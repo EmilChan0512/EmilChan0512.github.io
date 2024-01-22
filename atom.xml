@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blogs of EmilChan</title>
+  
+  
+  <link href="http://emilchan0512.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://emilchan0512.github.io/"/>
+  <updated>2024-01-22T15:03:55.695Z</updated>
+  <id>http://emilchan0512.github.io/</id>
+  
+  <author>
+    <name>Kiwiq</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>first publish</title>
+    <link href="http://emilchan0512.github.io/2024/01/22/first-publish/"/>
+    <id>http://emilchan0512.github.io/2024/01/22/first-publish/</id>
+    <published>2024-01-22T14:29:31.000Z</published>
+    <updated>2024-01-22T15:03:55.695Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;my first pub&lt;/strong&gt;&lt;br&gt;let’s do something awsome&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://emilchan0512.github.io/2024/01/22/hello-world/"/>
+    <id>http://emilchan0512.github.io/2024/01/22/hello-world/</id>
+    <published>2024-01-22T13:54:31.927Z</published>
+    <updated>2024-01-22T14:53:17.074Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+</feed>
