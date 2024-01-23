@@ -22,22 +22,23 @@
     var CONFIG = {"hostname":"emilchan0512.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="闲得慌写点笔记。 CSS：Cascading Style Sheet，层叠样式表CSS的引入方式 适合局部：行内样式1&lt;p style &#x3D; &quot;color: red;&quot;&gt;我是行内样式&lt;&#x2F;p&gt; 内嵌样式12345&lt;style type &#x3D; &quot;text&#x2F;css&quot;&gt;    p &#123;        color: red;">
+  <meta name="description" content="闲得慌写点笔记。  CSS：Cascading Style Sheet，层叠样式表  CSS的引入方式  适合局部：行内样式  1&lt;p style &#x3D; &quot;color: red;&quot;&gt;我是行内样式&lt;&#x2F;p&gt;  内嵌样式  12345&lt;style type &#x3D; &quot;text&#x2F;css&quot;&gt;    p &#123;        colo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="note_css">
 <meta property="og:url" content="http://emilchan0512.github.io/2024/01/23/note-css/index.html">
 <meta property="og:site_name" content="Blogs of EmilChan">
-<meta property="og:description" content="闲得慌写点笔记。 CSS：Cascading Style Sheet，层叠样式表CSS的引入方式 适合局部：行内样式1&lt;p style &#x3D; &quot;color: red;&quot;&gt;我是行内样式&lt;&#x2F;p&gt; 内嵌样式12345&lt;style type &#x3D; &quot;text&#x2F;css&quot;&gt;    p &#123;        color: red;">
+<meta property="og:description" content="闲得慌写点笔记。  CSS：Cascading Style Sheet，层叠样式表  CSS的引入方式  适合局部：行内样式  1&lt;p style &#x3D; &quot;color: red;&quot;&gt;我是行内样式&lt;&#x2F;p&gt;  内嵌样式  12345&lt;style type &#x3D; &quot;text&#x2F;css&quot;&gt;    p &#123;        colo">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://emilchan0512.github.io/image.png">
-<meta property="og:image" content="http://emilchan0512.github.io/image-1.png">
-<meta property="og:image" content="http://emilchan0512.github.io/image-2.png">
-<meta property="og:image" content="http://emilchan0512.github.io/image-3.png">
+<meta property="og:image" content="http://emilchan0512.github.io/2024/01/23/note-css/image.png">
+<meta property="og:image" content="http://emilchan0512.github.io/2024/01/23/note-css/image-1.png">
+<meta property="og:image" content="http://emilchan0512.github.io/2024/01/23/note-css/image-2.png">
+<meta property="og:image" content="http://emilchan0512.github.io/2024/01/23/note-css/image-3.png">
+<meta property="og:image" content="http://emilchan0512.github.io/2024/01/23/note-css/image-4.png">
 <meta property="article:published_time" content="2024-01-23T07:16:38.000Z">
-<meta property="article:modified_time" content="2024-01-23T08:43:53.545Z">
+<meta property="article:modified_time" content="2024-01-23T08:55:42.128Z">
 <meta property="article:author" content="Kiwiq">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://emilchan0512.github.io/image.png">
+<meta name="twitter:image" content="http://emilchan0512.github.io/2024/01/23/note-css/image.png">
 
 <link rel="canonical" href="http://emilchan0512.github.io/2024/01/23/note-css/">
 
@@ -220,7 +221,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-01-23 15:16:38 / 修改时间：16:43:53" itemprop="dateCreated datePublished" datetime="2024-01-23T15:16:38+08:00">2024-01-23</time>
+              <time title="创建时间：2024-01-23 15:16:38 / 修改时间：16:55:42" itemprop="dateCreated datePublished" datetime="2024-01-23T15:16:38+08:00">2024-01-23</time>
             </span>
 
           
@@ -236,7 +237,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.8k</span>
+              <span>2.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -256,16 +257,29 @@
 
       
         <p>闲得慌写点笔记。</p>
-<h1 id="CSS：Cascading-Style-Sheet，层叠样式表"><a href="#CSS：Cascading-Style-Sheet，层叠样式表" class="headerlink" title="CSS：Cascading Style Sheet，层叠样式表"></a>CSS：Cascading Style Sheet，层叠样式表</h1><h2 id="CSS的引入方式"><a href="#CSS的引入方式" class="headerlink" title="CSS的引入方式"></a>CSS的引入方式</h2><ul>
-<li>适合局部：行内样式<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span> = <span class="string">&quot;color: red;&quot;</span>&gt;</span>我是行内样式<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>内嵌样式<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span> = <span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>引入外部css文件<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span> = <span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span> = <span class="string">&quot;text/css&quot;</span> <span class="attr">href</span> = <span class="string">&quot;css/a.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<h1 id="csscascading-style-sheet层叠样式表"><a class="markdownIt-Anchor" href="#csscascading-style-sheet层叠样式表"></a> CSS：Cascading Style Sheet，层叠样式表</h1>
+<h2 id="css的引入方式"><a class="markdownIt-Anchor" href="#css的引入方式"></a> CSS的引入方式</h2>
+<ul>
+<li>适合局部：行内样式</li>
 </ul>
-<h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span> = <span class="string">&quot;color: red;&quot;</span>&gt;</span>我是行内样式<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>内嵌样式</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span> = <span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">p</span> &#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>引入外部css文件</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span> = <span class="string">&quot;stylesheet&quot;</span> <span class="attr">type</span> = <span class="string">&quot;text/css&quot;</span> <span class="attr">href</span> = <span class="string">&quot;css/a.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="css选择器"><a class="markdownIt-Anchor" href="#css选择器"></a> CSS选择器</h2>
+<ul>
 <li>标签选择器：针对一类标签</li>
 <li>ID 选择器：针对某一个特定的标签使用 <strong>唯一</strong></li>
-<li>类选择器：针对你想要的所有标签使用<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 同一个标签使用多个类选择器，用 空格隔开*/</span></span><br><span class="line">&lt;<span class="selector-tag">div</span> class = &quot;one two&quot;&gt;&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">p</span> class = &quot;one&quot;&gt;&lt;/<span class="selector-tag">p</span>&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 正确的思路，就是用所谓“公共类”的思路，就是我们类就是提供“公共服务”，比如有绿、大、线，一旦携带这个类名，就有相应的样式变化。对应 css 里的代码如下： */</span></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    <span class="selector-class">.lv</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: green;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.da</span> &#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">30px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.underline</span> &#123;</span><br><span class="line">        <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"><span class="comment">/* 然后让每个标签去选取自己想要用的类选择器： */</span></span><br><span class="line">&lt;<span class="selector-tag">p</span> class=&quot;lv da&quot;&gt;段落<span class="number">1</span>&lt;/<span class="selector-tag">p</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">p</span> class=&quot;lv xian&quot;&gt;段落<span class="number">2</span>&lt;/<span class="selector-tag">p</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">p</span> class=&quot;da xian&quot;&gt;段落<span class="number">3</span>&lt;/<span class="selector-tag">p</span>&gt;</span><br></pre></td></tr></table></figure></li>
+<li>类选择器：针对你想要的所有标签使用</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 同一个标签使用多个类选择器，用 空格隔开*/</span></span><br><span class="line">&lt;<span class="selector-tag">div</span> class = &quot;one two&quot;&gt;&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">p</span> class = &quot;one&quot;&gt;&lt;/<span class="selector-tag">p</span>&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 正确的思路，就是用所谓“公共类”的思路，就是我们类就是提供“公共服务”，比如有绿、大、线，一旦携带这个类名，就有相应的样式变化。对应 css 里的代码如下： */</span></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    <span class="selector-class">.lv</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: green;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.da</span> &#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">30px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.underline</span> &#123;</span><br><span class="line">        <span class="attribute">text-decoration</span>: underline;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"><span class="comment">/* 然后让每个标签去选取自己想要用的类选择器： */</span></span><br><span class="line">&lt;<span class="selector-tag">p</span> class=&quot;lv da&quot;&gt;段落<span class="number">1</span>&lt;/<span class="selector-tag">p</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">p</span> class=&quot;lv xian&quot;&gt;段落<span class="number">2</span>&lt;/<span class="selector-tag">p</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">p</span> class=&quot;da xian&quot;&gt;段落<span class="number">3</span>&lt;/<span class="selector-tag">p</span>&gt;</span><br></pre></td></tr></table></figure>
+<ul>
 <li>通用选择器（通配符）：针对所有的标签都适用（不建议使用）</li>
 </ul>
 <p>一个标签可以被多个css选择器选择，这是cascading的第一层含义。比如选了id又选了标签。</p>
@@ -273,48 +287,65 @@
 <p>也就是说类要尽可能小，<strong>突出一个公共</strong></p>
 <p>id选择器一般给js用，写css用class选择器</p>
 <ul>
-<li><p>后代选择器</p>
+<li>后代选择器</li>
+</ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* div1的所有后代p */</span></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    <span class="selector-class">.div1</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="/image.png" alt="后代选择器"></p>
-</li>
-<li><p>交集选择器<br><strong>注意没有空格 有空格就是后代</strong></p>
+<p><img src="image.png" alt="后代选择器" /></p>
+<ul>
+<li>交集选择器<br />
+<strong>注意没有空格 有空格就是后代</strong></li>
+</ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>交集选择器测试<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">            <span class="selector-tag">h3</span><span class="selector-class">.special</span> &#123;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">            &#125;</span></span><br><span class="line"><span class="language-css">        </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">&quot;special zhongyao&quot;</span>&gt;</span>标题1<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">&quot;special&quot;</span>&gt;</span>我也是标题<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>我是段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>并集选择器<br>用逗号隔开</p>
-</li>
+<ul>
+<li>并集选择器<br />
+用逗号隔开</li>
 </ul>
-<h3 id="CSS3"><a href="#CSS3" class="headerlink" title="CSS3"></a>CSS3</h3><ul>
-<li>子代选择器<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* div1的直接子代p */</span></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    <span class="selector-class">.div1</span> &gt; <span class="selector-tag">p</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></li>
-<li>序选择器<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* div1的第一个p */</span></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    <span class="selector-class">.div1</span> <span class="selector-tag">p</span><span class="selector-pseudo">:first</span>-child &#123;</span><br><span class="line">        <span class="attribute">color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></li>
+<h3 id="css3"><a class="markdownIt-Anchor" href="#css3"></a> CSS3</h3>
+<ul>
+<li>子代选择器</li>
 </ul>
-<h2 id="CSS选择器：伪类"><a href="#CSS选择器：伪类" class="headerlink" title="CSS选择器：伪类"></a>CSS选择器：伪类</h2><p>好像写的有点过于繁复了，写简单点。<br>超链接a标签有四种伪类 对应四种状态</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* div1的直接子代p */</span></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    <span class="selector-class">.div1</span> &gt; <span class="selector-tag">p</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>序选择器</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* div1的第一个p */</span></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    <span class="selector-class">.div1</span> <span class="selector-tag">p</span><span class="selector-pseudo">:first</span>-child &#123;</span><br><span class="line">        <span class="attribute">color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="css选择器伪类"><a class="markdownIt-Anchor" href="#css选择器伪类"></a> CSS选择器：伪类</h2>
+<p>好像写的有点过于繁复了，写简单点。<br />
+超链接a标签有四种伪类 对应四种状态</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">	<span class="comment">/*让超链接点击之前是红色*/</span></span><br><span class="line">	<span class="selector-tag">a</span><span class="selector-pseudo">:link</span>&#123;</span><br><span class="line">		<span class="attribute">color</span>:red;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*让超链接点击之后是绿色*/</span></span><br><span class="line">	<span class="selector-tag">a</span><span class="selector-pseudo">:visited</span>&#123;</span><br><span class="line">		<span class="attribute">color</span>:orange;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*鼠标悬停，放到标签上的时候*/</span></span><br><span class="line">	<span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">		<span class="attribute">color</span>:green;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*鼠标点击链接，但是不松手的时候*/</span></span><br><span class="line">	<span class="selector-tag">a</span><span class="selector-pseudo">:active</span>&#123;</span><br><span class="line">		<span class="attribute">color</span>:black;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-
 <p>超链接是有四个伪类，它后面两个动态伪类：hover ：active加上个 ：focus是对所有标签都可以用的动态伪类</p>
-<h2 id="CSS继承性"><a href="#CSS继承性" class="headerlink" title="CSS继承性"></a>CSS继承性</h2><p>有一些属性，当给自己设置的时候，自己的后代都继承上了，这个就是继承性。<br>关于文字样式的属性，都具有继承性。这些属性包括：color、 text-开头的、line-开头的、font-开头的。</p>
+<h2 id="css继承性"><a class="markdownIt-Anchor" href="#css继承性"></a> CSS继承性</h2>
+<p>有一些属性，当给自己设置的时候，自己的后代都继承上了，这个就是继承性。<br />
+关于文字样式的属性，都具有继承性。这些属性包括：color、 text-开头的、line-开头的、font-开头的。</p>
 <p>关于盒子、定位、布局的属性，都不能继承。</p>
-<h2 id="CSS层叠性"><a href="#CSS层叠性" class="headerlink" title="CSS层叠性"></a>CSS层叠性</h2><p>层叠性：就是css处理冲突的能力。 所有的权重计算，没有任何兼容问题！</p>
+<h2 id="css层叠性"><a class="markdownIt-Anchor" href="#css层叠性"></a> CSS层叠性</h2>
+<p>层叠性：就是css处理冲突的能力。 所有的权重计算，没有任何兼容问题！</p>
 <p>当多个选择器，选择上了某个元素的时候，要按照如下顺序统计权重：</p>
 <ul>
 <li>id 选择器</li>
 <li>类选择器、属性选择器、伪类选择器</li>
-<li>标签选择器、伪元素选择器<br><strong>一种笔试题型：计算权重</strong><br><img src="/image-1.png" alt="层叠性"><br>权重相同时<br><img src="/image-2.png" alt="Alt text"><br>实战一般这么写<br><img src="/image-3.png" alt="Alt text"><blockquote>
+<li>标签选择器、伪元素选择器<br />
+<strong>一种笔试题型：计算权重</strong><br />
+<img src="image-1.png" alt="层叠性" /><br />
+权重相同时<br />
+<img src="image-2.png" alt="Alt text" /><br />
+实战一般这么写<br />
+<img src="image-3.png" alt="Alt text" /></li>
+</ul>
+<blockquote>
 <p>为了达到这种效果，即为了防止权重不够，比较稳妥的做法是：把第二个样式表照着第一个样式表来写，在此基础上，给第二个样式表再加一个权重。上面这个例子很具有实战性。</p>
 </blockquote>
-</li>
-</ul>
-<p>继承不带来权重；<br>同权重就近原则；</p>
+<p>继承不带来权重；<br />
+同权重就近原则；<br />
+<img src="image-4.png" alt="Alt text" /></p>
 <details>
 <summary>总结</summary>
-![Alt text](image-4.png)
 1、对于相同的选择器（比如同样都是类选择器），其样式表排序：行级样式 > 内嵌样式表 > 外部样式表（就近原则）
 2、对于相同类型的样式表（比如同样都是内部样式表），其选择器排序：ID选择器 > 类选择器 > 标签选择器
 3、外部样式表的ID选择器 > 内嵌样式表的标签选择器
 > 总结：就近原则。ID选择器优先级最大。
 </details>
-k:v !important; 影响直接影响的当前属性权重，不影响继承权重，除非直接影响要不不考虑
-
-
+<p><em>k:v !important; 影响直接影响的当前属性权重，不影响继承权重，除非直接影响要不不考虑</em></p>
 
     </div>
 
@@ -395,7 +426,7 @@ k:v !important; 影响直接影响的当前属性权重，不影响继承权重�
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS%EF%BC%9ACascading-Style-Sheet%EF%BC%8C%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">1.</span> <span class="nav-text">CSS：Cascading Style Sheet，层叠样式表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E7%9A%84%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">CSS的引入方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.2.</span> <span class="nav-text">CSS选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS3"><span class="nav-number">1.2.1.</span> <span class="nav-text">CSS3</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%9A%E4%BC%AA%E7%B1%BB"><span class="nav-number">1.3.</span> <span class="nav-text">CSS选择器：伪类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E7%BB%A7%E6%89%BF%E6%80%A7"><span class="nav-number">1.4.</span> <span class="nav-text">CSS继承性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E5%B1%82%E5%8F%A0%E6%80%A7"><span class="nav-number">1.5.</span> <span class="nav-text">CSS层叠性</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#csscascading-style-sheet%E5%B1%82%E5%8F%A0%E6%A0%B7%E5%BC%8F%E8%A1%A8"><span class="nav-number">1.</span> <span class="nav-text"> CSS：Cascading Style Sheet，层叠样式表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#css%E7%9A%84%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text"> CSS的引入方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.2.</span> <span class="nav-text"> CSS选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#css3"><span class="nav-number">1.2.1.</span> <span class="nav-text"> CSS3</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%AA%E7%B1%BB"><span class="nav-number">1.3.</span> <span class="nav-text"> CSS选择器：伪类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css%E7%BB%A7%E6%89%BF%E6%80%A7"><span class="nav-number">1.4.</span> <span class="nav-text"> CSS继承性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#css%E5%B1%82%E5%8F%A0%E6%80%A7"><span class="nav-number">1.5.</span> <span class="nav-text"> CSS层叠性</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
