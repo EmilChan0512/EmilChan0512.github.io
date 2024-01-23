@@ -6,7 +6,7 @@
   <link href="http://emilchan0512.github.io/atom.xml" rel="self"/>
   
   <link href="http://emilchan0512.github.io/"/>
-  <updated>2024-01-23T10:18:09.590Z</updated>
+  <updated>2024-01-23T10:43:14.975Z</updated>
   <id>http://emilchan0512.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://emilchan0512.github.io/2024/01/23/test/"/>
+    <id>http://emilchan0512.github.io/2024/01/23/test/</id>
+    <published>2024-01-23T10:43:14.000Z</published>
+    <updated>2024-01-23T10:43:14.975Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>note-css-1</title>
