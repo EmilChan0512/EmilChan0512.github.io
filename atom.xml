@@ -6,7 +6,7 @@
   <link href="http://emilchan0512.github.io/atom.xml" rel="self"/>
   
   <link href="http://emilchan0512.github.io/"/>
-  <updated>2024-01-23T06:52:41.423Z</updated>
+  <updated>2024-01-23T08:44:41.667Z</updated>
   <id>http://emilchan0512.github.io/</id>
   
   <author>
@@ -17,12 +17,58 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>diary0123</title>
+    <title>note-css-1</title>
+    <link href="http://emilchan0512.github.io/2024/01/23/note-css-1/"/>
+    <id>http://emilchan0512.github.io/2024/01/23/note-css-1/</id>
+    <published>2024-01-23T08:43:51.000Z</published>
+    <updated>2024-01-23T08:44:41.667Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;感觉塞一堆不好看，再起一个页面。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>note_css</title>
+    <link href="http://emilchan0512.github.io/2024/01/23/note-css/"/>
+    <id>http://emilchan0512.github.io/2024/01/23/note-css/</id>
+    <published>2024-01-23T07:16:38.000Z</published>
+    <updated>2024-01-23T08:43:53.545Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;闲得慌写点笔记。&lt;/p&gt;
+&lt;h1 id=&quot;CSS：Cascading-Style-Sheet，层叠样式表&quot;&gt;&lt;a href=&quot;#CSS：Cascading-Style-Sheet，层叠样式表&quot; class=&quot;headerlink&quot; title=&quot;CSS：Cascading </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>杂感</title>
     <link href="http://emilchan0512.github.io/2024/01/23/diary0123/"/>
     <id>http://emilchan0512.github.io/2024/01/23/diary0123/</id>
     <published>2024-01-23T06:52:41.000Z</published>
-    <updated>2024-01-23T06:52:41.423Z</updated>
+    <updated>2024-01-23T07:15:58.449Z</updated>
     
+    
+      
+      
+    <summary type="html">&lt;p&gt;
+    没有想到莆田的冬天竟这么冷。
+    大抵是南京呆久了。室内的暖气给了我一种错觉，以为莆田的冬天也不会太冷。直到我裹成粽子在房间里码字。
+    以至于感冒了。三天也不见好。现在脑袋昏昏沉沉，前端的学习也停滞了。话说回来，前端与游戏客户端到底走那条路，我还不甚明晰</summary>
+      
     
     
     
