@@ -1197,7 +1197,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffab70;
+  background: #ff1f26;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2704,7 +2704,7 @@ body {
 .main-inner > .tabs-comment,
 .main-inner > .comments,
 .main-inner > .pagination {
-  background: rgba(245,245,245,0.42);
+  background: rgba(245,245,245,0.4); /* 更改透明度值，范围从 0（完全透明）到 1（完全不透明） */
 }
 body {
   color: #000;
@@ -2716,14 +2716,14 @@ body {
   color: #800;
 }
 .sidebar {
-  opacity: 0.85;
+  opacity: 0.7;
 }
 .header-inner {
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.7);
 }
 .popup {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 .content-wrap {
-  opacity: 0.8;
+  opacity: 0.7;
 }
