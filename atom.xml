@@ -40,9 +40,8 @@
       
       
     <summary type="html">&lt;p&gt;感觉塞一堆不好看，再起一个页面。&lt;/p&gt;
-&lt;h2 id=&quot;盒模型&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#盒模型&quot;&gt;&lt;/a&gt; 盒模型&lt;/h2&gt;
-&lt;p&gt;有一个boarder画三角形的奇技淫巧&lt;/p&gt;
-&lt;h2 id=&quot;浮动&quot;&gt;&lt;a class=</summary>
+&lt;h2 id=&quot;盒模型&quot;&gt;&lt;a href=&quot;#盒模型&quot; class=&quot;headerlink&quot; title=&quot;盒模型&quot;&gt;&lt;/a&gt;盒模型&lt;/h2&gt;&lt;p&gt;有一个boarder画三角形的奇技淫巧&lt;/p&gt;
+&lt;h2 id=&quot;浮动&quot;&gt;&lt;a hre</summary>
       
     
     
@@ -61,7 +60,7 @@
       
       
     <summary type="html">&lt;p&gt;闲得慌写点笔记。&lt;/p&gt;
-&lt;h1 id=&quot;csscascading-style-sheet层叠样式表&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#csscascading-style-sheet层叠样式表&quot;&gt;&lt;/a&gt; CSS：Cascading</summary>
+&lt;h1 id=&quot;CSS：Cascading-Style-Sheet，层叠样式表&quot;&gt;&lt;a href=&quot;#CSS：Cascading-Style-Sheet，层叠样式表&quot; class=&quot;headerlink&quot; title=&quot;CSS：Cascading </summary>
       
     
     
@@ -100,8 +99,7 @@
     
       
       
-    <summary type="html">&lt;p&gt;&lt;strong&gt;my first pub&lt;/strong&gt;&lt;br&gt;
-let’s do something awsome&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;strong&gt;my first pub&lt;/strong&gt;&lt;br&gt;let’s do something awsome&lt;/p&gt;
 &lt;p&gt;也许是中文的原因&lt;/p&gt;
 &lt;p&gt;再改改&lt;/p&gt;
 </summary>
