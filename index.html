@@ -245,16 +245,16 @@
 <h2 id="浮动"><a class="markdownIt-Anchor" href="#浮动"></a> 浮动</h2>
 <p>行内元素和块级元素的区别：（非常重要）</p>
 <h3 id="行内元素"><a class="markdownIt-Anchor" href="#行内元素"></a> 行内元素：</h3>
-<p>与其他行内元素并排；<br />
+<p>与其他行内元素并排；<br>
 不能设置宽、高。默认的宽度，就是文字的宽度。</p>
 <h3 id="块级元素"><a class="markdownIt-Anchor" href="#块级元素"></a> 块级元素：</h3>
-<p>霸占一行，不能与其他任何元素并列；<br />
+<p>霸占一行，不能与其他任何元素并列；<br>
 能接受宽、高。如果不设置宽度，那么宽度将默认变为父亲的100%。</p>
 <h3 id="行内元素和块级元素的分类"><a class="markdownIt-Anchor" href="#行内元素和块级元素的分类"></a> 行内元素和块级元素的分类：</h3>
 <p>在以前的HTML知识中，我们已经将标签分过类，当时分为了：文本级、容器级。</p>
 <p>从HTML的角度来讲，标签分为：</p>
-<p><strong>文本级标签：p、span、a、b、i、u、em。</strong><br />
-<strong>容器级标签：div、h系列、li、dt、dd。</strong><br />
+<p><strong>文本级标签：p、span、a、b、i、u、em。</strong><br>
+<strong>容器级标签：div、h系列、li、dt、dd。</strong><br>
 PS：为甚么说p是文本级标签呢？因为p里面只能放文字&amp;图片&amp;表单元素，p里面不能放h和ul，p里面也不能放p。</p>
 <p>现在，从CSS的角度讲，CSS的分类和上面的很像，就p不一样：</p>
 <p><strong>行内元素：除了p之外，所有的文本级标签，都是行内元素。p是个文本级，但是是个块级元素。</strong></p>
@@ -364,14 +364,14 @@ PS：为甚么说p是文本级标签呢？因为p里面只能放文字&amp;图�
 <li>后代选择器</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* div1的所有后代p */</span></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    <span class="selector-class">.div1</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="image.png" alt="后代选择器" /></p>
+<p><img src="/.io//image.png" alt="后代选择器"></p>
 <ul>
-<li>交集选择器<br />
+<li>交集选择器<br>
 <strong>注意没有空格 有空格就是后代</strong></li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>交集选择器测试<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">            <span class="selector-tag">h3</span><span class="selector-class">.special</span> &#123;</span></span><br><span class="line"><span class="language-css">                <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">            &#125;</span></span><br><span class="line"><span class="language-css">        </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">&quot;special zhongyao&quot;</span>&gt;</span>标题1<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">&quot;special&quot;</span>&gt;</span>我也是标题<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>我是段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>并集选择器<br />
+<li>并集选择器<br>
 用逗号隔开</li>
 </ul>
 <h3 id="css3"><a class="markdownIt-Anchor" href="#css3"></a> CSS3</h3>
@@ -384,12 +384,12 @@ PS：为甚么说p是文本级标签呢？因为p里面只能放文字&amp;图�
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* div1的第一个p */</span></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    <span class="selector-class">.div1</span> <span class="selector-tag">p</span><span class="selector-pseudo">:first</span>-child &#123;</span><br><span class="line">        <span class="attribute">color</span>: red;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="css选择器伪类"><a class="markdownIt-Anchor" href="#css选择器伪类"></a> CSS选择器：伪类</h2>
-<p>好像写的有点过于繁复了，写简单点。<br />
+<p>好像写的有点过于繁复了，写简单点。<br>
 超链接a标签有四种伪类 对应四种状态</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">	<span class="comment">/*让超链接点击之前是红色*/</span></span><br><span class="line">	<span class="selector-tag">a</span><span class="selector-pseudo">:link</span>&#123;</span><br><span class="line">		<span class="attribute">color</span>:red;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*让超链接点击之后是绿色*/</span></span><br><span class="line">	<span class="selector-tag">a</span><span class="selector-pseudo">:visited</span>&#123;</span><br><span class="line">		<span class="attribute">color</span>:orange;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*鼠标悬停，放到标签上的时候*/</span></span><br><span class="line">	<span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">		<span class="attribute">color</span>:green;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*鼠标点击链接，但是不松手的时候*/</span></span><br><span class="line">	<span class="selector-tag">a</span><span class="selector-pseudo">:active</span>&#123;</span><br><span class="line">		<span class="attribute">color</span>:black;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 <p>超链接是有四个伪类，它后面两个动态伪类：hover ：active加上个 ：focus是对所有标签都可以用的动态伪类</p>
 <h2 id="css继承性"><a class="markdownIt-Anchor" href="#css继承性"></a> CSS继承性</h2>
-<p>有一些属性，当给自己设置的时候，自己的后代都继承上了，这个就是继承性。<br />
+<p>有一些属性，当给自己设置的时候，自己的后代都继承上了，这个就是继承性。<br>
 关于文字样式的属性，都具有继承性。这些属性包括：color、 text-开头的、line-开头的、font-开头的。</p>
 <p>关于盒子、定位、布局的属性，都不能继承。</p>
 <h2 id="css层叠性"><a class="markdownIt-Anchor" href="#css层叠性"></a> CSS层叠性</h2>
@@ -398,20 +398,20 @@ PS：为甚么说p是文本级标签呢？因为p里面只能放文字&amp;图�
 <ul>
 <li>id 选择器</li>
 <li>类选择器、属性选择器、伪类选择器</li>
-<li>标签选择器、伪元素选择器<br />
-<strong>一种笔试题型：计算权重</strong><br />
-<img src="image-1.png" alt="层叠性" /><br />
-权重相同时<br />
-<img src="image-2.png" alt="Alt text" /><br />
-实战一般这么写<br />
-<img src="image-3.png" alt="Alt text" /></li>
+<li>标签选择器、伪元素选择器<br>
+<strong>一种笔试题型：计算权重</strong><br>
+<img src="/.io//image-1.png" alt="层叠性"><br>
+权重相同时<br>
+<img src="/.io//image-2.png" alt="Alt text"><br>
+实战一般这么写<br>
+<img src="/.io//image-3.png" alt="Alt text"></li>
 </ul>
 <blockquote>
 <p>为了达到这种效果，即为了防止权重不够，比较稳妥的做法是：把第二个样式表照着第一个样式表来写，在此基础上，给第二个样式表再加一个权重。上面这个例子很具有实战性。</p>
 </blockquote>
-<p>继承不带来权重；<br />
-同权重就近原则；<br />
-<img src="image-4.png" alt="Alt text" /></p>
+<p>继承不带来权重；<br>
+同权重就近原则；<br>
+<img src="/.io//image-4.png" alt="Alt text"></p>
 <details>
 <summary>总结</summary>
 1、对于相同的选择器（比如同样都是类选择器），其样式表排序：行级样式 > 内嵌样式表 > 外部样式表（就近原则）
@@ -575,7 +575,7 @@ PS：为甚么说p是文本级标签呢？因为p里面只能放文字&amp;图�
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>my first pub</strong><br />
+          <p><strong>my first pub</strong><br>
 let’s do something awsome</p>
 <p>也许是中文的原因</p>
 <p>再改改</p>
