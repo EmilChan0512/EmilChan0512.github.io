@@ -6,7 +6,7 @@
   <link href="http://emilchan0512.github.io/atom.xml" rel="self"/>
   
   <link href="http://emilchan0512.github.io/"/>
-  <updated>2024-01-23T14:23:03.928Z</updated>
+  <updated>2024-01-24T15:26:24.313Z</updated>
   <id>http://emilchan0512.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>diary0124</title>
+    <link href="http://emilchan0512.github.io/2024/01/24/diary0124/"/>
+    <id>http://emilchan0512.github.io/2024/01/24/diary0124/</id>
+    <published>2024-01-24T15:15:49.000Z</published>
+    <updated>2024-01-24T15:26:24.313Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;学了一下午js。&lt;br&gt;写了一晚上BDA新闻分类。&lt;br&gt;傻逼模型在存储后跑在验证集上准确率只剩0.12。&lt;br&gt;我是在debug三小时后发现这一点的。&lt;br&gt;在此之前我以为只是新数据集的问题。&lt;br&gt;妈的。&lt;br&gt;现在加了随机数种子跑，重跑个逻辑回归，重新训练一下。&lt;br</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>note-js-async</title>
+    <link href="http://emilchan0512.github.io/2024/01/24/note-js-async/"/>
+    <id>http://emilchan0512.github.io/2024/01/24/note-js-async/</id>
+    <published>2024-01-24T09:20:13.000Z</published>
+    <updated>2024-01-24T09:20:13.808Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>note-js</title>
     <link href="http://emilchan0512.github.io/2024/01/23/note-js/"/>
     <id>http://emilchan0512.github.io/2024/01/23/note-js/</id>
     <published>2024-01-23T14:09:27.000Z</published>
-    <updated>2024-01-23T14:23:03.928Z</updated>
+    <updated>2024-01-24T09:19:07.880Z</updated>
     
     
       
