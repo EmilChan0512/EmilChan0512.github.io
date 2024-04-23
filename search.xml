@@ -58,6 +58,10 @@
 <h4 id="如何让一个元素水平垂直居中"><a href="#如何让一个元素水平垂直居中" class="headerlink" title="如何让一个元素水平垂直居中"></a>如何让一个元素水平垂直居中</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 绝对位置加上transform --&gt;</span></span><br><span class="line">        .father&#123;</span><br><span class="line">            position: relative;</span><br><span class="line">            min-height: 500px;</span><br><span class="line">            background: pink;</span><br><span class="line">        &#125;</span><br><span class="line">        .son &#123;</span><br><span class="line">            position: absolute;</span><br><span class="line">            background: red;</span><br><span class="line">            top: 50%;</span><br><span class="line">            left: 50%;</span><br><span class="line">            transform: translate(-50%, -50%);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- flex布局 --&gt;</span></span><br><span class="line">        .father&#123;</span><br><span class="line">            display: flex;</span><br><span class="line">            min-height: 100vh;</span><br><span class="line">            background: pink;</span><br><span class="line">        &#125;</span><br><span class="line">        .son &#123;</span><br><span class="line">            margin: auto;</span><br><span class="line">            background: red;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>note</category>
+        <category>css</category>
+      </categories>
   </entry>
   <entry>
     <title>note_css</title>
@@ -121,6 +125,10 @@
 
 <p><em>k:v !important; 影响直接影响的当前属性权重，不影响继承权重，除非直接影响要不不考虑</em></p>
 ]]></content>
+      <categories>
+        <category>note</category>
+        <category>css</category>
+      </categories>
   </entry>
   <entry>
     <title>note-js</title>
@@ -163,5 +171,332 @@ IIFE的作用:将全局变量变为局部变量,闭包的作用:将函数内部�
     <title>note-js-async</title>
     <url>/2024/01/24/note-js-async/</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>diary0125</title>
+    <url>/2024/01/25/diary0125/</url>
+    <content><![CDATA[<p>完蛋。<br>今天好像啥也没做。<br>我下午做了啥来着？<br>晚上和哈提聊了下简历，受益匪浅。<br>定好接下来计划，然后，<br>休假。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>diary0301</title>
+    <url>/2024/03/01/diary0301/</url>
+    <content><![CDATA[<p>好吧，今天终于把那份很糙的简历都投了下。<br>腾讯美团vivo</p>
+<h2 id="JS函数式编程"><a href="#JS函数式编程" class="headerlink" title="JS函数式编程"></a>JS函数式编程</h2>]]></content>
+  </entry>
+  <entry>
+    <title>diary0224</title>
+    <url>/2024/02/24/diary0224/</url>
+    <content><![CDATA[<p>谁能想到这个假休得这么长呢？<br>同时它又很短。<br>好吧，不管怎么说，寒假结束了。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>diary0309</title>
+    <url>/2024/03/09/diary0309/</url>
+    <content><![CDATA[<h2 id="面经"><a href="#面经" class="headerlink" title="面经"></a>面经</h2><ol>
+<li><p>进程和线程概念</p>
+</li>
+<li><p>并发和并行<br>并发是指一个处理器同时处理多个任务，而并行是指多个处理器或者是多核的处理器同时处理多个不同的任务。</p>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>diary0307</title>
+    <url>/2024/03/07/diary0307/</url>
+    <content><![CDATA[<p>欠下的牛逼终归要还的。<br>离面试还有四天，让我看看我能不能把这些给整明白。</p>
+<h2 id="首先是CSS"><a href="#首先是CSS" class="headerlink" title="首先是CSS"></a>首先是CSS</h2><p>Less干了什么呢，让css需要编译了，浏览器不能直接执行了。<br>他有一些特性可以帮助css更方便写。<br>嵌套 更直观体现父选择器和后代选择器关系<br>混入 把一段css相同的代码放到另一个选择器里面<br>@变量 更方便</p>
+<h2 id="less和sass的区别是什么"><a href="#less和sass的区别是什么" class="headerlink" title="less和sass的区别是什么"></a>less和sass的区别是什么</h2><p>它们的目标都是通过引入一些编程语言的特性来增强CSS的功能<br>语法上有点区别<br>Less使用JavaScript实现，它依赖于浏览器端或服务器端的JavaScript执行环境进行编译<br>sass ruby</p>
+<h2 id="为什么说js是解释型语言"><a href="#为什么说js是解释型语言" class="headerlink" title="为什么说js是解释型语言"></a>为什么说js是解释型语言</h2><p>因为js是一行行边编译边执行的，而不是先全转译成机器码<br>至于说他是动态的，是因为它的类型是在运行时才确定的而不是编译时。</p>
+<h2 id="函数式编程是什么"><a href="#函数式编程是什么" class="headerlink" title="函数式编程是什么"></a>函数式编程是什么</h2><p>拉姆达演算开始的</p>
+<blockquote>
+<p>在前端领域, 我们同样能看到很多函数式编程的影子: ES6 中的新增的箭头函数, react 中大量使用函数式编程, Vue3 也开始拥抱函数式编程…<br>核心是无状态和数据不可变<br>无状态就是一个函数不管什么时候用给同样输入输出应该是一样的，不依赖外部状态；<br>数据不可变就是不该原来的对象而是创建一个新的对象</p>
+</blockquote>
+<h3 id="没有副作用-数据不变"><a href="#没有副作用-数据不变" class="headerlink" title="没有副作用(数据不变)"></a>没有副作用(数据不变)</h3><p>给两段代码直观看</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> list = [...];</span><br><span class="line"><span class="comment">// 修改 list 中的 type 和 age</span></span><br><span class="line">list.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">  item.<span class="property">type</span> = <span class="number">1</span>;</span><br><span class="line">  item.<span class="property">age</span>++;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> list = [...];</span><br><span class="line"><span class="comment">// 修改 list 中的 type 和 age</span></span><br><span class="line"><span class="keyword">const</span> newList = list.<span class="title function_">map</span>(<span class="function"><span class="params">item</span> =&gt;</span> (&#123;...item, <span class="attr">type</span>: <span class="number">1</span>, <span class="attr">age</span>:item.<span class="property">age</span> + <span class="number">1</span>&#125;));</span><br></pre></td></tr></table></figure>
+<h3 id="不依赖外部状态-无状态"><a href="#不依赖外部状态-无状态" class="headerlink" title="不依赖外部状态(无状态)"></a>不依赖外部状态(无状态)</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> curUser = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;Peter&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">saySth</span> = str =&gt; curUser.<span class="property">name</span> + <span class="string">&#x27;: &#x27;</span> + str;   <span class="comment">// 引用了全局变量</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">changeName</span> = (<span class="params">obj, name</span>) =&gt; obj.<span class="property">name</span> = name;  <span class="comment">// 修改了输入参数</span></span><br><span class="line"><span class="title function_">changeName</span>(curUser, <span class="string">&#x27;Jay&#x27;</span>);  <span class="comment">// &#123; name: &#x27;Jay&#x27; &#125;</span></span><br><span class="line"><span class="title function_">saySth</span>(<span class="string">&#x27;hello!&#x27;</span>); <span class="comment">// Jay: hello!</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> curUser = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;Peter&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">saySth</span> = (<span class="params">user, str</span>) =&gt; user.<span class="property">name</span> + <span class="string">&#x27;: &#x27;</span> + str;   <span class="comment">// 不依赖外部变量</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">changeName</span> = (<span class="params">user, name</span>) =&gt; (&#123;...user, name &#125;);  <span class="comment">// 未修改外部变量</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> newUser = <span class="title function_">changeName</span>(curUser, <span class="string">&#x27;Jay&#x27;</span>);  <span class="comment">// &#123; name: &#x27;Jay&#x27; &#125;</span></span><br><span class="line"><span class="title function_">saySth</span>(curUser, <span class="string">&#x27;hello!&#x27;</span>); <span class="comment">// Peter: hello!</span></span><br></pre></td></tr></table></figure>
+
+<p>currying 柯里化 将一个多元函数转换成多个一元函数<br>函数组合</p>
+<p>缺点：性能，资源占用，递归</p>
+<h2 id="Webpack"><a href="#Webpack" class="headerlink" title="Webpack"></a>Webpack</h2><p><a href="https://juejin.cn/post/6844903887795650573">https://juejin.cn/post/6844903887795650573</a><br><a href="https://poe.com/chat/22rmb37lente5e0uk8v">https://poe.com/chat/22rmb37lente5e0uk8v</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/* Webpack是一个现代化的前端构建工具，它的出现是为了解决前端开发中的模块化和构建问题。</span><br><span class="line"></span><br><span class="line">在过去，前端开发中使用的是传统的脚本标签引入方式，每个页面都需要手动引入各个依赖的脚本文件，这样会导致页面结构混乱、代码复用性差，并且难以管理项目中的大量依赖。同时，前端开发中使用的语言和框架也越来越复杂，需要将代码拆分成多个模块进行开发和维护。</span><br><span class="line"></span><br><span class="line">Webpack的出现解决了这些问题。它可以将前端项目中的各种资源，如JavaScript、CSS、图片等，都视为模块，并通过配置文件定义各个模块之间的依赖关系。然后，Webpack会根据这些配置，将模块打包成静态资源文件，以供浏览器加载和解析。</span><br><span class="line"></span><br><span class="line">Webpack具有以下主要功能和特点：</span><br><span class="line">1. 模块化管理：Webpack支持使用ES6的import语法和CommonJS的require语法等方式来引入模块，并且可以处理模块之间的依赖关系，实现代码的模块化管理。</span><br><span class="line">2. 打包和压缩：Webpack可以将多个模块打包成一个或多个静态资源文件，减少了浏览器加载的请求数量，并且可以通过各种优化手段来压缩代码，减小文件体积，提高页面加载速度。</span><br><span class="line">3. 资源优化：Webpack可以处理各种类型的资源，如CSS、图片等，并且可以对它们进行优化，如压缩、合并、转换格式等，以提高页面性能。</span><br><span class="line">4. 插件系统：Webpack提供了丰富的插件系统，可以通过插件扩展其功能，例如自动化构建、代码分割、按需加载等。</span><br><span class="line">5. 开发环境支持：Webpack提供了开发环境的支持，包括文件监听、热模块替换等功能，可以提高开发效率。</span><br><span class="line">loader entry output plugins </span><br><span class="line"></span><br><span class="line">总的来说，Webpack的出现是为了解决前端开发中的模块化和构建问题，使得前端开发更加高效、灵活，并且可以提供优化和扩展的能力。*/</span><br></pre></td></tr></table></figure>
+<p>1**	信息，服务器收到请求，需要请求者继续执行操作 100<br>2**	成功，操作被成功接收并处理 200 204<br>3**	重定向，需要进一步的操作以完成请求<br>4**	客户端错误，请求包含语法错误或无法完成请求 400 401 403 404 分别代表请求错误，未授权，禁止访问，未找到<br>5**	服务器错误，服务器在处理请求的过程中发生了错误</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>diary0312</title>
+    <url>/2024/03/12/diary0312/</url>
+    <content><![CDATA[<p>一个值得记录的发现。<br>useState的维护挺复杂的。<br>setState并不是立即生效的，而是在下一次渲染时生效。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>js-base-1</title>
+    <url>/2024/04/08/js-base-1/</url>
+    <content><![CDATA[<h2 id="for-each和map"><a href="#for-each和map" class="headerlink" title="for each和map"></a>for each和map</h2><p>for each只是遍历，不会返回新数组，对</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>现在开始当然是最好的时间</title>
+    <url>/2024/03/19/diary0319/</url>
+    <content><![CDATA[<p>面腾讯第二次了。<br>这次是腾讯云。<br>面试内容：1.js基础（数据类型有哪些，闭包） 2.项目里面写的（媒体响应布局&#x3D;&gt;flex了解哪些，如果我要一个盒子左边右边自适应满怎么做） 3.react基础（hooks有哪些，useeffect传了哪些参数，返回值是什么，map有返回值吗） 4.算法题：比较两个对象是否相等，有嵌套字段；将多维数组拍成一维数组，有嵌套[1,2,[3,4],5,[6]];<br>反思：1.数据类型没说全，闭包没说全 2.响应布局怎么做要看，flex布局也要看 3.react基础，hooks没说全，useeffect不会，map不知道有没有返回值 4.算法题，如果前面答得好，api不熟没做出来，有个思路也行。<br>总结：1.js书蛮看 2.计网基础要看 跨域，浏览器请求 要理解深点 3.react基础要看文档 4.算法题要多做递归，数组，对象处理 相关API要熟悉</p>
+<hr>
+<p>美团一面 挂<br>问题出在基础，简历上写的东西要有深入了解 react生命周期 this指向生命周期<br>相对定位<br>响应式布局写了就要懂有哪些方法，就算还没实践，知道有哪几种。<br>浏览器存储有哪些。<br>get和post区别，深入，登录怎么做<br>交互体验，你认为好的交互体验<br>css的继承 定位</p>
+<p>简历上有些就要有深入理解，大部分面试官专注于以简历上写的为基础。</p>
+<p>还有就是算法题要专注于题目，别紧张，老是断思路，可以试着写出思路。<br>react的搭建<br>root.render<br>生命周期</p>
+<h3 id="好的"><a href="#好的" class="headerlink" title="好的"></a>好的</h3><p>我现在对于浏览器的运行，输入请求发生了什么，get post的区别有了表层的理解<br>浏览器是一个有很多进程的结构，作为用户代理，包括渲染进程，浏览器进程（用于管理进程，缓存，gpu，网络；<br>html dom css layout 栅格化 gpu</p>
+<p>get和post都是http的东西，http是tcp内的其中一种协议，没有本质区别，通常get用于获取资源，post用于提交资源，get的参数在url上，post的参数在请求体里，get的参数有长度限制，post没有，get的参数会被缓存，post不会，get的参数会被记录在浏览器历史里，post不会，get的参数会被记录在服务器日志里，post不会，get的参数可以被收藏为书签，post不会，get的参数只能进行url编码，post可以用formdata编码，get的参数可以被缓存，post不会，get的参数对于搜索引擎友好</p>
+<h3 id="那么"><a href="#那么" class="headerlink" title="那么"></a>那么</h3><p>浏览器事件循环机制是什么呢？<br>…b站收藏</p>
+<p>响应式布局<br>列表手机端怎么做适应</p>
+<h3 id="呜"><a href="#呜" class="headerlink" title="呜"></a>呜</h3><p>hash history<br>登录<br>cookie session token<br><a href="https://zhuanlan.zhihu.com/p/631349844">https://zhuanlan.zhihu.com/p/631349844</a></p>
+<p>闭包<br>私有变量和函数，避免全局命名冲突 和 变量污染，惰性求值<br><a href="https://zhuanlan.zhihu.com/p/25489604">https://zhuanlan.zhihu.com/p/25489604</a></p>
+<p>如何使用函数式编程<br>函数式编程有什么好处</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">函数式编程是一种编程范式，它将计算视为数学函数的求值过程，并强调使用纯函数（Pure Function）作为构建块来进行程序开发。在函数式编程中，函数被视为一等公民，可以作为参数传递给其他函数，也可以作为返回值。函数式编程强调使用不可变数据和避免副作用，即函数在执行过程中不会修改传入的参数或产生其他可观察的影响。</span><br><span class="line"></span><br><span class="line">要使用函数式编程，你可以遵循以下几个主要的原则和技术：</span><br><span class="line"></span><br><span class="line">1. 使用纯函数：纯函数是没有副作用的函数，它的输出仅由输入决定，不依赖于外部状态。通过使用纯函数，可以提高代码的可测试性和可维护性。</span><br><span class="line"></span><br><span class="line">2. 不可变数据：函数式编程鼓励使用不可变数据，即数据在创建后不可修改。这样可以避免意外的数据修改和共享数据导致的并发问题。</span><br><span class="line"></span><br><span class="line">3. 高阶函数：高阶函数是指可以接受一个或多个函数作为参数，或者返回一个新函数的函数。通过使用高阶函数，可以实现函数的组合和抽象，提高代码的模块化和复用性。</span><br><span class="line"></span><br><span class="line">4. 递归：函数式编程通常使用递归来实现循环和迭代的效果。递归是一种自我引用的技术，可以遍历和处理数据结构。</span><br><span class="line"></span><br><span class="line">函数式编程有以下几个好处：</span><br><span class="line"></span><br><span class="line">1. 可维护性：函数式编程鼓励使用纯函数和不可变数据，这样可以减少代码的副作用和意外修改，使代码更易于理解和维护。</span><br><span class="line"></span><br><span class="line">2. 可测试性：由于函数式编程重视纯函数，函数的输出仅由输入决定，因此可以更容易地编写和执行单元测试。</span><br><span class="line"></span><br><span class="line">3. 并发和并行性：由于函数式编程避免了共享数据和副作用，因此在并发和并行编程中更容易实现线程安全性。</span><br><span class="line"></span><br><span class="line">4. 可扩展性：函数式编程强调函数的组合和抽象，可以通过将小的函数组合成更大的函数来构建复杂的系统，从而提高代码的可扩展性。</span><br><span class="line"></span><br><span class="line">需要注意的是，函数式编程并不是适用于所有场景的银弹，它在某些问题领域和特定情况下可能比命令式编程更适用。因此，在选择使用函数式编程时，需要根据实际情况做出合适的权衡和决策。</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>diary0407</title>
+    <url>/2024/04/07/diary0407/</url>
+    <content><![CDATA[<p>第三次面腾讯 qq浏览器<br>问了很多计网相关 http协议 tcp&#x2F;udp</p>
+<p>面携程<br>甚至没做题 基础不牢 知道但不深入 建议找一块大部分时间学<br>深入某一个方面 js 其他时间看一看</p>
+<p>面淘天<br>html语义化标签 css </p>
+<p>4&#x2F;10 面美团点评<br>感觉还行 如果不是kpi概率进二面</p>
+<p>事件委托<br>冒泡 捕获<br>css选择器<br>迭代器<br><a href="https://zhuanlan.zhihu.com/p/165948917?utm_id=0">https://zhuanlan.zhihu.com/p/165948917?utm_id=0</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/04/08/js-base-1-t/</url>
+    <content><![CDATA[let a = 'asdsd';
+let b = 'asdsc';
+let c = Symbol(a);
+let d = Symbol(a);
+a = parseInt(a);
+console.log(a);
+console.log(typeof c,d,c===d);
+var arr = [1,2,3,4,5];
+var num = 3;
+arr.some(function(v){
+    if(v == num) {
+        return;  // 
+    }
+    // console.log(v);
+});
+let af = [1,2]
+console.log(typeof af);
+let z = 1;
+let bb = {
+    z: 1,
+}
+let cc = [z,2]
+a = 2
+console.log(bb.z,cc[0]);]]></content>
+  </entry>
+  <entry>
+    <title>note-css-mdn-1</title>
+    <url>/2024/04/24/note-css-mdn-1/</url>
+    <content><![CDATA[<div style="font-family: '楷体', '黑体'; background-color: white;">
+“为天地之无穷兮，哀人生之长勤”
+</div>
+<div style="font-family:'黑体'">
+从今日始，从今日始。
+</div>
+]]></content>
+      <categories>
+        <category>note</category>
+        <category>css</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>note-js-this</title>
+    <url>/2024/03/18/note-js-this/</url>
+    <content><![CDATA[<p>普通函数里的this是调用的对象<br>回调函数里的this undefined，非严格模式下是window，严格模式下是undefined<br>箭头函数 不会创建新的this绑定，直接绑到函数创建时的this上<br>构造函数 this指向新创建的对象</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/04/15/pdd/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/04/07/t/</url>
+    <content><![CDATA[
+<!DOCTYPE html>
+<html>
+<head>
+  <title>导入 JavaScript 文件</title>
+  <script src="test3.js"></script>
+  <style>
+    .container{
+      display: flex;
+      align-items: center;
+    }
+    .img{
+      width: 100px;
+      color: red;
+      background-color: yellow;
+    }
+    .title{
+      flex:1;/*占满剩余空间*/
+      word-wrap: break-word;/*换行*/
+      color: blue;
+      background-color: pink;
+    }
+    .button{
+      white-space: nowrap;/*不换行*/
+      overflow: hidden;/*超出部分隐藏*/
+      width:auto;/*自适应宽度*/
+      color: green;
+      background-color: lightblue;
+    }
+
+  </style>
+</head>
+<body>
+    <div class="container">
+        <img class="img" src="" />
+        <div class="title">标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案文案标题文案标题文案</div>
+        <div class="button">查看详情标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案</div>
+    </div></body>
+</html>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/03/31/tempCodeRunnerFile/</url>
+    <content><![CDATA[let af = [1,2]
+console.log(typeof af);
+let z = 1;
+let bb = {
+    z: 1,
+}
+let cc = [z,2]
+a = 2
+console.log(bb.z,cc[0]);]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/03/30/test/</url>
+    <content><![CDATA[function create(transformers) {
+    return function (template, ...args) {
+        let idx = 0;
+        let state = 'UNDEFINED';
+
+        return template.replace(
+            /([{}])\1|[{](.*?)(?:!(.+?))?[}]/g,
+            function (match, literal, key, xf) {
+                if (literal != null) {
+                    return literal;
+                }
+                if (key.length > 0) {
+                    if (state === 'IMPLICIT') {
+                        throw ValueError('cannot switch from implicit to explicit numbering');
+                    }
+                    state = 'EXPLICIT';
+                } else {
+                    if (state === 'EXPLICIT') {
+                        throw ValueError('cannot switch from explicit to implicit numbering');
+                    }
+                    state = 'IMPLICIT';
+                    key = String(idx);
+                    idx += 1;
+                }
+
+                // 补全代码: 根据占位符的 key 和 args 数组中的值，获取相应的 value
+                // 提示：使用 key 和 args 数组来获取正确的 value
+                let value = args[1];
+                console.log(value)
+                console.log('args',args)
+                return String(value);
+                if (xf == null) {
+                    // 补全代码: 如果没有转换器 xf，返回获取到的 value
+
+                } else if (transformers.hasOwnProperty(xf)) {
+                    // 补全代码: 如果存在名为 xf 的转换器，将其应用于 value，并返回转换后的结果
+                    // 提示：使用 transformers 对象来查找和应用转换器
+
+
+                } else {
+                    throw ValueError(`no transformer named "${xf}"`);
+                }
+            }
+        );
+    };
+}
+function ValueError(message) {
+    var err = new Error(message);
+    err.name = 'ValueError';
+    return err;
+}
+console.log(create({})`{0} {1}!{upper}`('hello', 'world'));]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/04/02/test2/</url>
+    <content><![CDATA[//大数相乘 两个代表非负整数的字符串 返回也是字符串 使用js
+//输入：2342423423424234234234234234242342353454365 * 43543534643345343253464363454235234235345346
+//输出：101997395487256741190161412236975225638701789029942886861208566826758303120581826135290
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+function big_multiply(a, b) {
+
+    const len1 = a.length;
+    const len2 = b.length;
+    //console.log("num1:",a,len1);
+    //console.log("num2:",b, len2);
+    let result = new Array(len1 + len2).fill(0);
+    for(let i = len1-1;i>=0;i--){
+        for(let j = len2- 1;j>=0;j--){
+            let tmp = Number(a[i])*Number(b[j]);
+            //console.log("tmp:",tmp);
+            let sum = tmp+result[i+j+1];
+            result[i+j] += Math.floor(sum/10);
+            result[i+j+1] = sum%10;
+        }
+    }
+    while (result[0] === 0) {
+        result.shift();
+    }
+
+    result = result.join('');
+    //console.log( "correct:",(BigInt(a) * BigInt(b)).toString())
+
+    return result;
+}
+rl.on('line', (line) => {
+    const nums = line.split(' * ');
+    const a = nums[0];
+    const b = nums[1];
+    console.log(big_multiply(a, b));
+    rl.close();
+});
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/04/06/test3/</url>
+    <content><![CDATA[
+//一个flex横向布局，左中右分别为img宽度固定为100px，title可换行布满剩余空间，button宽度不固定不许换行
+<script>
+var container = document.querySelector('.container');
+var img = document.querySelector('.img');
+var title = document.querySelector('.title');
+var button = document.querySelector('.button');
+container.style.display = 'flex';
+container.style.alignItems = 'center';
+img.style.width = '100px';
+title.style.flex = '1';
+title.style.wordWrap = 'break-word';
+button.style.whiteSpace = 'nowrap';
+button.style.overflow = 'hidden';
+button.style.width = 'auto';
+</script>
+
+]]></content>
   </entry>
 </search>

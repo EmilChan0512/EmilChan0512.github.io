@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"emilchan0512.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="面腾讯第二次了。这次是腾讯云。面试内容：1.js基础（数据类型有哪些，闭包） 2.项目里面写的（媒体响应布局&#x3D;&gt;flex了解哪些，如果我要一个盒子左边右边自适应满怎么做） 3.react基础（hooks有哪些，useeffect传了哪些参数，返回值是什么，map有返回值吗） 4.算法题：比较两个对象是否相等，有嵌套字段；将多维数组拍成一维数组，有嵌套[1,2,[3,4],5,[6]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="现在开始当然是最好的时间">
+<meta property="og:url" content="http://emilchan0512.github.io/2024/03/19/diary0319/index.html">
+<meta property="og:site_name" content="Blogs of EmilChan">
+<meta property="og:description" content="面腾讯第二次了。这次是腾讯云。面试内容：1.js基础（数据类型有哪些，闭包） 2.项目里面写的（媒体响应布局&#x3D;&gt;flex了解哪些，如果我要一个盒子左边右边自适应满怎么做） 3.react基础（hooks有哪些，useeffect传了哪些参数，返回值是什么，map有返回值吗） 4.算法题：比较两个对象是否相等，有嵌套字段；将多维数组拍成一维数组，有嵌套[1,2,[3,4],5,[6]">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-03-19T03:29:26.000Z">
+<meta property="article:modified_time" content="2024-04-06T14:24:16.947Z">
+<meta property="article:author" content="Kiwiq">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://emilchan0512.github.io/2024/03/19/diary0319/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>现在开始当然是最好的时间 | Blogs of EmilChan</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Blogs of EmilChan" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Blogs of EmilChan</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/03/19/diary0319/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/frieren-fire.gif">
+      <meta itemprop="name" content="Kiwiq">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs of EmilChan">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          现在开始当然是最好的时间
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-03-19 11:29:26" itemprop="dateCreated datePublished" datetime="2024-03-19T11:29:26+08:00">2024-03-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-04-06 22:24:16" itemprop="dateModified" datetime="2024-04-06T22:24:16+08:00">2024-04-06</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>面腾讯第二次了。<br>这次是腾讯云。<br>面试内容：1.js基础（数据类型有哪些，闭包） 2.项目里面写的（媒体响应布局&#x3D;&gt;flex了解哪些，如果我要一个盒子左边右边自适应满怎么做） 3.react基础（hooks有哪些，useeffect传了哪些参数，返回值是什么，map有返回值吗） 4.算法题：比较两个对象是否相等，有嵌套字段；将多维数组拍成一维数组，有嵌套[1,2,[3,4],5,[6]];<br>反思：1.数据类型没说全，闭包没说全 2.响应布局怎么做要看，flex布局也要看 3.react基础，hooks没说全，useeffect不会，map不知道有没有返回值 4.算法题，如果前面答得好，api不熟没做出来，有个思路也行。<br>总结：1.js书蛮看 2.计网基础要看 跨域，浏览器请求 要理解深点 3.react基础要看文档 4.算法题要多做递归，数组，对象处理 相关API要熟悉</p>
+<hr>
+<p>美团一面 挂<br>问题出在基础，简历上写的东西要有深入了解 react生命周期 this指向生命周期<br>相对定位<br>响应式布局写了就要懂有哪些方法，就算还没实践，知道有哪几种。<br>浏览器存储有哪些。<br>get和post区别，深入，登录怎么做<br>交互体验，你认为好的交互体验<br>css的继承 定位</p>
+<p>简历上有些就要有深入理解，大部分面试官专注于以简历上写的为基础。</p>
+<p>还有就是算法题要专注于题目，别紧张，老是断思路，可以试着写出思路。<br>react的搭建<br>root.render<br>生命周期</p>
+<h3 id="好的"><a href="#好的" class="headerlink" title="好的"></a>好的</h3><p>我现在对于浏览器的运行，输入请求发生了什么，get post的区别有了表层的理解<br>浏览器是一个有很多进程的结构，作为用户代理，包括渲染进程，浏览器进程（用于管理进程，缓存，gpu，网络；<br>html dom css layout 栅格化 gpu</p>
+<p>get和post都是http的东西，http是tcp内的其中一种协议，没有本质区别，通常get用于获取资源，post用于提交资源，get的参数在url上，post的参数在请求体里，get的参数有长度限制，post没有，get的参数会被缓存，post不会，get的参数会被记录在浏览器历史里，post不会，get的参数会被记录在服务器日志里，post不会，get的参数可以被收藏为书签，post不会，get的参数只能进行url编码，post可以用formdata编码，get的参数可以被缓存，post不会，get的参数对于搜索引擎友好</p>
+<h3 id="那么"><a href="#那么" class="headerlink" title="那么"></a>那么</h3><p>浏览器事件循环机制是什么呢？<br>…b站收藏</p>
+<p>响应式布局<br>列表手机端怎么做适应</p>
+<h3 id="呜"><a href="#呜" class="headerlink" title="呜"></a>呜</h3><p>hash history<br>登录<br>cookie session token<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/631349844">https://zhuanlan.zhihu.com/p/631349844</a></p>
+<p>闭包<br>私有变量和函数，避免全局命名冲突 和 变量污染，惰性求值<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/25489604">https://zhuanlan.zhihu.com/p/25489604</a></p>
+<p>如何使用函数式编程<br>函数式编程有什么好处</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">函数式编程是一种编程范式，它将计算视为数学函数的求值过程，并强调使用纯函数（Pure Function）作为构建块来进行程序开发。在函数式编程中，函数被视为一等公民，可以作为参数传递给其他函数，也可以作为返回值。函数式编程强调使用不可变数据和避免副作用，即函数在执行过程中不会修改传入的参数或产生其他可观察的影响。</span><br><span class="line"></span><br><span class="line">要使用函数式编程，你可以遵循以下几个主要的原则和技术：</span><br><span class="line"></span><br><span class="line">1. 使用纯函数：纯函数是没有副作用的函数，它的输出仅由输入决定，不依赖于外部状态。通过使用纯函数，可以提高代码的可测试性和可维护性。</span><br><span class="line"></span><br><span class="line">2. 不可变数据：函数式编程鼓励使用不可变数据，即数据在创建后不可修改。这样可以避免意外的数据修改和共享数据导致的并发问题。</span><br><span class="line"></span><br><span class="line">3. 高阶函数：高阶函数是指可以接受一个或多个函数作为参数，或者返回一个新函数的函数。通过使用高阶函数，可以实现函数的组合和抽象，提高代码的模块化和复用性。</span><br><span class="line"></span><br><span class="line">4. 递归：函数式编程通常使用递归来实现循环和迭代的效果。递归是一种自我引用的技术，可以遍历和处理数据结构。</span><br><span class="line"></span><br><span class="line">函数式编程有以下几个好处：</span><br><span class="line"></span><br><span class="line">1. 可维护性：函数式编程鼓励使用纯函数和不可变数据，这样可以减少代码的副作用和意外修改，使代码更易于理解和维护。</span><br><span class="line"></span><br><span class="line">2. 可测试性：由于函数式编程重视纯函数，函数的输出仅由输入决定，因此可以更容易地编写和执行单元测试。</span><br><span class="line"></span><br><span class="line">3. 并发和并行性：由于函数式编程避免了共享数据和副作用，因此在并发和并行编程中更容易实现线程安全性。</span><br><span class="line"></span><br><span class="line">4. 可扩展性：函数式编程强调函数的组合和抽象，可以通过将小的函数组合成更大的函数来构建复杂的系统，从而提高代码的可扩展性。</span><br><span class="line"></span><br><span class="line">需要注意的是，函数式编程并不是适用于所有场景的银弹，它在某些问题领域和特定情况下可能比命令式编程更适用。因此，在选择使用函数式编程时，需要根据实际情况做出合适的权衡和决策。</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/03/18/note-js-this/" rel="prev" title="note-js-this">
+      <i class="fa fa-chevron-left"></i> note-js-this
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/03/30/test/" rel="next" title="">
+       <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A5%BD%E7%9A%84"><span class="nav-number">1.</span> <span class="nav-text">好的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%82%A3%E4%B9%88"><span class="nav-number">2.</span> <span class="nav-text">那么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%9C"><span class="nav-number">3.</span> <span class="nav-text">呜</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Kiwiq"
+      src="/images/frieren-fire.gif">
+  <p class="site-author-name" itemprop="name">Kiwiq</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/EmilChan0512" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;EmilChan0512" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:1072206654@qq.com" title="E-Mail → mailto:1072206654@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kiwiq</span>
+</div>
+  <div class="powered-by">
+<!--由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动 -->
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+  
+    <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+
+</body>
+</html>

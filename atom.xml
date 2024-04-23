@@ -6,7 +6,7 @@
   <link href="http://emilchan0512.github.io/atom.xml" rel="self"/>
   
   <link href="http://emilchan0512.github.io/"/>
-  <updated>2024-01-24T15:26:24.313Z</updated>
+  <updated>2024-04-23T16:26:33.216Z</updated>
   <id>http://emilchan0512.github.io/</id>
   
   <author>
@@ -15,6 +15,381 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>note-css-mdn-1</title>
+    <link href="http://emilchan0512.github.io/2024/04/24/note-css-mdn-1/"/>
+    <id>http://emilchan0512.github.io/2024/04/24/note-css-mdn-1/</id>
+    <published>2024-04-23T16:11:06.000Z</published>
+    <updated>2024-04-23T16:26:33.216Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;div style=&quot;font-family: &#39;楷体&#39;, &#39;黑体&#39;; background-color: white;&quot;&gt;
+“为天地之无穷兮，哀人生之长勤”
+&lt;/div&gt;
+&lt;div style=&quot;font-family:&#39;黑体&#39;&quot;&gt;
+从今日始，从今日始。
+&lt;/div&gt;
+</summary>
+      
+    
+    
+    
+    <category term="note" scheme="http://emilchan0512.github.io/categories/note/"/>
+    
+    <category term="css" scheme="http://emilchan0512.github.io/categories/note/css/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://emilchan0512.github.io/2024/04/15/pdd/"/>
+    <id>http://emilchan0512.github.io/2024/04/15/pdd/</id>
+    <published>2024-04-15T11:50:54.613Z</published>
+    <updated>2024-04-15T11:50:54.613Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://emilchan0512.github.io/2024/04/08/js-base-1-t/"/>
+    <id>http://emilchan0512.github.io/2024/04/08/js-base-1-t/</id>
+    <published>2024-04-08T08:18:23.917Z</published>
+    <updated>2024-04-22T12:52:32.876Z</updated>
+    
+    
+      
+      
+    <summary type="html">let a = &#39;asdsd&#39;;
+let b = &#39;asdsc&#39;;
+let c = Symbol(a);
+let d = Symbol(a);
+a = parseInt(a);
+console.log(a);
+console.log(typeof c,d,c===d);
+var </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>js-base-1</title>
+    <link href="http://emilchan0512.github.io/2024/04/08/js-base-1/"/>
+    <id>http://emilchan0512.github.io/2024/04/08/js-base-1/</id>
+    <published>2024-04-08T07:59:51.000Z</published>
+    <updated>2024-04-11T09:49:30.318Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;for-each和map&quot;&gt;&lt;a href=&quot;#for-each和map&quot; class=&quot;headerlink&quot; title=&quot;for each和map&quot;&gt;&lt;/a&gt;for each和map&lt;/h2&gt;&lt;p&gt;for each只是遍历，不会返回新数组，对&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>diary0407</title>
+    <link href="http://emilchan0512.github.io/2024/04/07/diary0407/"/>
+    <id>http://emilchan0512.github.io/2024/04/07/diary0407/</id>
+    <published>2024-04-07T15:08:15.000Z</published>
+    <updated>2024-04-22T12:52:32.880Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;第三次面腾讯 qq浏览器&lt;br&gt;问了很多计网相关 http协议 tcp&amp;#x2F;udp&lt;/p&gt;
+&lt;p&gt;面携程&lt;br&gt;甚至没做题 基础不牢 知道但不深入 建议找一块大部分时间学&lt;br&gt;深入某一个方面 js 其他时间看一看&lt;/p&gt;
+&lt;p&gt;面淘天&lt;br&gt;html语义化标签 cs</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://emilchan0512.github.io/2024/04/07/t/"/>
+    <id>http://emilchan0512.github.io/2024/04/07/t/</id>
+    <published>2024-04-07T07:19:23.350Z</published>
+    <updated>2024-04-08T08:17:06.472Z</updated>
+    
+    
+      
+      
+    <summary type="html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;导入 JavaScript 文件&lt;/title&gt;
+  &lt;script src=&quot;test3.js&quot;&gt;&lt;/script&gt;
+  &lt;style&gt;
+    .container{
+      display:</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://emilchan0512.github.io/2024/04/06/test3/"/>
+    <id>http://emilchan0512.github.io/2024/04/06/test3/</id>
+    <published>2024-04-06T14:38:07.140Z</published>
+    <updated>2024-04-08T08:02:37.068Z</updated>
+    
+    
+      
+      
+    <summary type="html">
+//一个flex横向布局，左中右分别为img宽度固定为100px，title可换行布满剩余空间，button宽度不固定不许换行
+&lt;script&gt;
+var container = document.querySelector(&#39;.container&#39;);
+var img = do</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://emilchan0512.github.io/2024/04/02/test2/"/>
+    <id>http://emilchan0512.github.io/2024/04/02/test2/</id>
+    <published>2024-04-02T07:26:09.147Z</published>
+    <updated>2024-04-07T08:26:19.960Z</updated>
+    
+    
+      
+      
+    <summary type="html">//大数相乘 两个代表非负整数的字符串 返回也是字符串 使用js
+//输入：2342423423424234234234234234242342353454365 * 43543534643345343253464363454235234235345346
+//输出：101997</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://emilchan0512.github.io/2024/03/31/tempCodeRunnerFile/"/>
+    <id>http://emilchan0512.github.io/2024/03/31/tempCodeRunnerFile/</id>
+    <published>2024-03-31T13:30:57.993Z</published>
+    <updated>2024-04-22T12:42:27.079Z</updated>
+    
+    
+      
+      
+    <summary type="html">let af = [1,2]
+console.log(typeof af);
+let z = 1;
+let bb = {
+    z: 1,
+}
+let cc = [z,2]
+a = 2
+console.log(bb.z,cc[0]);</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://emilchan0512.github.io/2024/03/30/test/"/>
+    <id>http://emilchan0512.github.io/2024/03/30/test/</id>
+    <published>2024-03-30T13:59:58.247Z</published>
+    <updated>2024-03-31T13:31:53.082Z</updated>
+    
+    
+      
+      
+    <summary type="html">function create(transformers) {
+    return function (template, ...args) {
+        let idx = 0;
+        let state = &#39;UNDEFINED&#39;;
+
+        ret</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>现在开始当然是最好的时间</title>
+    <link href="http://emilchan0512.github.io/2024/03/19/diary0319/"/>
+    <id>http://emilchan0512.github.io/2024/03/19/diary0319/</id>
+    <published>2024-03-19T03:29:26.000Z</published>
+    <updated>2024-04-06T14:24:16.947Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;面腾讯第二次了。&lt;br&gt;这次是腾讯云。&lt;br&gt;面试内容：1.js基础（数据类型有哪些，闭包） 2.项目里面写的（媒体响应布局&amp;#x3D;&amp;gt;flex了解哪些，如果我要一个盒子左边右边自适应满怎么做） 3.react基础（hooks有哪些，useeffect传了哪些参数，</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>note-js-this</title>
+    <link href="http://emilchan0512.github.io/2024/03/18/note-js-this/"/>
+    <id>http://emilchan0512.github.io/2024/03/18/note-js-this/</id>
+    <published>2024-03-18T11:18:24.000Z</published>
+    <updated>2024-03-18T11:25:19.040Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;普通函数里的this是调用的对象&lt;br&gt;回调函数里的this undefined，非严格模式下是window，严格模式下是undefined&lt;br&gt;箭头函数 不会创建新的this绑定，直接绑到函数创建时的this上&lt;br&gt;构造函数 this指向新创建的对象&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>diary0312</title>
+    <link href="http://emilchan0512.github.io/2024/03/12/diary0312/"/>
+    <id>http://emilchan0512.github.io/2024/03/12/diary0312/</id>
+    <published>2024-03-12T10:50:03.000Z</published>
+    <updated>2024-03-12T10:50:49.847Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;一个值得记录的发现。&lt;br&gt;useState的维护挺复杂的。&lt;br&gt;setState并不是立即生效的，而是在下一次渲染时生效。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>diary0309</title>
+    <link href="http://emilchan0512.github.io/2024/03/09/diary0309/"/>
+    <id>http://emilchan0512.github.io/2024/03/09/diary0309/</id>
+    <published>2024-03-09T11:54:17.000Z</published>
+    <updated>2024-03-11T08:48:08.271Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;面经&quot;&gt;&lt;a href=&quot;#面经&quot; class=&quot;headerlink&quot; title=&quot;面经&quot;&gt;&lt;/a&gt;面经&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;进程和线程概念&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;并发和并行&lt;br&gt;并发是指一个处理器同时处理多个任务，而并行是指多个处理</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>diary0307</title>
+    <link href="http://emilchan0512.github.io/2024/03/07/diary0307/"/>
+    <id>http://emilchan0512.github.io/2024/03/07/diary0307/</id>
+    <published>2024-03-07T09:08:37.000Z</published>
+    <updated>2024-04-22T12:52:32.880Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;欠下的牛逼终归要还的。&lt;br&gt;离面试还有四天，让我看看我能不能把这些给整明白。&lt;/p&gt;
+&lt;h2 id=&quot;首先是CSS&quot;&gt;&lt;a href=&quot;#首先是CSS&quot; class=&quot;headerlink&quot; title=&quot;首先是CSS&quot;&gt;&lt;/a&gt;首先是CSS&lt;/h2&gt;&lt;p&gt;Less干了什</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>diary0301</title>
+    <link href="http://emilchan0512.github.io/2024/03/01/diary0301/"/>
+    <id>http://emilchan0512.github.io/2024/03/01/diary0301/</id>
+    <published>2024-03-01T13:18:43.000Z</published>
+    <updated>2024-03-02T14:36:29.325Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;好吧，今天终于把那份很糙的简历都投了下。&lt;br&gt;腾讯美团vivo&lt;/p&gt;
+&lt;h2 id=&quot;JS函数式编程&quot;&gt;&lt;a href=&quot;#JS函数式编程&quot; class=&quot;headerlink&quot; title=&quot;JS函数式编程&quot;&gt;&lt;/a&gt;JS函数式编程&lt;/h2&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>diary0224</title>
+    <link href="http://emilchan0512.github.io/2024/02/24/diary0224/"/>
+    <id>http://emilchan0512.github.io/2024/02/24/diary0224/</id>
+    <published>2024-02-24T13:46:08.000Z</published>
+    <updated>2024-02-26T11:20:26.551Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;谁能想到这个假休得这么长呢？&lt;br&gt;同时它又很短。&lt;br&gt;好吧，不管怎么说，寒假结束了。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>diary0125</title>
+    <link href="http://emilchan0512.github.io/2024/01/25/diary0125/"/>
+    <id>http://emilchan0512.github.io/2024/01/25/diary0125/</id>
+    <published>2024-01-25T13:57:04.000Z</published>
+    <updated>2024-01-25T13:58:54.348Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;完蛋。&lt;br&gt;今天好像啥也没做。&lt;br&gt;我下午做了啥来着？&lt;br&gt;晚上和哈提聊了下简历，受益匪浅。&lt;br&gt;定好接下来计划，然后，&lt;br&gt;休假。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>diary0124</title>
@@ -40,119 +415,6 @@
     <id>http://emilchan0512.github.io/2024/01/24/note-js-async/</id>
     <published>2024-01-24T09:20:13.000Z</published>
     <updated>2024-01-24T09:20:13.808Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>note-js</title>
-    <link href="http://emilchan0512.github.io/2024/01/23/note-js/"/>
-    <id>http://emilchan0512.github.io/2024/01/23/note-js/</id>
-    <published>2024-01-23T14:09:27.000Z</published>
-    <updated>2024-01-24T09:19:07.880Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;不知道怎么起标题了&quot;&gt;&lt;a href=&quot;#不知道怎么起标题了&quot; class=&quot;headerlink&quot; title=&quot;不知道怎么起标题了&quot;&gt;&lt;/a&gt;不知道怎么起标题了&lt;/h2&gt;&lt;p&gt;要肝吐了&lt;/p&gt;
-&lt;h2 id=&quot;Date&quot;&gt;&lt;a href=&quot;#Date&quot; cla</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>note-css-1</title>
-    <link href="http://emilchan0512.github.io/2024/01/23/note-css-1/"/>
-    <id>http://emilchan0512.github.io/2024/01/23/note-css-1/</id>
-    <published>2024-01-23T08:43:51.000Z</published>
-    <updated>2024-01-23T13:57:25.969Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;感觉塞一堆不好看，再起一个页面。&lt;/p&gt;
-&lt;h2 id=&quot;盒模型&quot;&gt;&lt;a href=&quot;#盒模型&quot; class=&quot;headerlink&quot; title=&quot;盒模型&quot;&gt;&lt;/a&gt;盒模型&lt;/h2&gt;&lt;p&gt;有一个boarder画三角形的奇技淫巧&lt;/p&gt;
-&lt;h2 id=&quot;浮动&quot;&gt;&lt;a hre</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>note_css</title>
-    <link href="http://emilchan0512.github.io/2024/01/23/note-css/"/>
-    <id>http://emilchan0512.github.io/2024/01/23/note-css/</id>
-    <published>2024-01-23T07:16:38.000Z</published>
-    <updated>2024-01-23T11:51:30.977Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;闲得慌写点笔记。&lt;/p&gt;
-&lt;h1 id=&quot;CSS：Cascading-Style-Sheet，层叠样式表&quot;&gt;&lt;a href=&quot;#CSS：Cascading-Style-Sheet，层叠样式表&quot; class=&quot;headerlink&quot; title=&quot;CSS：Cascading </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>杂感</title>
-    <link href="http://emilchan0512.github.io/2024/01/23/diary0123/"/>
-    <id>http://emilchan0512.github.io/2024/01/23/diary0123/</id>
-    <published>2024-01-23T06:52:41.000Z</published>
-    <updated>2024-01-23T14:24:38.463Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;
-    没有想到莆田的冬天竟这么冷。
-    大抵是南京呆久了。室内的暖气给了我一种错觉，以为莆田的冬天也不会太冷。直到我裹成粽子在房间里码字。
-    以至于感冒了。三天也不见好。现在脑袋昏昏沉沉，前端的学习也停滞了。话说回来，前端与游戏客户端到底走那条路，我还不甚明晰</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>first publish</title>
-    <link href="http://emilchan0512.github.io/2024/01/22/first-publish/"/>
-    <id>http://emilchan0512.github.io/2024/01/22/first-publish/</id>
-    <published>2024-01-22T14:29:31.000Z</published>
-    <updated>2024-01-22T16:30:14.873Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;my first pub&lt;/strong&gt;&lt;br&gt;let’s do something awsome&lt;/p&gt;
-&lt;p&gt;也许是中文的原因&lt;/p&gt;
-&lt;p&gt;再改改&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://emilchan0512.github.io/2024/01/22/hello-world/"/>
-    <id>http://emilchan0512.github.io/2024/01/22/hello-world/</id>
-    <published>2024-01-22T13:54:31.927Z</published>
-    <updated>2024-01-22T14:53:17.074Z</updated>
     
     
     
