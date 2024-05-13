@@ -6,7 +6,7 @@
   <link href="http://emilchan0512.github.io/atom.xml" rel="self"/>
   
   <link href="http://emilchan0512.github.io/"/>
-  <updated>2024-04-23T16:26:33.216Z</updated>
+  <updated>2024-05-09T14:10:02.904Z</updated>
   <id>http://emilchan0512.github.io/</id>
   
   <author>
@@ -17,11 +17,54 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>todew-demo</title>
+    <link href="http://emilchan0512.github.io/2024/05/09/todew-demo/"/>
+    <id>http://emilchan0512.github.io/2024/05/09/todew-demo/</id>
+    <published>2024-05-09T13:36:32.000Z</published>
+    <updated>2024-05-09T14:10:02.904Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;draggble组件的使用，事件响应&lt;/li&gt;
+&lt;li&gt;ref绑定&lt;/li&gt;
+&lt;li&gt;css伪元素的使用&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://desnlee.com/post/chat-gpt/&quot;&gt;https://desnlee.com/post</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://emilchan0512.github.io/2024/04/28/test4/"/>
+    <id>http://emilchan0512.github.io/2024/04/28/test4/</id>
+    <published>2024-04-28T12:05:53.241Z</published>
+    <updated>2024-04-28T13:32:46.698Z</updated>
+    
+    
+      
+      
+    <summary type="html">function bubbleSort(nums) {
+    if(nums.length&lt;=1)return nums;
+    for (let i = 0; i &lt; nums.length; i++) {
+        for (let j = 0; j &lt; nums.</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>note-css-mdn-1</title>
     <link href="http://emilchan0512.github.io/2024/04/24/note-css-mdn-1/"/>
     <id>http://emilchan0512.github.io/2024/04/24/note-css-mdn-1/</id>
     <published>2024-04-23T16:11:06.000Z</published>
-    <updated>2024-04-23T16:26:33.216Z</updated>
+    <updated>2024-04-24T15:21:12.888Z</updated>
     
     
       
@@ -32,7 +75,8 @@
 &lt;div style=&quot;font-family:&#39;黑体&#39;&quot;&gt;
 从今日始，从今日始。
 &lt;/div&gt;
-</summary>
+
+&lt;b</summary>
       
     
     
@@ -62,19 +106,20 @@
     <link href="http://emilchan0512.github.io/2024/04/08/js-base-1-t/"/>
     <id>http://emilchan0512.github.io/2024/04/08/js-base-1-t/</id>
     <published>2024-04-08T08:18:23.917Z</published>
-    <updated>2024-04-22T12:52:32.876Z</updated>
+    <updated>2024-05-13T11:00:59.661Z</updated>
     
     
       
       
-    <summary type="html">let a = &#39;asdsd&#39;;
-let b = &#39;asdsc&#39;;
-let c = Symbol(a);
-let d = Symbol(a);
-a = parseInt(a);
-console.log(a);
-console.log(typeof c,d,c===d);
-var </summary>
+    <summary type="html">function getThis() {
+  return this;
+}
+
+console.log(Function.prototype);
+console.log(Object.getPrototypeOf(getThis));
+
+let age = 20;
+function</summary>
       
     
     
@@ -87,13 +132,13 @@ var </summary>
     <link href="http://emilchan0512.github.io/2024/04/08/js-base-1/"/>
     <id>http://emilchan0512.github.io/2024/04/08/js-base-1/</id>
     <published>2024-04-08T07:59:51.000Z</published>
-    <updated>2024-04-11T09:49:30.318Z</updated>
+    <updated>2024-05-13T11:58:36.757Z</updated>
     
     
       
       
     <summary type="html">&lt;h2 id=&quot;for-each和map&quot;&gt;&lt;a href=&quot;#for-each和map&quot; class=&quot;headerlink&quot; title=&quot;for each和map&quot;&gt;&lt;/a&gt;for each和map&lt;/h2&gt;&lt;p&gt;for each只是遍历，不会返回新数组，对&lt;/p&gt;
-</summary>
+&lt;h2</summary>
       
     
     
@@ -194,20 +239,20 @@ var img = do</summary>
     <link href="http://emilchan0512.github.io/2024/03/31/tempCodeRunnerFile/"/>
     <id>http://emilchan0512.github.io/2024/03/31/tempCodeRunnerFile/</id>
     <published>2024-03-31T13:30:57.993Z</published>
-    <updated>2024-04-22T12:42:27.079Z</updated>
+    <updated>2024-05-13T11:01:04.165Z</updated>
     
     
       
       
-    <summary type="html">let af = [1,2]
-console.log(typeof af);
-let z = 1;
-let bb = {
-    z: 1,
+    <summary type="html">function getThis() {
+  return this;
 }
-let cc = [z,2]
-a = 2
-console.log(bb.z,cc[0]);</summary>
+
+console.log(Function.prototype);
+console.log(Object.getPrototypeOf(getThis));
+
+let age = 20;
+function</summary>
       
     
     
@@ -385,37 +430,6 @@ console.log(bb.z,cc[0]);</summary>
     <summary type="html">&lt;p&gt;完蛋。&lt;br&gt;今天好像啥也没做。&lt;br&gt;我下午做了啥来着？&lt;br&gt;晚上和哈提聊了下简历，受益匪浅。&lt;br&gt;定好接下来计划，然后，&lt;br&gt;休假。&lt;/p&gt;
 </summary>
       
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>diary0124</title>
-    <link href="http://emilchan0512.github.io/2024/01/24/diary0124/"/>
-    <id>http://emilchan0512.github.io/2024/01/24/diary0124/</id>
-    <published>2024-01-24T15:15:49.000Z</published>
-    <updated>2024-01-24T15:26:24.313Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;学了一下午js。&lt;br&gt;写了一晚上BDA新闻分类。&lt;br&gt;傻逼模型在存储后跑在验证集上准确率只剩0.12。&lt;br&gt;我是在debug三小时后发现这一点的。&lt;br&gt;在此之前我以为只是新数据集的问题。&lt;br&gt;妈的。&lt;br&gt;现在加了随机数种子跑，重跑个逻辑回归，重新训练一下。&lt;br</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>note-js-async</title>
-    <link href="http://emilchan0512.github.io/2024/01/24/note-js-async/"/>
-    <id>http://emilchan0512.github.io/2024/01/24/note-js-async/</id>
-    <published>2024-01-24T09:20:13.000Z</published>
-    <updated>2024-01-24T09:20:13.808Z</updated>
-    
     
     
     

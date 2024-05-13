@@ -159,6 +159,7 @@ IIFE的作用:将全局变量变为局部变量,闭包的作用:将函数内部�
 <h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p>当我们不确定有多少个参数传递的时候，可以用 arguments 来获取。</p>
 <h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p><strong>ES5</strong>：全局作用域的预处理：JS在解析的时候，会把变量的声明（用var声明的）提升到当前作用域的最前面，但是赋值不会提升。<br>只是声明提升，不会提前赋值。<br>函数作用域：函数中，使用 var 关键字声明的变量，会在函数中所有代码执行之前被提前声明。函数中，没有 var 声明的变量都是全局变量，且并不会被提前声明。<br>没有块级作用域：在 ES5 中，没有块级作用域的概念，只有全局作用域和函数作用域。</p>
 <p>…arg  …arr<br>剩余参数  扩展运算符-用来转化为数组到真数组-用来数组赋值而不是浅拷贝-用来合并数组</p>
+<p><a href="https://tech.meituan.com/2018/09/27/fe-security.html">https://tech.meituan.com/2018/09/27/fe-security.html</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -235,6 +236,25 @@ IIFE的作用:将全局变量变为局部变量,闭包的作用:将函数内部�
     <title>js-base-1</title>
     <url>/2024/04/08/js-base-1/</url>
     <content><![CDATA[<h2 id="for-each和map"><a href="#for-each和map" class="headerlink" title="for each和map"></a>for each和map</h2><p>for each只是遍历，不会返回新数组，对</p>
+<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p><a href="https://juejin.cn/post/">https://juejin.cn/post/</a> 复习过一下</p>
+<p>记笔记啊<br>还有继承</p>
+<h2 id="bind-apply-call"><a href="#bind-apply-call" class="headerlink" title="bind apply call"></a>bind apply call</h2><p>bind返回一个函数，apply和call立即执行<br>，apply和call的区别是参数的传递方式不同，apply是数组，call是逗号分隔的参数</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params">a, b</span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>, a, b);</span><br><span class="line">&#125;</span><br><span class="line">fn.<span class="title function_">call</span>(&#123;<span class="attr">x</span>: <span class="number">100</span>&#125;, <span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">fn.<span class="title function_">apply</span>(&#123;<span class="attr">x</span>: <span class="number">100</span>&#125;, [<span class="number">1</span>, <span class="number">2</span>]);</span><br><span class="line">fn.<span class="title function_">bind</span>(&#123;<span class="attr">x</span>: <span class="number">100</span>&#125;)(<span class="number">1</span>, <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><p>this是函数运行时自动生成的一个对象，指向函数的调用者</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">fn</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">a</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.<span class="title function_">fn</span>();</span><br></pre></td></tr></table></figure>
+
+<h3 id="this的指向"><a href="#this的指向" class="headerlink" title="this的指向"></a>this的指向</h3><p>举例</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">fn</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">a</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> fn = obj.<span class="property">fn</span>;</span><br><span class="line"><span class="title function_">fn</span>();</span><br></pre></td></tr></table></figure>
+<p>this指向全局对象，因为fn是全局函数</p>
+<h3 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="string">&#x27;use strict&#x27;</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>();</span><br></pre></td></tr></table></figure>
+<p>严格模式下this指向undefined</p>
+<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Fn</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">a</span> = <span class="number">1</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> <span class="title class_">Fn</span>();</span><br></pre></td></tr></table></figure>
+<p>this指向实例对象</p>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">fn</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">a</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.<span class="title function_">fn</span>();</span><br></pre></td></tr></table></figure>
+<p>this指向全局对象，为什么</p>
+<h3 id="call-apply-bind"><a href="#call-apply-bind" class="headerlink" title="call apply bind"></a>call apply bind</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">fn</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">a</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj2 = &#123;</span><br><span class="line">    <span class="attr">a</span>: <span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line">obj.<span class="property">fn</span>.<span class="title function_">call</span>(obj2);</span><br><span class="line">obj.<span class="property">fn</span>.<span class="title function_">apply</span>(obj2);</span><br><span class="line">obj.<span class="property">fn</span>.<span class="title function_">bind</span>(obj2)();</span><br></pre></td></tr></table></figure>
+<p>call apply bind可以改变this的指向</p>
 ]]></content>
   </entry>
   <entry>
@@ -267,7 +287,45 @@ IIFE的作用:将全局变量变为局部变量,闭包的作用:将函数内部�
   <entry>
     <title></title>
     <url>/2024/04/08/js-base-1-t/</url>
-    <content><![CDATA[let a = 'asdsd';
+    <content><![CDATA[function getThis() {
+  return this;
+}
+
+console.log(Function.prototype);
+console.log(Object.getPrototypeOf(getThis));
+
+let age = 20;
+function person(name,age) {
+    this.name = name;
+    this.age = age;
+    this.say = function() {
+        console.log(this.name + this.age);
+    }
+
+}
+console.log(person.prototype);
+person.prototype.do = function() {
+    console.log("i do");
+}
+let p1 = new person('zhangsan', 20);
+p1.do();
+let pison = {
+    age: 40,
+    name: 'zhangsi',
+    Bge: 50,
+    bge: age,
+    say: function() {
+        console.log(this.name + this.bge);
+    }
+}
+console.log(this);
+console.log(pison);
+p1.say();
+pison.say();
+
+
+
+let a = 'asdsd';
 let b = 'asdsc';
 let c = Symbol(a);
 let d = Symbol(a);
@@ -290,7 +348,78 @@ let bb = {
 }
 let cc = [z,2]
 a = 2
-console.log(bb.z,cc[0]);]]></content>
+console.log(bb.z,cc[0]);
+
+function exampleFunction2(){
+var x = "declared outside function";
+return x;
+}
+exampleFunction();
+
+function exampleFunction() {
+  console.log("Inside function");
+  console.log(x);
+}
+
+console.log("Outside function");
+console.log(x);
+
+
+// foreach
+var arr_ref = [{a:1},{b:2},{c:3}];
+arr_ref.forEach(function(v){
+    console.log(v);
+    v["a"] = v["a"]+1;
+});
+console.log(arr_ref);
+var arr_base = [1,2,3,4,5];
+arr_base.forEach(function(v){
+    console.log(v);
+    v = v+1;
+    return v;
+});
+console.log(arr_base);
+
+//浅拷贝
+let arr_shallow = [1,2,3,4,5];
+let arr_shallow_copy = arr_shallow.reverse();
+console.log(arr_shallow);
+arr_shallow_copy[0] = 100;
+console.log(arr_shallow);
+// reverse返回引用 slice返回新对象
+//https://zhuanlan.zhihu.com/p/503311780
+
+console.log(typeof function(){} );
+console.log(typeof [1,2] );
+
+let count_global = 0;
+function createCounter() {
+    let count = 0;
+  
+    return {
+      increment: function() {
+        count++;
+        count_global++;
+      },
+      decrement: function() {
+        count--;
+      },
+      getCount: function() {
+        return [count,count_global];
+      }
+    };
+  }
+  
+  const counter = createCounter();
+  const counter2 = createCounter();
+  counter.increment();
+  counter.increment();
+  console.log(counter.getCount()); 
+  counter2.increment();
+  counter2.increment();
+
+
+    console.log(counter2.getCount());]]></content>
   </entry>
   <entry>
     <title>note-css-mdn-1</title>
@@ -301,6 +430,19 @@ console.log(bb.z,cc[0]);]]></content>
 <div style="font-family:'黑体'">
 从今日始，从今日始。
 </div>
+
+<blockquote>
+<p>html开发者工具文档<a href="https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#html_tree">firefox</a></p>
+</blockquote>
+<h2 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h2><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">box-sizing</span>: content-box | border-box | inherit;</span><br><span class="line"><span class="attribute">display</span>: block | inline | inline-block | none;</span><br></pre></td></tr></table></figure>
+<h2 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h2><h3 id="响应式图片"><a href="#响应式图片" class="headerlink" title="响应式图片"></a>响应式图片</h3><blockquote>
+<p>max-width:100% 相对父元素宽度</p>
+</blockquote>
+<h2 id="流布局"><a href="#流布局" class="headerlink" title="流布局"></a>流布局</h2><p>flex的属性</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">flex-direction</span>: row | row-reverse | column | column-reverse;</span><br><span class="line"><span class="attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse;</span><br><span class="line"><span class="attribute">flex-flow</span>: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;</span><br><span class="line"><span class="attribute">justify-content</span>: flex-start | flex-end | center | space-between | </span><br><span class="line">space-around;</span><br><span class="line"><span class="comment">/* justify-content 控制 flex 项在主轴（横轴）上的位置。 */</span></span><br><span class="line"><span class="attribute">align-items</span>: flex-start | flex-end | center | baseline | stretch;</span><br><span class="line"><span class="comment">/* align-items 控制 flex 项在交叉轴（竖轴）上的位置。 */</span></span><br><span class="line"><span class="attribute">align-content</span>: flex-start | flex-end | center | space-between | </span><br><span class="line">space-around | stretch;</span><br><span class="line"><span class="attribute">flex-grow</span>: &lt;number&gt;; <span class="comment">/* default 0 */</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>flex游戏：<a href="https://flexboxfroggy.com/">https://flexboxfroggy.com/</a><br><a href="https://blog.csdn.net/cc18868876837/article/details/88138057">https://blog.csdn.net/cc18868876837/article/details/88138057</a> 看结论：就是align-content基本单位是子项构成的行，有space-between和space-around</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>note</category>
@@ -364,15 +506,28 @@ console.log(bb.z,cc[0]);]]></content>
   <entry>
     <title></title>
     <url>/2024/03/31/tempCodeRunnerFile/</url>
-    <content><![CDATA[let af = [1,2]
-console.log(typeof af);
-let z = 1;
-let bb = {
-    z: 1,
+    <content><![CDATA[function getThis() {
+  return this;
 }
-let cc = [z,2]
-a = 2
-console.log(bb.z,cc[0]);]]></content>
+
+console.log(Function.prototype);
+console.log(Object.getPrototypeOf(getThis));
+
+let age = 20;
+function person(name,age) {
+    this.name = name;
+    this.age = age;
+    this.say = function() {
+        console.log(this.name + this.age);
+    }
+
+}
+console.log(person.prototype);
+person.prototype.do = function() {
+    console.log("i do");
+}
+let p1 = new person('zhangsan', 20);
+p1.do();]]></content>
   </entry>
   <entry>
     <title></title>
@@ -497,6 +652,58 @@ button.style.overflow = 'hidden';
 button.style.width = 'auto';
 </script>
 
+]]></content>
+  </entry>
+  <entry>
+    <title>todew-demo</title>
+    <url>/2024/05/09/todew-demo/</url>
+    <content><![CDATA[<ol>
+<li>draggble组件的使用，事件响应</li>
+<li>ref绑定</li>
+<li>css伪元素的使用</li>
+<li><a href="https://desnlee.com/post/chat-gpt/">https://desnlee.com/post/chat-gpt/</a></li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/04/28/test4/</url>
+    <content><![CDATA[function bubbleSort(nums) {
+    if(nums.length<=1)return nums;
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = 0; j < nums.length - 1; j++) {
+            if (nums[j] > nums[j + 1]) {
+                let tmp = nums[j];
+                let tmp2 = nums[j + 1];
+                nums = nums.slice()
+                nums[j] = tmp2;
+                nums[j + 1] = tmp;
+            }
+        }
+    }
+    return nums;
+}
+
+function qsort(nums){
+    if(nums.length<=1)return nums;
+    let mid_index = Math.floor(nums.length/2)
+    let mid = nums.splice(mid_index,1)[0];
+    let left = [];
+    let right = [];
+    
+    for(let i = 0;i<nums.length;i++){
+        if(nums[i]<=mid){
+            left.push(nums[i]);
+        }else{
+            right.push(nums[i])
+        }
+    }
+    return qsort(left).concat(mid,qsort(right));
+}
+console.log(qsort([2,1,3,22,4]));
+console.log([1,2,3].splice(1, 1)[0]);
+
+console.log(bubbleSort([1,2,5,2,6]))
 ]]></content>
   </entry>
 </search>

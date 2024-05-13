@@ -186,6 +186,234 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/03/31/tempCodeRunnerFile/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/frieren-fire.gif">
+      <meta itemprop="name" content="Kiwiq">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs of EmilChan">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/03/31/tempCodeRunnerFile/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-03-31 21:30:57" itemprop="dateCreated datePublished" datetime="2024-03-31T21:30:57+08:00">2024-03-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-05-13 19:01:04" itemprop="dateModified" datetime="2024-05-13T19:01:04+08:00">2024-05-13</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span></span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>NaN:aN</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          function getThis() {
+  return this;
+}
+
+console.log(Function.prototype);
+console.log(Object.getPrototypeOf(getThis));
+
+let age = 20;
+function person(name,age) {
+    this.name = name;
+    this.age = age;
+    this.say = function() {
+        console.log(this.name + this.age);
+    }
+
+}
+console.log(person.prototype);
+person.prototype.do = function() {
+    console.log("i do");
+}
+let p1 = new person('zhangsan', 20);
+p1.do();
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/03/30/test/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/frieren-fire.gif">
+      <meta itemprop="name" content="Kiwiq">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs of EmilChan">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/03/30/test/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-03-30 21:59:58" itemprop="dateCreated datePublished" datetime="2024-03-30T21:59:58+08:00">2024-03-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-03-31 21:31:53" itemprop="dateModified" datetime="2024-03-31T21:31:53+08:00">2024-03-31</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span></span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>NaN:aN</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          function create(transformers) {
+    return function (template, ...args) {
+        let idx = 0;
+        let state = 'UNDEFINED';
+
+        return template.replace(
+            /([{}])\1|[{](.*?)(?:!(.+?))?[}]/g,
+            function (match, literal, key, xf) {
+                if (literal != null) {
+                    return literal;
+                }
+                if (key.length > 0) {
+                    if (state === 'IMPLICIT') {
+                        throw ValueError('cannot switch from implicit to explicit numbering');
+                    }
+                    state = 'EXPLICIT';
+                } else {
+                    if (state === 'EXPLICIT') {
+                        throw ValueError('cannot switch from explicit to implicit numbering');
+                    }
+                    state = 'IMPLICIT';
+                    key = String(idx);
+                    idx += 1;
+                }
+
+                // 补全代码: 根据占位符的 key 和 args 数组中的值，获取相应的 value
+                // 提示：使用 key 和 args 数组来获取正确的 value
+                let value = args[1];
+                console.log(value)
+                console.log('args',args)
+                return String(value);
+                if (xf == null) {
+                    // 补全代码: 如果没有转换器 xf，返回获取到的 value
+
+                } else if (transformers.hasOwnProperty(xf)) {
+                    // 补全代码: 如果存在名为 xf 的转换器，将其应用于 value，并返回转换后的结果
+                    // 提示：使用 transformers 对象来查找和应用转换器
+
+
+                } else {
+                    throw ValueError(`no transformer named "${xf}"`);
+                }
+            }
+        );
+    };
+}
+function ValueError(message) {
+    var err = new Error(message);
+    err.name = 'ValueError';
+    return err;
+}
+console.log(create({})`{0} {1}!{upper}`('hello', 'world'));
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/03/19/diary0319/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -830,150 +1058,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/01/24/diary0124/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/frieren-fire.gif">
-      <meta itemprop="name" content="Kiwiq">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blogs of EmilChan">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/01/24/diary0124/" class="post-title-link" itemprop="url">diary0124</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-01-24 23:15:49 / 修改时间：23:26:24" itemprop="dateCreated datePublished" datetime="2024-01-24T23:15:49+08:00">2024-01-24</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>136</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>学了一下午js。<br>写了一晚上BDA新闻分类。<br>傻逼模型在存储后跑在验证集上准确率只剩0.12。<br>我是在debug三小时后发现这一点的。<br>在此之前我以为只是新数据集的问题。<br>妈的。<br>现在加了随机数种子跑，重跑个逻辑回归，重新训练一下。<br>其实我一点原理都不懂。模模糊糊有个概念。<br>真尼玛折磨。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/01/24/note-js-async/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/frieren-fire.gif">
-      <meta itemprop="name" content="Kiwiq">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blogs of EmilChan">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/01/24/note-js-async/" class="post-title-link" itemprop="url">note-js-async</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-01-24 17:20:13" itemprop="dateCreated datePublished" datetime="2024-01-24T17:20:13+08:00">2024-01-24</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>0</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1045,7 +1129,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">28</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

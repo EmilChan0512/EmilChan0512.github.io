@@ -186,6 +186,192 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/05/09/todew-demo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/frieren-fire.gif">
+      <meta itemprop="name" content="Kiwiq">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs of EmilChan">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/05/09/todew-demo/" class="post-title-link" itemprop="url">todew-demo</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-05-09 21:36:32 / 修改时间：22:10:02" itemprop="dateCreated datePublished" datetime="2024-05-09T21:36:32+08:00">2024-05-09</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>66</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>draggble组件的使用，事件响应</li>
+<li>ref绑定</li>
+<li>css伪元素的使用</li>
+<li><a target="_blank" rel="noopener" href="https://desnlee.com/post/chat-gpt/">https://desnlee.com/post/chat-gpt/</a></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/04/28/test4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/frieren-fire.gif">
+      <meta itemprop="name" content="Kiwiq">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs of EmilChan">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/28/test4/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-04-28 20:05:53 / 修改时间：21:32:46" itemprop="dateCreated datePublished" datetime="2024-04-28T20:05:53+08:00">2024-04-28</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span></span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>NaN:aN</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          function bubbleSort(nums) {
+    if(nums.length<=1)return nums;
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = 0; j < nums.length - 1; j++) {
+            if (nums[j] > nums[j + 1]) {
+                let tmp = nums[j];
+                let tmp2 = nums[j + 1];
+                nums = nums.slice()
+                nums[j] = tmp2;
+                nums[j + 1] = tmp;
+            }
+        }
+    }
+    return nums;
+}
+
+function qsort(nums){
+    if(nums.length<=1)return nums;
+    let mid_index = Math.floor(nums.length/2)
+    let mid = nums.splice(mid_index,1)[0];
+    let left = [];
+    let right = [];
+    
+    for(let i = 0;i<nums.length;i++){
+        if(nums[i]<=mid){
+            left.push(nums[i]);
+        }else{
+            right.push(nums[i])
+        }
+    }
+    return qsort(left).concat(mid,qsort(right));
+}
+console.log(qsort([2,1,3,22,4]));
+console.log([1,2,3].splice(1, 1)[0]);
+
+console.log(bubbleSort([1,2,5,2,6]))
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/04/24/note-css-mdn-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -211,7 +397,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-04-24 00:11:06 / 修改时间：00:26:33" itemprop="dateCreated datePublished" datetime="2024-04-24T00:11:06+08:00">2024-04-24</time>
+              <time title="创建时间：2024-04-24 00:11:06 / 修改时间：23:21:12" itemprop="dateCreated datePublished" datetime="2024-04-24T00:11:06+08:00">2024-04-24</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -233,7 +419,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>26</span>
+              <span>787</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -258,6 +444,19 @@
 <div style="font-family:'黑体'">
 从今日始，从今日始。
 </div>
+
+<blockquote>
+<p>html开发者工具文档<a target="_blank" rel="noopener" href="https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#html_tree">firefox</a></p>
+</blockquote>
+<h2 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">box-sizing</span>: content-box | border-box | inherit;</span><br><span class="line"><span class="attribute">display</span>: block | inline | inline-block | none;</span><br></pre></td></tr></table></figure>
+<h2 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h2><h3 id="响应式图片"><a href="#响应式图片" class="headerlink" title="响应式图片"></a>响应式图片</h3><blockquote>
+<p>max-width:100% 相对父元素宽度</p>
+</blockquote>
+<h2 id="流布局"><a href="#流布局" class="headerlink" title="流布局"></a>流布局</h2><p>flex的属性</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flex-direction</span>: row | row-reverse | column | column-reverse;</span><br><span class="line"><span class="attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse;</span><br><span class="line"><span class="attribute">flex-flow</span>: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;</span><br><span class="line"><span class="attribute">justify-content</span>: flex-start | flex-end | center | space-between | </span><br><span class="line">space-around;</span><br><span class="line"><span class="comment">/* justify-content 控制 flex 项在主轴（横轴）上的位置。 */</span></span><br><span class="line"><span class="attribute">align-items</span>: flex-start | flex-end | center | baseline | stretch;</span><br><span class="line"><span class="comment">/* align-items 控制 flex 项在交叉轴（竖轴）上的位置。 */</span></span><br><span class="line"><span class="attribute">align-content</span>: flex-start | flex-end | center | space-between | </span><br><span class="line">space-around | stretch;</span><br><span class="line"><span class="attribute">flex-grow</span>: &lt;number&gt;; <span class="comment">/* default 0 */</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>flex游戏：<a target="_blank" rel="noopener" href="https://flexboxfroggy.com/">https://flexboxfroggy.com/</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/cc18868876837/article/details/88138057">https://blog.csdn.net/cc18868876837/article/details/88138057</a> 看结论：就是align-content基本单位是子项构成的行，有space-between和space-around</p>
+</blockquote>
 
       
     </div>
@@ -379,7 +578,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-22 20:52:32" itemprop="dateModified" datetime="2024-04-22T20:52:32+08:00">2024-04-22</time>
+                <time title="修改时间：2024-05-13 19:00:59" itemprop="dateModified" datetime="2024-05-13T19:00:59+08:00">2024-05-13</time>
               </span>
 
           <br>
@@ -407,7 +606,45 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          let a = 'asdsd';
+          function getThis() {
+  return this;
+}
+
+console.log(Function.prototype);
+console.log(Object.getPrototypeOf(getThis));
+
+let age = 20;
+function person(name,age) {
+    this.name = name;
+    this.age = age;
+    this.say = function() {
+        console.log(this.name + this.age);
+    }
+
+}
+console.log(person.prototype);
+person.prototype.do = function() {
+    console.log("i do");
+}
+let p1 = new person('zhangsan', 20);
+p1.do();
+let pison = {
+    age: 40,
+    name: 'zhangsi',
+    Bge: 50,
+    bge: age,
+    say: function() {
+        console.log(this.name + this.bge);
+    }
+}
+console.log(this);
+console.log(pison);
+p1.say();
+pison.say();
+
+
+
+let a = 'asdsd';
 let b = 'asdsc';
 let c = Symbol(a);
 let d = Symbol(a);
@@ -431,6 +668,77 @@ let bb = {
 let cc = [z,2]
 a = 2
 console.log(bb.z,cc[0]);
+
+function exampleFunction2(){
+var x = "declared outside function";
+return x;
+}
+exampleFunction();
+
+function exampleFunction() {
+  console.log("Inside function");
+  console.log(x);
+}
+
+console.log("Outside function");
+console.log(x);
+
+
+// foreach
+var arr_ref = [{a:1},{b:2},{c:3}];
+arr_ref.forEach(function(v){
+    console.log(v);
+    v["a"] = v["a"]+1;
+});
+console.log(arr_ref);
+var arr_base = [1,2,3,4,5];
+arr_base.forEach(function(v){
+    console.log(v);
+    v = v+1;
+    return v;
+});
+console.log(arr_base);
+
+//浅拷贝
+let arr_shallow = [1,2,3,4,5];
+let arr_shallow_copy = arr_shallow.reverse();
+console.log(arr_shallow);
+arr_shallow_copy[0] = 100;
+console.log(arr_shallow);
+// reverse返回引用 slice返回新对象
+//https://zhuanlan.zhihu.com/p/503311780
+
+console.log(typeof function(){} );
+console.log(typeof [1,2] );
+
+let count_global = 0;
+function createCounter() {
+    let count = 0;
+  
+    return {
+      increment: function() {
+        count++;
+        count_global++;
+      },
+      decrement: function() {
+        count--;
+      },
+      getCount: function() {
+        return [count,count_global];
+      }
+    };
+  }
+  
+  const counter = createCounter();
+  const counter2 = createCounter();
+  counter.increment();
+  counter.increment();
+  console.log(counter.getCount()); 
+  counter2.increment();
+  counter2.increment();
+
+
+    console.log(counter2.getCount());
       
     </div>
 
@@ -480,7 +788,7 @@ console.log(bb.z,cc[0]);
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-11 17:49:30" itemprop="dateModified" datetime="2024-04-11T17:49:30+08:00">2024-04-11</time>
+                <time title="修改时间：2024-05-13 19:58:36" itemprop="dateModified" datetime="2024-05-13T19:58:36+08:00">2024-05-13</time>
               </span>
 
           <br>
@@ -489,14 +797,14 @@ console.log(bb.z,cc[0]);
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>32</span>
+              <span>1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -509,6 +817,25 @@ console.log(bb.z,cc[0]);
 
       
           <h2 id="for-each和map"><a href="#for-each和map" class="headerlink" title="for each和map"></a>for each和map</h2><p>for each只是遍历，不会返回新数组，对</p>
+<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/">https://juejin.cn/post/</a> 复习过一下</p>
+<p>记笔记啊<br>还有继承</p>
+<h2 id="bind-apply-call"><a href="#bind-apply-call" class="headerlink" title="bind apply call"></a>bind apply call</h2><p>bind返回一个函数，apply和call立即执行<br>，apply和call的区别是参数的传递方式不同，apply是数组，call是逗号分隔的参数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params">a, b</span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>, a, b);</span><br><span class="line">&#125;</span><br><span class="line">fn.<span class="title function_">call</span>(&#123;<span class="attr">x</span>: <span class="number">100</span>&#125;, <span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">fn.<span class="title function_">apply</span>(&#123;<span class="attr">x</span>: <span class="number">100</span>&#125;, [<span class="number">1</span>, <span class="number">2</span>]);</span><br><span class="line">fn.<span class="title function_">bind</span>(&#123;<span class="attr">x</span>: <span class="number">100</span>&#125;)(<span class="number">1</span>, <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><p>this是函数运行时自动生成的一个对象，指向函数的调用者</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">fn</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">a</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.<span class="title function_">fn</span>();</span><br></pre></td></tr></table></figure>
+
+<h3 id="this的指向"><a href="#this的指向" class="headerlink" title="this的指向"></a>this的指向</h3><p>举例</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">fn</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">a</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> fn = obj.<span class="property">fn</span>;</span><br><span class="line"><span class="title function_">fn</span>();</span><br></pre></td></tr></table></figure>
+<p>this指向全局对象，因为fn是全局函数</p>
+<h3 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fn</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="string">&#x27;use strict&#x27;</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fn</span>();</span><br></pre></td></tr></table></figure>
+<p>严格模式下this指向undefined</p>
+<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Fn</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">a</span> = <span class="number">1</span>;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> <span class="title class_">Fn</span>();</span><br></pre></td></tr></table></figure>
+<p>this指向实例对象</p>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">fn</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">a</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.<span class="title function_">fn</span>();</span><br></pre></td></tr></table></figure>
+<p>this指向全局对象，为什么</p>
+<h3 id="call-apply-bind"><a href="#call-apply-bind" class="headerlink" title="call apply bind"></a>call apply bind</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">fn</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">a</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj2 = &#123;</span><br><span class="line">    <span class="attr">a</span>: <span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line">obj.<span class="property">fn</span>.<span class="title function_">call</span>(obj2);</span><br><span class="line">obj.<span class="property">fn</span>.<span class="title function_">apply</span>(obj2);</span><br><span class="line">obj.<span class="property">fn</span>.<span class="title function_">bind</span>(obj2)();</span><br></pre></td></tr></table></figure>
+<p>call apply bind可以改变this的指向</p>
 
       
     </div>
@@ -938,221 +1265,6 @@ rl.on('line', (line) => {
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/03/31/tempCodeRunnerFile/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/frieren-fire.gif">
-      <meta itemprop="name" content="Kiwiq">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blogs of EmilChan">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/03/31/tempCodeRunnerFile/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-03-31 21:30:57" itemprop="dateCreated datePublished" datetime="2024-03-31T21:30:57+08:00">2024-03-31</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-22 20:42:27" itemprop="dateModified" datetime="2024-04-22T20:42:27+08:00">2024-04-22</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span></span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>NaN:aN</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          let af = [1,2]
-console.log(typeof af);
-let z = 1;
-let bb = {
-    z: 1,
-}
-let cc = [z,2]
-a = 2
-console.log(bb.z,cc[0]);
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/03/30/test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/frieren-fire.gif">
-      <meta itemprop="name" content="Kiwiq">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blogs of EmilChan">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/03/30/test/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-03-30 21:59:58" itemprop="dateCreated datePublished" datetime="2024-03-30T21:59:58+08:00">2024-03-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-03-31 21:31:53" itemprop="dateModified" datetime="2024-03-31T21:31:53+08:00">2024-03-31</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span></span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>NaN:aN</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          function create(transformers) {
-    return function (template, ...args) {
-        let idx = 0;
-        let state = 'UNDEFINED';
-
-        return template.replace(
-            /([{}])\1|[{](.*?)(?:!(.+?))?[}]/g,
-            function (match, literal, key, xf) {
-                if (literal != null) {
-                    return literal;
-                }
-                if (key.length > 0) {
-                    if (state === 'IMPLICIT') {
-                        throw ValueError('cannot switch from implicit to explicit numbering');
-                    }
-                    state = 'EXPLICIT';
-                } else {
-                    if (state === 'EXPLICIT') {
-                        throw ValueError('cannot switch from explicit to implicit numbering');
-                    }
-                    state = 'IMPLICIT';
-                    key = String(idx);
-                    idx += 1;
-                }
-
-                // 补全代码: 根据占位符的 key 和 args 数组中的值，获取相应的 value
-                // 提示：使用 key 和 args 数组来获取正确的 value
-                let value = args[1];
-                console.log(value)
-                console.log('args',args)
-                return String(value);
-                if (xf == null) {
-                    // 补全代码: 如果没有转换器 xf，返回获取到的 value
-
-                } else if (transformers.hasOwnProperty(xf)) {
-                    // 补全代码: 如果存在名为 xf 的转换器，将其应用于 value，并返回转换后的结果
-                    // 提示：使用 transformers 对象来查找和应用转换器
-
-
-                } else {
-                    throw ValueError(`no transformer named "${xf}"`);
-                }
-            }
-        );
-    };
-}
-function ValueError(message) {
-    var err = new Error(message);
-    err.name = 'ValueError';
-    return err;
-}
-console.log(create({})`{0} {1}!{upper}`('hello', 'world'));
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1224,7 +1336,7 @@ console.log(create({})`{0} {1}!{upper}`('hello', 'world'));
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">28</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
