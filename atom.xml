@@ -6,7 +6,7 @@
   <link href="http://emilchan0512.github.io/atom.xml" rel="self"/>
   
   <link href="http://emilchan0512.github.io/"/>
-  <updated>2024-05-17T08:49:47.889Z</updated>
+  <updated>2024-05-17T13:56:58.423Z</updated>
   <id>http://emilchan0512.github.io/</id>
   
   <author>
@@ -17,23 +17,48 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>js-rushing-for-honor</title>
+    <link href="http://emilchan0512.github.io/2024/05/17/js-rushing-for-honor/"/>
+    <id>http://emilchan0512.github.io/2024/05/17/js-rushing-for-honor/</id>
+    <published>2024-05-17T12:11:50.000Z</published>
+    <updated>2024-05-17T13:56:58.423Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;要准备的&quot;&gt;&lt;a href=&quot;#要准备的&quot; class=&quot;headerlink&quot; title=&quot;要准备的&quot;&gt;&lt;/a&gt;要准备的&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 闭包&lt;/li&gt;
+&lt;li&gt;&lt;input d</summary>
+      
+    
+    
+    
+    <category term="note" scheme="http://emilchan0512.github.io/categories/note/"/>
+    
+    <category term="js" scheme="http://emilchan0512.github.io/categories/note/js/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title></title>
     <link href="http://emilchan0512.github.io/2024/05/17/js-this-1/"/>
     <id>http://emilchan0512.github.io/2024/05/17/js-this-1/</id>
     <published>2024-05-17T08:45:46.524Z</published>
-    <updated>2024-05-17T08:49:47.889Z</updated>
+    <updated>2024-05-17T10:26:43.711Z</updated>
     
     
       
       
     <summary type="html">var a = 2;
-globalThis.a = 3; 
-function tthis(a){
+globalThis.a = 3;
+function tthis(a) {
     console.log(this.a);
-    console.log(&quot;my a == &quot;,a)
+    console.log(&quot;my a == &quot;, a)
+    return a * a;
 }
-tthis(1);
-Object.prototype.tthis =</summary>
+this.a = 5;
+// </summary>
       
     
     
@@ -89,7 +114,7 @@ Object.prototype.tthis =</summary>
     <link href="http://emilchan0512.github.io/2024/04/24/note-css-mdn-1/"/>
     <id>http://emilchan0512.github.io/2024/04/24/note-css-mdn-1/</id>
     <published>2024-04-23T16:11:06.000Z</published>
-    <updated>2024-04-24T15:21:12.888Z</updated>
+    <updated>2024-05-17T11:55:31.445Z</updated>
     
     
       
@@ -131,7 +156,7 @@ Object.prototype.tthis =</summary>
     <link href="http://emilchan0512.github.io/2024/04/08/js-base-1-t/"/>
     <id>http://emilchan0512.github.io/2024/04/08/js-base-1-t/</id>
     <published>2024-04-08T08:18:23.917Z</published>
-    <updated>2024-05-13T11:00:59.661Z</updated>
+    <updated>2024-05-17T12:10:50.563Z</updated>
     
     
       
@@ -157,7 +182,7 @@ function</summary>
     <link href="http://emilchan0512.github.io/2024/04/08/js-base-1/"/>
     <id>http://emilchan0512.github.io/2024/04/08/js-base-1/</id>
     <published>2024-04-08T07:59:51.000Z</published>
-    <updated>2024-05-13T13:21:36.560Z</updated>
+    <updated>2024-05-17T12:10:52.069Z</updated>
     
     
       
@@ -167,6 +192,10 @@ function</summary>
       
     
     
+    
+    <category term="note" scheme="http://emilchan0512.github.io/categories/note/"/>
+    
+    <category term="js" scheme="http://emilchan0512.github.io/categories/note/js/"/>
     
     
   </entry>
@@ -264,18 +293,20 @@ var img = do</summary>
     <link href="http://emilchan0512.github.io/2024/03/31/tempCodeRunnerFile/"/>
     <id>http://emilchan0512.github.io/2024/03/31/tempCodeRunnerFile/</id>
     <published>2024-03-31T13:30:57.993Z</published>
-    <updated>2024-05-17T08:48:43.683Z</updated>
+    <updated>2024-05-17T12:10:36.790Z</updated>
     
     
       
       
-    <summary type="html">function tthis(a){
-    console.log(this.a);
-    console.log(&quot;my a == &quot;,a)
-}
-tthis(1);
-Object.prototype.tthis = tthis;
-globalThis.tthis(1);</summary>
+    <summary type="html">function f() {
+
+  &quot;use strict&quot;;
+  console.log(this);
+  this.a = 1;
+  
+};
+
+f();// 报错，this未定义</summary>
       
     
     
@@ -329,7 +360,7 @@ globalThis.tthis(1);</summary>
     <link href="http://emilchan0512.github.io/2024/03/18/note-js-this/"/>
     <id>http://emilchan0512.github.io/2024/03/18/note-js-this/</id>
     <published>2024-03-18T11:18:24.000Z</published>
-    <updated>2024-05-17T09:03:29.424Z</updated>
+    <updated>2024-05-17T11:56:28.362Z</updated>
     
     
       
@@ -339,6 +370,10 @@ globalThis.tthis(1);</summary>
       
     
     
+    
+    <category term="note" scheme="http://emilchan0512.github.io/categories/note/"/>
+    
+    <category term="js" scheme="http://emilchan0512.github.io/categories/note/js/"/>
     
     
   </entry>
@@ -414,25 +449,6 @@ globalThis.tthis(1);</summary>
       
     <summary type="html">&lt;p&gt;好吧，今天终于把那份很糙的简历都投了下。&lt;br&gt;腾讯美团vivo&lt;/p&gt;
 &lt;h2 id=&quot;JS函数式编程&quot;&gt;&lt;a href=&quot;#JS函数式编程&quot; class=&quot;headerlink&quot; title=&quot;JS函数式编程&quot;&gt;&lt;/a&gt;JS函数式编程&lt;/h2&gt;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>diary0224</title>
-    <link href="http://emilchan0512.github.io/2024/02/24/diary0224/"/>
-    <id>http://emilchan0512.github.io/2024/02/24/diary0224/</id>
-    <published>2024-02-24T13:46:08.000Z</published>
-    <updated>2024-02-26T11:20:26.551Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;谁能想到这个假休得这么长呢？&lt;br&gt;同时它又很短。&lt;br&gt;好吧，不管怎么说，寒假结束了。&lt;/p&gt;
-</summary>
       
     
     

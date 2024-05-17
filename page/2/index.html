@@ -186,6 +186,101 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/04/06/test3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/frieren-fire.gif">
+      <meta itemprop="name" content="Kiwiq">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs of EmilChan">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/06/test3/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-04-06 22:38:07" itemprop="dateCreated datePublished" datetime="2024-04-06T22:38:07+08:00">2024-04-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-04-08 16:02:37" itemprop="dateModified" datetime="2024-04-08T16:02:37+08:00">2024-04-08</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span></span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>NaN:aN</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+//一个flex横向布局，左中右分别为img宽度固定为100px，title可换行布满剩余空间，button宽度不固定不许换行
+<script>
+var container = document.querySelector('.container');
+var img = document.querySelector('.img');
+var title = document.querySelector('.title');
+var button = document.querySelector('.button');
+container.style.display = 'flex';
+container.style.alignItems = 'center';
+img.style.width = '100px';
+title.style.flex = '1';
+title.style.wordWrap = 'break-word';
+button.style.whiteSpace = 'nowrap';
+button.style.overflow = 'hidden';
+button.style.width = 'auto';
+</script>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/04/02/test2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -337,7 +432,7 @@ rl.on('line', (line) => {
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-17 16:48:43" itemprop="dateModified" datetime="2024-05-17T16:48:43+08:00">2024-05-17</time>
+                <time title="修改时间：2024-05-17 20:10:36" itemprop="dateModified" datetime="2024-05-17T20:10:36+08:00">2024-05-17</time>
               </span>
 
           <br>
@@ -365,13 +460,15 @@ rl.on('line', (line) => {
     <div class="post-body" itemprop="articleBody">
 
       
-          function tthis(a){
-    console.log(this.a);
-    console.log("my a == ",a)
-}
-tthis(1);
-Object.prototype.tthis = tthis;
-globalThis.tthis(1);
+          function f() {
+
+  "use strict";
+  console.log(this);
+  this.a = 1;
+  
+};
+
+f();// 报错，this未定义
       
     </div>
 
@@ -640,8 +737,21 @@ console.log(create({})`{0} {1}!{upper}`('hello', 'world'));
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-17 17:03:29" itemprop="dateModified" datetime="2024-05-17T17:03:29+08:00">2024-05-17</time>
+                <time title="修改时间：2024-05-17 19:56:28" itemprop="dateModified" datetime="2024-05-17T19:56:28+08:00">2024-05-17</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/note/" itemprop="url" rel="index"><span itemprop="name">note</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/note/js/" itemprop="url" rel="index"><span itemprop="name">js</span></a>
+                </span>
+            </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -649,7 +759,7 @@ console.log(create({})`{0} {1}!{upper}`('hello', 'world'));
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>379</span>
+              <span>507</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -669,8 +779,8 @@ console.log(create({})`{0} {1}!{upper}`('hello', 'world'));
 
       
           <p>普通函数里的this是调用的对象<br>回调函数里的this undefined，非严格模式下是window，严格模式下是undefined<br>箭头函数 不会创建新的this绑定，直接绑到函数创建时的this上<br>构造函数 this指向新创建的对象</p>
-<p><strong>理解this指向</strong><br>出现在函数里面，是函数的一个内部属性或者说自有变量，指向函数的调用者<br>函数总是要被调用的，总要有一个对象调用它，this就是指向这个对象的，也就是堆里的一块数据<br>这个上下文对象是在函数调用时确定的，而不是在函数定义时确定的<br>那这样就好理解了</p>
-<p>至于箭头函数比较特殊，它的this基于词法作用域从外层获得，什么意思呢，它的this是在定义时确定的，而不是在调用时确定的。因为特喵箭头函数没有变量名别处调用不了，本身就是一个匿名函数，所以它的this就是定义时的this，也就是外层函数的this，这样就不会出现this指向问题了</p>
+<p><strong>理解this指向</strong><br>出现在函数里面，是函数的一个内部属性或者说自有变量，指向函数的调用者<br>函数总是要被调用的，总要有一个对象调用它，this就是指向这个对象的，也就是堆里的一块数据<br>这个<strong>上下文对象是在函数调用时确定的</strong>，而不是在函数定义时确定的<br>那这样就好理解了</p>
+<p>至于<strong>箭头函数</strong>比较特殊，它的this基于词法作用域从外层获得，什么意思呢，它的this是在定义时确定的，而不是在调用时确定的。这是因为箭头函数不会创建自己的 this 上下文，它们只会从自己被定义的环境中获取 this。所以它的this就是定义时的this，也就是<strong>外层函数的this</strong>，这样就不会出现this指向问题了<br><a target="_blank" rel="noopener" href="https://fe.ecool.fun/topic/dbf9172e-1193-44cb-a534-3c16ae07de2d?orderBy=updateTime&order=desc&titleKey=this">https://fe.ecool.fun/topic/dbf9172e-1193-44cb-a534-3c16ae07de2d?orderBy=updateTime&amp;order=desc&amp;titleKey=this</a></p>
 
       
     </div>
@@ -1019,85 +1129,6 @@ console.log(create({})`{0} {1}!{upper}`('hello', 'world'));
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/02/24/diary0224/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/frieren-fire.gif">
-      <meta itemprop="name" content="Kiwiq">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blogs of EmilChan">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/02/24/diary0224/" class="post-title-link" itemprop="url">diary0224</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-02-24 21:46:08" itemprop="dateCreated datePublished" datetime="2024-02-24T21:46:08+08:00">2024-02-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-02-26 19:20:26" itemprop="dateModified" datetime="2024-02-26T19:20:26+08:00">2024-02-26</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>36</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>谁能想到这个假休得这么长呢？<br>同时它又很短。<br>好吧，不管怎么说，寒假结束了。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1169,14 +1200,14 @@ console.log(create({})`{0} {1}!{upper}`('hello', 'world'));
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>

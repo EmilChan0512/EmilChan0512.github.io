@@ -163,6 +163,10 @@ IIFE的作用:将全局变量变为局部变量,闭包的作用:将函数内部�
 <p>原型链本质是一个原型对象的单链表</p>
 <h2 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h2><p>简单的理解 <a href="https://www.bilibili.com/video/BV1Jm4y1v773/?spm_id_from=333.788&vd_source=aa13acd135b592a2a91f229a82aa2f5d">https://www.bilibili.com/video/BV1Jm4y1v773/?spm_id_from=333.788&amp;vd_source=aa13acd135b592a2a91f229a82aa2f5d</a></p>
 ]]></content>
+      <categories>
+        <category>note</category>
+        <category>js</category>
+      </categories>
   </entry>
   <entry>
     <title>diary0124</title>
@@ -177,6 +181,10 @@ IIFE的作用:将全局变量变为局部变量,闭包的作用:将函数内部�
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> param_arr = [];</span><br><span class="line"><span class="keyword">const</span> promises = param_arr.<span class="title function_">map</span>(<span class="function"><span class="params">param</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 异步操作</span></span><br><span class="line">        <span class="keyword">if</span> (param) &#123;</span><br><span class="line">            <span class="title function_">resolve</span>(param);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="title function_">reject</span>(<span class="string">&#x27;error&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="title class_">Promise</span>.<span class="title function_">all</span>(promises).<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span><br><span class="line">&#125;).<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(err);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>用allSettled来执行，不管resolve还是reject，都会返回一个数组，数组里是每个异步操作的返回值</p>
 ]]></content>
+      <categories>
+        <category>note</category>
+        <category>js</category>
+      </categories>
   </entry>
   <entry>
     <title>diary0125</title>
@@ -261,7 +269,12 @@ IIFE的作用:将全局变量变为局部变量,闭包的作用:将函数内部�
 <p>this指向全局对象，为什么</p>
 <h3 id="call-apply-bind"><a href="#call-apply-bind" class="headerlink" title="call apply bind"></a>call apply bind</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">fn</span>: <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">a</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj2 = &#123;</span><br><span class="line">    <span class="attr">a</span>: <span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line">obj.<span class="property">fn</span>.<span class="title function_">call</span>(obj2);</span><br><span class="line">obj.<span class="property">fn</span>.<span class="title function_">apply</span>(obj2);</span><br><span class="line">obj.<span class="property">fn</span>.<span class="title function_">bind</span>(obj2)();</span><br></pre></td></tr></table></figure>
 <p>call apply bind可以改变this的指向</p>
+<h2 id="严格模式-1"><a href="#严格模式-1" class="headerlink" title="严格模式"></a>严格模式</h2><p>记两个就行<br>this不能指向全局对象;<br>a &#x3D; 1; 不能直接赋值;</p>
 ]]></content>
+      <categories>
+        <category>note</category>
+        <category>js</category>
+      </categories>
   </entry>
   <entry>
     <title>现在开始当然是最好的时间</title>
@@ -301,28 +314,28 @@ console.log(Function.prototype);
 console.log(Object.getPrototypeOf(getThis));
 
 let age = 20;
-function person(name,age) {
-    this.name = name;
-    this.age = age;
-    this.say = function() {
-        console.log(this.name + this.age);
-    }
+function person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.say = function () {
+    console.log(this.name + this.age);
+  }
 
 }
 console.log(person.prototype);
-person.prototype.do = function() {
-    console.log("i do");
+person.prototype.do = function () {
+  console.log("i do");
 }
 let p1 = new person('zhangsan', 20);
 p1.do();
 let pison = {
-    age: 40,
-    name: 'zhangsi',
-    Bge: 50,
-    bge: age,
-    say: function() {
-        console.log(this.name + this.bge);
-    }
+  age: 40,
+  name: 'zhangsi',
+  Bge: 50,
+  bge: age,
+  say: function () {
+    console.log(this.name + this.bge);
+  }
 }
 console.log(this);
 console.log(pison);
@@ -337,28 +350,28 @@ let c = Symbol(a);
 let d = Symbol(a);
 a = parseInt(a);
 console.log(a);
-console.log(typeof c,d,c===d);
-var arr = [1,2,3,4,5];
+console.log(typeof c, d, c === d);
+var arr = [1, 2, 3, 4, 5];
 var num = 3;
-arr.some(function(v){
-    if(v == num) {
-        return;  // 
-    }
-    // console.log(v);
+arr.some(function (v) {
+  if (v == num) {
+    return;  // 
+  }
+  // console.log(v);
 });
-let af = [1,2]
+let af = [1, 2]
 console.log(typeof af);
 let z = 1;
 let bb = {
-    z: 1,
+  z: 1,
 }
-let cc = [z,2]
+let cc = [z, 2]
 a = 2
-console.log(bb.z,cc[0]);
+console.log(bb.z, cc[0]);
 
-function exampleFunction2(){
-var x = "declared outside function";
-return x;
+function exampleFunction2() {
+  var x = "declared outside function";
+  return x;
 }
 exampleFunction();
 
@@ -372,22 +385,22 @@ console.log(x);
 
 
 // foreach
-var arr_ref = [{a:1},{b:2},{c:3}];
-arr_ref.forEach(function(v){
-    console.log(v);
-    v["a"] = v["a"]+1;
+var arr_ref = [{ a: 1 }, { b: 2 }, { c: 3 }];
+arr_ref.forEach(function (v) {
+  console.log(v);
+  v["a"] = v["a"] + 1;
 });
 console.log(arr_ref);
-var arr_base = [1,2,3,4,5];
-arr_base.forEach(function(v){
-    console.log(v);
-    v = v+1;
-    return v;
+var arr_base = [1, 2, 3, 4, 5];
+arr_base.forEach(function (v) {
+  console.log(v);
+  v = v + 1;
+  return v;
 });
 console.log(arr_base);
 
 //浅拷贝
-let arr_shallow = [1,2,3,4,5];
+let arr_shallow = [1, 2, 3, 4, 5];
 let arr_shallow_copy = arr_shallow.reverse();
 console.log(arr_shallow);
 arr_shallow_copy[0] = 100;
@@ -395,37 +408,49 @@ console.log(arr_shallow);
 // reverse返回引用 slice返回新对象
 //https://zhuanlan.zhihu.com/p/503311780
 
-console.log(typeof function(){} );
-console.log(typeof [1,2] );
+console.log(typeof function () { });
+console.log(typeof [1, 2]);
 
 let count_global = 0;
 function createCounter() {
-    let count = 0;
-  
-    return {
-      increment: function() {
-        count++;
-        count_global++;
-      },
-      decrement: function() {
-        count--;
-      },
-      getCount: function() {
-        return [count,count_global];
-      }
-    };
-  }
-  
-  const counter = createCounter();
-  const counter2 = createCounter();
-  counter.increment();
-  counter.increment();
-  console.log(counter.getCount()); 
-  counter2.increment();
-  counter2.increment();
+  let count = 0;
+
+  return {
+    increment: function () {
+      count++;
+      count_global++;
+    },
+    decrement: function () {
+      count--;
+    },
+    getCount: function () {
+      return [count, count_global];
+    }
+  };
+}
+
+const counter = createCounter();
+const counter2 = createCounter();
+counter.increment();
+counter.increment();
+console.log(counter.getCount());
+counter2.increment();
+counter2.increment();
 
 
-    console.log(counter2.getCount());]]></content>
+console.log(counter2.getCount());
+
+
+
+function f() {
+
+  "use strict";
+  console.log(this);
+  this.a = 1;
+  
+};
+
+f();// 报错，this未定义]]></content>
   </entry>
   <entry>
     <title>note-css-mdn-1</title>
@@ -444,6 +469,12 @@ function createCounter() {
 <h2 id="响应式设计"><a href="#响应式设计" class="headerlink" title="响应式设计"></a>响应式设计</h2><h3 id="响应式图片"><a href="#响应式图片" class="headerlink" title="响应式图片"></a>响应式图片</h3><blockquote>
 <p>max-width:100% 相对父元素宽度</p>
 </blockquote>
+<h3 id="响应式的几种操作"><a href="#响应式的几种操作" class="headerlink" title="响应式的几种操作"></a>响应式的几种操作</h3><ul>
+<li>@<strong>media</strong><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@media</span> <span class="keyword">not</span>|<span class="keyword">only</span> mediatype <span class="keyword">and</span> (expressions) &#123;</span><br><span class="line">    CSS-<span class="selector-tag">Code</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>flex&#x2F;<strong>grid</strong></li>
+<li>vw&#x2F;<strong>vh</strong></li>
+<li>rem&#x2F;<strong>em</strong></li>
+</ul>
 <h2 id="流布局"><a href="#流布局" class="headerlink" title="流布局"></a>流布局</h2><p>flex的属性</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">flex-direction</span>: row | row-reverse | column | column-reverse;</span><br><span class="line"><span class="attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse;</span><br><span class="line"><span class="attribute">flex-flow</span>: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;</span><br><span class="line"><span class="attribute">justify-content</span>: flex-start | flex-end | center | space-between | </span><br><span class="line">space-around;</span><br><span class="line"><span class="comment">/* justify-content 控制 flex 项在主轴（横轴）上的位置。 */</span></span><br><span class="line"><span class="attribute">align-items</span>: flex-start | flex-end | center | baseline | stretch;</span><br><span class="line"><span class="comment">/* align-items 控制 flex 项在交叉轴（竖轴）上的位置。 */</span></span><br><span class="line"><span class="attribute">align-content</span>: flex-start | flex-end | center | space-between | </span><br><span class="line">space-around | stretch;</span><br><span class="line"><span class="attribute">flex-grow</span>: &lt;number&gt;; <span class="comment">/* default 0 */</span></span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -459,9 +490,13 @@ function createCounter() {
     <title>note-js-this</title>
     <url>/2024/03/18/note-js-this/</url>
     <content><![CDATA[<p>普通函数里的this是调用的对象<br>回调函数里的this undefined，非严格模式下是window，严格模式下是undefined<br>箭头函数 不会创建新的this绑定，直接绑到函数创建时的this上<br>构造函数 this指向新创建的对象</p>
-<p><strong>理解this指向</strong><br>出现在函数里面，是函数的一个内部属性或者说自有变量，指向函数的调用者<br>函数总是要被调用的，总要有一个对象调用它，this就是指向这个对象的，也就是堆里的一块数据<br>这个上下文对象是在函数调用时确定的，而不是在函数定义时确定的<br>那这样就好理解了</p>
-<p>至于箭头函数比较特殊，它的this基于词法作用域从外层获得，什么意思呢，它的this是在定义时确定的，而不是在调用时确定的。因为特喵箭头函数没有变量名别处调用不了，本身就是一个匿名函数，所以它的this就是定义时的this，也就是外层函数的this，这样就不会出现this指向问题了</p>
+<p><strong>理解this指向</strong><br>出现在函数里面，是函数的一个内部属性或者说自有变量，指向函数的调用者<br>函数总是要被调用的，总要有一个对象调用它，this就是指向这个对象的，也就是堆里的一块数据<br>这个<strong>上下文对象是在函数调用时确定的</strong>，而不是在函数定义时确定的<br>那这样就好理解了</p>
+<p>至于<strong>箭头函数</strong>比较特殊，它的this基于词法作用域从外层获得，什么意思呢，它的this是在定义时确定的，而不是在调用时确定的。这是因为箭头函数不会创建自己的 this 上下文，它们只会从自己被定义的环境中获取 this。所以它的this就是定义时的this，也就是<strong>外层函数的this</strong>，这样就不会出现this指向问题了<br><a href="https://fe.ecool.fun/topic/dbf9172e-1193-44cb-a534-3c16ae07de2d?orderBy=updateTime&order=desc&titleKey=this">https://fe.ecool.fun/topic/dbf9172e-1193-44cb-a534-3c16ae07de2d?orderBy=updateTime&amp;order=desc&amp;titleKey=this</a></p>
 ]]></content>
+      <categories>
+        <category>note</category>
+        <category>js</category>
+      </categories>
   </entry>
   <entry>
     <title></title>
@@ -514,13 +549,15 @@ function createCounter() {
   <entry>
     <title></title>
     <url>/2024/03/31/tempCodeRunnerFile/</url>
-    <content><![CDATA[function tthis(a){
-    console.log(this.a);
-    console.log("my a == ",a)
-}
-tthis(1);
-Object.prototype.tthis = tthis;
-globalThis.tthis(1);]]></content>
+    <content><![CDATA[function f() {
+
+  "use strict";
+  console.log(this);
+  this.a = 1;
+  
+};
+
+f();// 报错，this未定义]]></content>
   </entry>
   <entry>
     <title></title>
@@ -703,13 +740,134 @@ console.log(bubbleSort([1,2,5,2,6]))
     <title></title>
     <url>/2024/05/17/js-this-1/</url>
     <content><![CDATA[var a = 2;
-globalThis.a = 3; 
-function tthis(a){
+globalThis.a = 3;
+function tthis(a) {
     console.log(this.a);
-    console.log("my a == ",a)
+    console.log("my a == ", a)
+    return a * a;
 }
-tthis(1);
+this.a = 5;
+// tthis(1);
+//因为这里globalThis和this不是一个东西，nodejs模块的最顶层this是空的
 Object.prototype.tthis = tthis;
-globalThis.tthis(1);]]></content>
+
+globalThis.tthis(1);
+console.log("================", this);
+console.log("================", globalThis);
+console.log("================", globalThis.tthis(4));
+
+console.log("================", this.tthis(4));
+console.log("================", tthis(4));
+/**
+这段代码主要涉及到 JavaScript 中的 `this` 关键字和原型链的使用。
+
+首先，我们定义了一个全局变量 [`a`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A0%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 并赋值为 2，然后我们又在全局对象 [`globalThis`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A1%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 上定义了一个属性 [`a`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A0%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 并赋值为 3。在 JavaScript 中，全局变量实际上是全局对象的属性，所以这里 [`globalThis.a = 3;`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A1%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 实际上改变了全局变量 [`a`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A0%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 的值。
+
+接着，我们定义了一个名为 [`tthis`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A2%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 的函数，这个函数接收一个参数 [`a`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A0%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js")，并在函数体内部打印 `this.a` 和 `"my a == ",a`，然后返回 [`a`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A0%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 的平方。这里的 `this.a` 是指调用这个函数的对象的 [`a`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A0%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 属性，如果没有指定调用对象，那么 `this` 就是全局对象。
+
+然后，我们将 [`tthis`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A2%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 函数添加到 [`Object.prototype`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fd%253A%2FCode%2FMicrosoft%2520VS%2520Code%2Fresources%2Fapp%2Fextensions%2Fnode_modules%2Ftypescript%2Flib%2Flib.es5.d.ts%22%2C%22path%22%3A%22%2Fd%3A%2FCode%2FMicrosoft%20VS%20Code%2Fresources%2Fapp%2Fextensions%2Fnode_modules%2Ftypescript%2Flib%2Flib.es5.d.ts%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A122%2C%22character%22%3A0%7D%5D "d:/Code/Microsoft VS Code/resources/app/extensions/node_modules/typescript/lib/lib.es5.d.ts") 上，这意味着所有的对象都可以调用 [`tthis`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A2%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 方法。
+
+最后，我们调用 `this.tthis(4)` 和 [`tthis(4)`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A2%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js")，并打印结果。这里的 `this` 是全局对象，所以 `this.tthis(4)` 实际上是调用全局对象的 [`tthis`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A2%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 方法，而 [`tthis(4)`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A2%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 是直接调用 [`tthis`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A2%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 函数，因为没有指定调用对象，所以 `this` 是全局对象。
+*/
+/*
+这是因为JavaScript中的`this`关键字的行为取决于它是如何被调用的。在JavaScript中，`this`关键字在函数内部的值取决于函数是如何被调用的。
+
+在你的代码中，当你直接调用`tthis(4)`时，`this`在`tthis`函数内部指向全局对象，因为`tthis`是在全局作用域中被调用的。所以，`this.a`在`tthis`函数内部的值是全局对象的`a`属性，即3。
+
+然而，当你通过`this.tthis(4)`调用时，`this`在`tthis`函数内部指向的是`Object.prototype`，因为你是通过`Object.prototype`的`tthis`方法来调用的。`Object.prototype`没有`a`属性，所以`this.a`在`tthis`函数内部的值是`undefined`。
+
+这就是为什么全局对象的`tthis`方法中`this.a`输出的是`undefined`，而直接调用`tthis`函数`this`也是全局对象却能输出3的原因。
+*/
+/*
+在JavaScript中，`this`关键字的值是在函数被调用时确定的，而不是在函数被定义时确定的。`this`的值取决于函数的调用上下文（也就是调用函数的对象）。
+
+在你的代码中，`Object.prototype.tthis = tthis;`这行代码将函数`tthis`赋值给了`Object.prototype.tthis`。因此，当你通过`this.tthis(4)`调用函数时，`this`在`tthis`函数内部指向的是`Object.prototype`，因为你是通过`Object.prototype`的`tthis`方法来调用的。
+
+如果你直接调用`tthis(4)`，那么`this`在`tthis`函数内部将指向全局对象，因为`tthis`是在全局作用域中被调用的。
+
+这就是为什么通过`Object.prototype`调用`tthis`方法时，`this`指向的是`Object.prototype`而不是全局对象的原因。
+*/
+
+//为了验证copilot的说法，我做一个继承
+let person = {
+    sex: 0,
+}
+let student = {
+    id: "z007",
+    brk: function () {
+        console.log("brk ", this.sex);
+    }
+}
+student.prototype = person;
+student.brk();
+
+let arrow = (a, b) => {
+    console.log(this);
+    console.log(a + b);
+}
+let arrow2 = function (a,b) {
+    let ar =  (a, b) => {
+        console.log(this);
+        console.log(a + b);
+    }
+    return ar(a, b);
+}
+let obj = {
+    qq: "123",
+    arrow:arrow2, 
+}
+let obj2 = {
+    qq: "23",
+    arrow:arrow2, 
+}
+obj2.arrow(1, 2);]]></content>
+  </entry>
+  <entry>
+    <title>js-rushing-for-honor</title>
+    <url>/2024/05/17/js-rushing-for-honor/</url>
+    <content><![CDATA[<h1 id="要准备的"><a href="#要准备的" class="headerlink" title="要准备的"></a>要准备的</h1><ul>
+<li><input disabled="" type="checkbox"> 闭包</li>
+<li><input disabled="" type="checkbox"> 作用域</li>
+<li><input disabled="" type="checkbox"> 原型链</li>
+<li><input disabled="" type="checkbox"> 继承</li>
+<li><input disabled="" type="checkbox"> this</li>
+<li><input disabled="" type="checkbox"> 事件循环</li>
+<li><input disabled="" type="checkbox"> Promise</li>
+<li><input disabled="" type="checkbox"> async&#x2F;await</li>
+<li><input disabled="" type="checkbox"> 事件委托</li>
+<li><input disabled="" type="checkbox"> 事件冒泡</li>
+<li><input disabled="" type="checkbox"> 事件捕获</li>
+<li><input disabled="" type="checkbox"> 事件队列<br><strong>花旗杯项目</strong></li>
+<li><input disabled="" type="checkbox"> 项目结构</li>
+<li><input disabled="" type="checkbox"> 项目初始化</li>
+<li><input disabled="" type="checkbox"> 项目配置</li>
+<li><input disabled="" type="checkbox"> 安全 路由 登陆怎么做 token怎么传</li>
+<li><input disabled="" type="checkbox"> 性能优化 <a href="https://fe.ecool.fun/topic/a5032eb9-6a53-4792-852f-3f9417631c47?orderBy=updateTime&order=desc&tagId=14">https://fe.ecool.fun/topic/a5032eb9-6a53-4792-852f-3f9417631c47?orderBy=updateTime&amp;order=desc&amp;tagId=14</a></li>
+<li><input disabled="" type="checkbox"> 移动端适配&#x2F;响应式设计<br><strong>css</strong></li>
+<li><input disabled="" type="checkbox"> 布局练手</li>
+<li><input disabled="" type="checkbox"> 属性复习 grid&#x2F;flex<br><strong>react</strong></li>
+<li><input disabled="" type="checkbox"> 生命周期</li>
+<li><input disabled="" type="checkbox"> hooks useEffect</li>
+<li><input disabled="" type="checkbox"> hooks useState</li>
+<li><input disabled="" type="checkbox"> hooks useContext</li>
+<li><input disabled="" type="checkbox"> hooks useReducer</li>
+<li><input disabled="" type="checkbox"> hooks useRef<br><strong>vue</strong></li>
+<li><input disabled="" type="checkbox"> 生命周期</li>
+<li><input disabled="" type="checkbox"> vue-router</li>
+<li><input disabled="" type="checkbox"> vuex</li>
+<li><input disabled="" type="checkbox"> 组合式API</li>
+</ul>
+<h2 id="问题们"><a href="#问题们" class="headerlink" title="问题们"></a>问题们</h2><ul>
+<li><input disabled="" type="checkbox"> vue和react的区别，你觉得哪个更好</li>
+<li><input disabled="" type="checkbox"> ES6的新特性</li>
+<li><input disabled="" type="checkbox"> 你对闭包的理解</li>
+<li><input disabled="" type="checkbox"> 你对作用域的理解</li>
+<li><input disabled="" type="checkbox"> 你对原型链的理解<br>等等…</li>
+</ul>
+]]></content>
+      <categories>
+        <category>note</category>
+        <category>js</category>
+      </categories>
   </entry>
 </search>

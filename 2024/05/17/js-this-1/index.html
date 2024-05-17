@@ -22,15 +22,15 @@
     var CONFIG = {"hostname":"emilchan0512.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="var a &#x3D; 2; globalThis.a &#x3D; 3;  function tthis(a){     console.log(this.a);     console.log(&quot;my a &#x3D;&#x3D; &quot;,a) } tthis(1); Object.prototype.tthis &#x3D; tthis; globalThis.tthis(1);">
+  <meta name="description" content="var a &#x3D; 2; globalThis.a &#x3D; 3; function tthis(a) {     console.log(this.a);     console.log(&quot;my a &#x3D;&#x3D; &quot;, a)     return a * a; } this.a &#x3D; 5; &#x2F;&#x2F; tthis(1); &#x2F;&#x2F;因为这里globalThis和this不是一个东西，nodejs模块的最顶层this是空的 Ob">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Blogs of EmilChan">
 <meta property="og:url" content="http://emilchan0512.github.io/2024/05/17/js-this-1/index.html">
 <meta property="og:site_name" content="Blogs of EmilChan">
-<meta property="og:description" content="var a &#x3D; 2; globalThis.a &#x3D; 3;  function tthis(a){     console.log(this.a);     console.log(&quot;my a &#x3D;&#x3D; &quot;,a) } tthis(1); Object.prototype.tthis &#x3D; tthis; globalThis.tthis(1);">
+<meta property="og:description" content="var a &#x3D; 2; globalThis.a &#x3D; 3; function tthis(a) {     console.log(this.a);     console.log(&quot;my a &#x3D;&#x3D; &quot;, a)     return a * a; } this.a &#x3D; 5; &#x2F;&#x2F; tthis(1); &#x2F;&#x2F;因为这里globalThis和this不是一个东西，nodejs模块的最顶层this是空的 Ob">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-05-17T08:45:46.524Z">
-<meta property="article:modified_time" content="2024-05-17T08:49:47.889Z">
+<meta property="article:modified_time" content="2024-05-17T10:26:43.711Z">
 <meta property="article:author" content="Kiwiq">
 <meta name="twitter:card" content="summary">
 
@@ -215,7 +215,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2024-05-17 16:45:46 / 修改时间：16:49:47" itemprop="dateCreated datePublished" datetime="2024-05-17T16:45:46+08:00">2024-05-17</time>
+              <time title="创建时间：2024-05-17 16:45:46 / 修改时间：18:26:43" itemprop="dateCreated datePublished" datetime="2024-05-17T16:45:46+08:00">2024-05-17</time>
             </span>
 
           
@@ -251,14 +251,87 @@
 
       
         var a = 2;
-globalThis.a = 3; 
-function tthis(a){
+globalThis.a = 3;
+function tthis(a) {
     console.log(this.a);
-    console.log("my a == ",a)
+    console.log("my a == ", a)
+    return a * a;
 }
-tthis(1);
+this.a = 5;
+// tthis(1);
+//因为这里globalThis和this不是一个东西，nodejs模块的最顶层this是空的
 Object.prototype.tthis = tthis;
+
 globalThis.tthis(1);
+console.log("================", this);
+console.log("================", globalThis);
+console.log("================", globalThis.tthis(4));
+
+console.log("================", this.tthis(4));
+console.log("================", tthis(4));
+/**
+这段代码主要涉及到 JavaScript 中的 `this` 关键字和原型链的使用。
+
+首先，我们定义了一个全局变量 [`a`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A0%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 并赋值为 2，然后我们又在全局对象 [`globalThis`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A1%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 上定义了一个属性 [`a`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A0%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 并赋值为 3。在 JavaScript 中，全局变量实际上是全局对象的属性，所以这里 [`globalThis.a = 3;`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A1%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 实际上改变了全局变量 [`a`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A0%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 的值。
+
+接着，我们定义了一个名为 [`tthis`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A2%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 的函数，这个函数接收一个参数 [`a`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A0%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js")，并在函数体内部打印 `this.a` 和 `"my a == ",a`，然后返回 [`a`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A0%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 的平方。这里的 `this.a` 是指调用这个函数的对象的 [`a`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A0%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 属性，如果没有指定调用对象，那么 `this` 就是全局对象。
+
+然后，我们将 [`tthis`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A2%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 函数添加到 [`Object.prototype`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fd%253A%2FCode%2FMicrosoft%2520VS%2520Code%2Fresources%2Fapp%2Fextensions%2Fnode_modules%2Ftypescript%2Flib%2Flib.es5.d.ts%22%2C%22path%22%3A%22%2Fd%3A%2FCode%2FMicrosoft%20VS%20Code%2Fresources%2Fapp%2Fextensions%2Fnode_modules%2Ftypescript%2Flib%2Flib.es5.d.ts%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A122%2C%22character%22%3A0%7D%5D "d:/Code/Microsoft VS Code/resources/app/extensions/node_modules/typescript/lib/lib.es5.d.ts") 上，这意味着所有的对象都可以调用 [`tthis`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A2%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 方法。
+
+最后，我们调用 `this.tthis(4)` 和 [`tthis(4)`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A2%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js")，并打印结果。这里的 `this` 是全局对象，所以 `this.tthis(4)` 实际上是调用全局对象的 [`tthis`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A2%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 方法，而 [`tthis(4)`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A2%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 是直接调用 [`tthis`](command:_github.copilot.openSymbolFromReferences?%5B%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22e%3A%5C%5CBlog%5C%5Csource%5C%5C_posts%5C%5Cjs-this-1.js%22%2C%22_sep%22%3A1%2C%22external%22%3A%22file%3A%2F%2F%2Fe%253A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22path%22%3A%22%2Fe%3A%2FBlog%2Fsource%2F_posts%2Fjs-this-1.js%22%2C%22scheme%22%3A%22file%22%7D%2C%7B%22line%22%3A2%2C%22character%22%3A0%7D%5D "source/_posts/js-this-1.js") 函数，因为没有指定调用对象，所以 `this` 是全局对象。
+*/
+/*
+这是因为JavaScript中的`this`关键字的行为取决于它是如何被调用的。在JavaScript中，`this`关键字在函数内部的值取决于函数是如何被调用的。
+
+在你的代码中，当你直接调用`tthis(4)`时，`this`在`tthis`函数内部指向全局对象，因为`tthis`是在全局作用域中被调用的。所以，`this.a`在`tthis`函数内部的值是全局对象的`a`属性，即3。
+
+然而，当你通过`this.tthis(4)`调用时，`this`在`tthis`函数内部指向的是`Object.prototype`，因为你是通过`Object.prototype`的`tthis`方法来调用的。`Object.prototype`没有`a`属性，所以`this.a`在`tthis`函数内部的值是`undefined`。
+
+这就是为什么全局对象的`tthis`方法中`this.a`输出的是`undefined`，而直接调用`tthis`函数`this`也是全局对象却能输出3的原因。
+*/
+/*
+在JavaScript中，`this`关键字的值是在函数被调用时确定的，而不是在函数被定义时确定的。`this`的值取决于函数的调用上下文（也就是调用函数的对象）。
+
+在你的代码中，`Object.prototype.tthis = tthis;`这行代码将函数`tthis`赋值给了`Object.prototype.tthis`。因此，当你通过`this.tthis(4)`调用函数时，`this`在`tthis`函数内部指向的是`Object.prototype`，因为你是通过`Object.prototype`的`tthis`方法来调用的。
+
+如果你直接调用`tthis(4)`，那么`this`在`tthis`函数内部将指向全局对象，因为`tthis`是在全局作用域中被调用的。
+
+这就是为什么通过`Object.prototype`调用`tthis`方法时，`this`指向的是`Object.prototype`而不是全局对象的原因。
+*/
+
+//为了验证copilot的说法，我做一个继承
+let person = {
+    sex: 0,
+}
+let student = {
+    id: "z007",
+    brk: function () {
+        console.log("brk ", this.sex);
+    }
+}
+student.prototype = person;
+student.brk();
+
+let arrow = (a, b) => {
+    console.log(this);
+    console.log(a + b);
+}
+let arrow2 = function (a,b) {
+    let ar =  (a, b) => {
+        console.log(this);
+        console.log(a + b);
+    }
+    return ar(a, b);
+}
+let obj = {
+    qq: "123",
+    arrow:arrow2, 
+}
+let obj2 = {
+    qq: "23",
+    arrow:arrow2, 
+}
+obj2.arrow(1, 2);
     </div>
 
     
@@ -276,7 +349,10 @@ globalThis.tthis(1);
     <a href="/2024/05/09/todew-demo/" rel="prev" title="todew-demo">
       <i class="fa fa-chevron-left"></i> todew-demo
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2024/05/17/js-rushing-for-honor/" rel="next" title="js-rushing-for-honor">
+      js-rushing-for-honor <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -350,14 +426,14 @@ globalThis.tthis(1);
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
   </nav>
