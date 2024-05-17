@@ -186,6 +186,86 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/05/17/js-this-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/frieren-fire.gif">
+      <meta itemprop="name" content="Kiwiq">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs of EmilChan">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/05/17/js-this-1/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-05-17 16:45:46 / 修改时间：16:49:47" itemprop="dateCreated datePublished" datetime="2024-05-17T16:45:46+08:00">2024-05-17</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span></span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>NaN:aN</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          var a = 2;
+globalThis.a = 3; 
+function tthis(a){
+    console.log(this.a);
+    console.log("my a == ",a)
+}
+tthis(1);
+Object.prototype.tthis = tthis;
+globalThis.tthis(1);
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/05/09/todew-demo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -788,7 +868,7 @@ function createCounter() {
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-13 19:58:36" itemprop="dateModified" datetime="2024-05-13T19:58:36+08:00">2024-05-13</time>
+                <time title="修改时间：2024-05-13 21:21:36" itemprop="dateModified" datetime="2024-05-13T21:21:36+08:00">2024-05-13</time>
               </span>
 
           <br>
@@ -797,7 +877,7 @@ function createCounter() {
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1k</span>
+              <span>1.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -817,6 +897,7 @@ function createCounter() {
 
       
           <h2 id="for-each和map"><a href="#for-each和map" class="headerlink" title="for each和map"></a>for each和map</h2><p>for each只是遍历，不会返回新数组，对</p>
+<h2 id="for-of-和-for-in"><a href="#for-of-和-for-in" class="headerlink" title="for of 和 for in"></a>for of 和 for in</h2><p>for of遍历数组值，for in遍历对象的键</p>
 <h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/">https://juejin.cn/post/</a> 复习过一下</p>
 <p>记笔记啊<br>还有继承</p>
 <h2 id="bind-apply-call"><a href="#bind-apply-call" class="headerlink" title="bind apply call"></a>bind apply call</h2><p>bind返回一个函数，apply和call立即执行<br>，apply和call的区别是参数的传递方式不同，apply是数组，call是逗号分隔的参数</p>
@@ -1145,126 +1226,6 @@ button.style.width = 'auto';
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/04/02/test2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/frieren-fire.gif">
-      <meta itemprop="name" content="Kiwiq">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blogs of EmilChan">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/04/02/test2/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-04-02 15:26:09" itemprop="dateCreated datePublished" datetime="2024-04-02T15:26:09+08:00">2024-04-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-07 16:26:19" itemprop="dateModified" datetime="2024-04-07T16:26:19+08:00">2024-04-07</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span></span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>NaN:aN</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          //大数相乘 两个代表非负整数的字符串 返回也是字符串 使用js
-//输入：2342423423424234234234234234242342353454365 * 43543534643345343253464363454235234235345346
-//输出：101997395487256741190161412236975225638701789029942886861208566826758303120581826135290
-const readline = require('readline');
-
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
-function big_multiply(a, b) {
-
-    const len1 = a.length;
-    const len2 = b.length;
-    //console.log("num1:",a,len1);
-    //console.log("num2:",b, len2);
-    let result = new Array(len1 + len2).fill(0);
-    for(let i = len1-1;i>=0;i--){
-        for(let j = len2- 1;j>=0;j--){
-            let tmp = Number(a[i])*Number(b[j]);
-            //console.log("tmp:",tmp);
-            let sum = tmp+result[i+j+1];
-            result[i+j] += Math.floor(sum/10);
-            result[i+j+1] = sum%10;
-        }
-    }
-    while (result[0] === 0) {
-        result.shift();
-    }
-
-    result = result.join('');
-    //console.log( "correct:",(BigInt(a) * BigInt(b)).toString())
-
-    return result;
-}
-rl.on('line', (line) => {
-    const nums = line.split(' * ');
-    const a = nums[0];
-    const b = nums[1];
-    console.log(big_multiply(a, b));
-    rl.close();
-});
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1336,7 +1297,7 @@ rl.on('line', (line) => {
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

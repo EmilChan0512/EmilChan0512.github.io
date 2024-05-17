@@ -160,6 +160,8 @@ IIFE的作用:将全局变量变为局部变量,闭包的作用:将函数内部�
 <h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p><strong>ES5</strong>：全局作用域的预处理：JS在解析的时候，会把变量的声明（用var声明的）提升到当前作用域的最前面，但是赋值不会提升。<br>只是声明提升，不会提前赋值。<br>函数作用域：函数中，使用 var 关键字声明的变量，会在函数中所有代码执行之前被提前声明。函数中，没有 var 声明的变量都是全局变量，且并不会被提前声明。<br>没有块级作用域：在 ES5 中，没有块级作用域的概念，只有全局作用域和函数作用域。</p>
 <p>…arg  …arr<br>剩余参数  扩展运算符-用来转化为数组到真数组-用来数组赋值而不是浅拷贝-用来合并数组</p>
 <p><a href="https://tech.meituan.com/2018/09/27/fe-security.html">https://tech.meituan.com/2018/09/27/fe-security.html</a></p>
+<p>原型链本质是一个原型对象的单链表</p>
+<h2 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h2><p>简单的理解 <a href="https://www.bilibili.com/video/BV1Jm4y1v773/?spm_id_from=333.788&vd_source=aa13acd135b592a2a91f229a82aa2f5d">https://www.bilibili.com/video/BV1Jm4y1v773/?spm_id_from=333.788&amp;vd_source=aa13acd135b592a2a91f229a82aa2f5d</a></p>
 ]]></content>
   </entry>
   <entry>
@@ -171,7 +173,10 @@ IIFE的作用:将全局变量变为局部变量,闭包的作用:将函数内部�
   <entry>
     <title>note-js-async</title>
     <url>/2024/01/24/note-js-async/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p><strong>Promise的事情</strong><br>用一个array存储异步操作，然后用Promise.all来执行，只要有一个reject，就会返回reject方法的值，如果都resolve了，就会返回一个数组，数组里是每个异步操作的返回值</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> param_arr = [];</span><br><span class="line"><span class="keyword">const</span> promises = param_arr.<span class="title function_">map</span>(<span class="function"><span class="params">param</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 异步操作</span></span><br><span class="line">        <span class="keyword">if</span> (param) &#123;</span><br><span class="line">            <span class="title function_">resolve</span>(param);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="title function_">reject</span>(<span class="string">&#x27;error&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="title class_">Promise</span>.<span class="title function_">all</span>(promises).<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span><br><span class="line">&#125;).<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(err);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>用allSettled来执行，不管resolve还是reject，都会返回一个数组，数组里是每个异步操作的返回值</p>
+]]></content>
   </entry>
   <entry>
     <title>diary0125</title>
@@ -236,6 +241,7 @@ IIFE的作用:将全局变量变为局部变量,闭包的作用:将函数内部�
     <title>js-base-1</title>
     <url>/2024/04/08/js-base-1/</url>
     <content><![CDATA[<h2 id="for-each和map"><a href="#for-each和map" class="headerlink" title="for each和map"></a>for each和map</h2><p>for each只是遍历，不会返回新数组，对</p>
+<h2 id="for-of-和-for-in"><a href="#for-of-和-for-in" class="headerlink" title="for of 和 for in"></a>for of 和 for in</h2><p>for of遍历数组值，for in遍历对象的键</p>
 <h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p><a href="https://juejin.cn/post/">https://juejin.cn/post/</a> 复习过一下</p>
 <p>记笔记啊<br>还有继承</p>
 <h2 id="bind-apply-call"><a href="#bind-apply-call" class="headerlink" title="bind apply call"></a>bind apply call</h2><p>bind返回一个函数，apply和call立即执行<br>，apply和call的区别是参数的传递方式不同，apply是数组，call是逗号分隔的参数</p>
@@ -453,6 +459,8 @@ function createCounter() {
     <title>note-js-this</title>
     <url>/2024/03/18/note-js-this/</url>
     <content><![CDATA[<p>普通函数里的this是调用的对象<br>回调函数里的this undefined，非严格模式下是window，严格模式下是undefined<br>箭头函数 不会创建新的this绑定，直接绑到函数创建时的this上<br>构造函数 this指向新创建的对象</p>
+<p><strong>理解this指向</strong><br>出现在函数里面，是函数的一个内部属性或者说自有变量，指向函数的调用者<br>函数总是要被调用的，总要有一个对象调用它，this就是指向这个对象的，也就是堆里的一块数据<br>这个上下文对象是在函数调用时确定的，而不是在函数定义时确定的<br>那这样就好理解了</p>
+<p>至于箭头函数比较特殊，它的this基于词法作用域从外层获得，什么意思呢，它的this是在定义时确定的，而不是在调用时确定的。因为特喵箭头函数没有变量名别处调用不了，本身就是一个匿名函数，所以它的this就是定义时的this，也就是外层函数的this，这样就不会出现this指向问题了</p>
 ]]></content>
   </entry>
   <entry>
@@ -506,28 +514,13 @@ function createCounter() {
   <entry>
     <title></title>
     <url>/2024/03/31/tempCodeRunnerFile/</url>
-    <content><![CDATA[function getThis() {
-  return this;
+    <content><![CDATA[function tthis(a){
+    console.log(this.a);
+    console.log("my a == ",a)
 }
-
-console.log(Function.prototype);
-console.log(Object.getPrototypeOf(getThis));
-
-let age = 20;
-function person(name,age) {
-    this.name = name;
-    this.age = age;
-    this.say = function() {
-        console.log(this.name + this.age);
-    }
-
-}
-console.log(person.prototype);
-person.prototype.do = function() {
-    console.log("i do");
-}
-let p1 = new person('zhangsan', 20);
-p1.do();]]></content>
+tthis(1);
+Object.prototype.tthis = tthis;
+globalThis.tthis(1);]]></content>
   </entry>
   <entry>
     <title></title>
@@ -705,5 +698,18 @@ console.log([1,2,3].splice(1, 1)[0]);
 
 console.log(bubbleSort([1,2,5,2,6]))
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2024/05/17/js-this-1/</url>
+    <content><![CDATA[var a = 2;
+globalThis.a = 3; 
+function tthis(a){
+    console.log(this.a);
+    console.log("my a == ",a)
+}
+tthis(1);
+Object.prototype.tthis = tthis;
+globalThis.tthis(1);]]></content>
   </entry>
 </search>

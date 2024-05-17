@@ -6,7 +6,7 @@
   <link href="http://emilchan0512.github.io/atom.xml" rel="self"/>
   
   <link href="http://emilchan0512.github.io/"/>
-  <updated>2024-05-09T14:10:02.904Z</updated>
+  <updated>2024-05-17T08:49:47.889Z</updated>
   <id>http://emilchan0512.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://emilchan0512.github.io/2024/05/17/js-this-1/"/>
+    <id>http://emilchan0512.github.io/2024/05/17/js-this-1/</id>
+    <published>2024-05-17T08:45:46.524Z</published>
+    <updated>2024-05-17T08:49:47.889Z</updated>
+    
+    
+      
+      
+    <summary type="html">var a = 2;
+globalThis.a = 3; 
+function tthis(a){
+    console.log(this.a);
+    console.log(&quot;my a == &quot;,a)
+}
+tthis(1);
+Object.prototype.tthis =</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>todew-demo</title>
@@ -132,7 +157,7 @@ function</summary>
     <link href="http://emilchan0512.github.io/2024/04/08/js-base-1/"/>
     <id>http://emilchan0512.github.io/2024/04/08/js-base-1/</id>
     <published>2024-04-08T07:59:51.000Z</published>
-    <updated>2024-05-13T11:58:36.757Z</updated>
+    <updated>2024-05-13T13:21:36.560Z</updated>
     
     
       
@@ -239,20 +264,18 @@ var img = do</summary>
     <link href="http://emilchan0512.github.io/2024/03/31/tempCodeRunnerFile/"/>
     <id>http://emilchan0512.github.io/2024/03/31/tempCodeRunnerFile/</id>
     <published>2024-03-31T13:30:57.993Z</published>
-    <updated>2024-05-13T11:01:04.165Z</updated>
+    <updated>2024-05-17T08:48:43.683Z</updated>
     
     
       
       
-    <summary type="html">function getThis() {
-  return this;
+    <summary type="html">function tthis(a){
+    console.log(this.a);
+    console.log(&quot;my a == &quot;,a)
 }
-
-console.log(Function.prototype);
-console.log(Object.getPrototypeOf(getThis));
-
-let age = 20;
-function</summary>
+tthis(1);
+Object.prototype.tthis = tthis;
+globalThis.tthis(1);</summary>
       
     
     
@@ -306,13 +329,13 @@ function</summary>
     <link href="http://emilchan0512.github.io/2024/03/18/note-js-this/"/>
     <id>http://emilchan0512.github.io/2024/03/18/note-js-this/</id>
     <published>2024-03-18T11:18:24.000Z</published>
-    <updated>2024-03-18T11:25:19.040Z</updated>
+    <updated>2024-05-17T09:03:29.424Z</updated>
     
     
       
       
     <summary type="html">&lt;p&gt;普通函数里的this是调用的对象&lt;br&gt;回调函数里的this undefined，非严格模式下是window，严格模式下是undefined&lt;br&gt;箭头函数 不会创建新的this绑定，直接绑到函数创建时的this上&lt;br&gt;构造函数 this指向新创建的对象&lt;/p&gt;
-</summary>
+&lt;p&gt;&lt;</summary>
       
     
     
@@ -409,25 +432,6 @@ function</summary>
       
       
     <summary type="html">&lt;p&gt;谁能想到这个假休得这么长呢？&lt;br&gt;同时它又很短。&lt;br&gt;好吧，不管怎么说，寒假结束了。&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>diary0125</title>
-    <link href="http://emilchan0512.github.io/2024/01/25/diary0125/"/>
-    <id>http://emilchan0512.github.io/2024/01/25/diary0125/</id>
-    <published>2024-01-25T13:57:04.000Z</published>
-    <updated>2024-01-25T13:58:54.348Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;完蛋。&lt;br&gt;今天好像啥也没做。&lt;br&gt;我下午做了啥来着？&lt;br&gt;晚上和哈提聊了下简历，受益匪浅。&lt;br&gt;定好接下来计划，然后，&lt;br&gt;休假。&lt;/p&gt;
 </summary>
       
     

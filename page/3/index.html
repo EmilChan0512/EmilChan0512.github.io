@@ -186,6 +186,79 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/01/25/diary0125/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/frieren-fire.gif">
+      <meta itemprop="name" content="Kiwiq">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs of EmilChan">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/01/25/diary0125/" class="post-title-link" itemprop="url">diary0125</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-01-25 21:57:04 / 修改时间：21:58:54" itemprop="dateCreated datePublished" datetime="2024-01-25T21:57:04+08:00">2024-01-25</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>51</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>完蛋。<br>今天好像啥也没做。<br>我下午做了啥来着？<br>晚上和哈提聊了下简历，受益匪浅。<br>定好接下来计划，然后，<br>休假。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/01/24/diary0124/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -285,6 +358,13 @@
 
               <time title="创建时间：2024-01-24 17:20:13" itemprop="dateCreated datePublished" datetime="2024-01-24T17:20:13+08:00">2024-01-24</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-05-17 17:10:06" itemprop="dateModified" datetime="2024-05-17T17:10:06+08:00">2024-05-17</time>
+              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -292,7 +372,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>0</span>
+              <span>499</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -311,7 +391,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <p><strong>Promise的事情</strong><br>用一个array存储异步操作，然后用Promise.all来执行，只要有一个reject，就会返回reject方法的值，如果都resolve了，就会返回一个数组，数组里是每个异步操作的返回值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> param_arr = [];</span><br><span class="line"><span class="keyword">const</span> promises = param_arr.<span class="title function_">map</span>(<span class="function"><span class="params">param</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 异步操作</span></span><br><span class="line">        <span class="keyword">if</span> (param) &#123;</span><br><span class="line">            <span class="title function_">resolve</span>(param);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="title function_">reject</span>(<span class="string">&#x27;error&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="title class_">Promise</span>.<span class="title function_">all</span>(promises).<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res);</span><br><span class="line">&#125;).<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(err);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>用allSettled来执行，不管resolve还是reject，都会返回一个数组，数组里是每个异步操作的返回值</p>
+
       
     </div>
 
@@ -361,7 +444,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-04 20:18:19" itemprop="dateModified" datetime="2024-05-04T20:18:19+08:00">2024-05-04</time>
+                <time title="修改时间：2024-05-17 17:05:04" itemprop="dateModified" datetime="2024-05-17T17:05:04+08:00">2024-05-17</time>
               </span>
 
           <br>
@@ -370,7 +453,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.1k</span>
+              <span>3.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -416,6 +499,8 @@ IIFE的作用:将全局变量变为局部变量,闭包的作用:将函数内部�
 <h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p><strong>ES5</strong>：全局作用域的预处理：JS在解析的时候，会把变量的声明（用var声明的）提升到当前作用域的最前面，但是赋值不会提升。<br>只是声明提升，不会提前赋值。<br>函数作用域：函数中，使用 var 关键字声明的变量，会在函数中所有代码执行之前被提前声明。函数中，没有 var 声明的变量都是全局变量，且并不会被提前声明。<br>没有块级作用域：在 ES5 中，没有块级作用域的概念，只有全局作用域和函数作用域。</p>
 <p>…arg  …arr<br>剩余参数  扩展运算符-用来转化为数组到真数组-用来数组赋值而不是浅拷贝-用来合并数组</p>
 <p><a target="_blank" rel="noopener" href="https://tech.meituan.com/2018/09/27/fe-security.html">https://tech.meituan.com/2018/09/27/fe-security.html</a></p>
+<p>原型链本质是一个原型对象的单链表</p>
+<h2 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h2><p>简单的理解 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Jm4y1v773/?spm_id_from=333.788&vd_source=aa13acd135b592a2a91f229a82aa2f5d">https://www.bilibili.com/video/BV1Jm4y1v773/?spm_id_from=333.788&amp;vd_source=aa13acd135b592a2a91f229a82aa2f5d</a></p>
 
       
     </div>
@@ -1003,7 +1088,7 @@ IIFE的作用:将全局变量变为局部变量,闭包的作用:将函数内部�
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

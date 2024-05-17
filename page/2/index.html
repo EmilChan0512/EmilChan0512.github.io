@@ -186,6 +186,126 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/04/02/test2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/frieren-fire.gif">
+      <meta itemprop="name" content="Kiwiq">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs of EmilChan">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/04/02/test2/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-04-02 15:26:09" itemprop="dateCreated datePublished" datetime="2024-04-02T15:26:09+08:00">2024-04-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-04-07 16:26:19" itemprop="dateModified" datetime="2024-04-07T16:26:19+08:00">2024-04-07</time>
+              </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span></span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>NaN:aN</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          //大数相乘 两个代表非负整数的字符串 返回也是字符串 使用js
+//输入：2342423423424234234234234234242342353454365 * 43543534643345343253464363454235234235345346
+//输出：101997395487256741190161412236975225638701789029942886861208566826758303120581826135290
+const readline = require('readline');
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+function big_multiply(a, b) {
+
+    const len1 = a.length;
+    const len2 = b.length;
+    //console.log("num1:",a,len1);
+    //console.log("num2:",b, len2);
+    let result = new Array(len1 + len2).fill(0);
+    for(let i = len1-1;i>=0;i--){
+        for(let j = len2- 1;j>=0;j--){
+            let tmp = Number(a[i])*Number(b[j]);
+            //console.log("tmp:",tmp);
+            let sum = tmp+result[i+j+1];
+            result[i+j] += Math.floor(sum/10);
+            result[i+j+1] = sum%10;
+        }
+    }
+    while (result[0] === 0) {
+        result.shift();
+    }
+
+    result = result.join('');
+    //console.log( "correct:",(BigInt(a) * BigInt(b)).toString())
+
+    return result;
+}
+rl.on('line', (line) => {
+    const nums = line.split(' * ');
+    const a = nums[0];
+    const b = nums[1];
+    console.log(big_multiply(a, b));
+    rl.close();
+});
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/03/31/tempCodeRunnerFile/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -217,7 +337,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-13 19:01:04" itemprop="dateModified" datetime="2024-05-13T19:01:04+08:00">2024-05-13</time>
+                <time title="修改时间：2024-05-17 16:48:43" itemprop="dateModified" datetime="2024-05-17T16:48:43+08:00">2024-05-17</time>
               </span>
 
           <br>
@@ -245,28 +365,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          function getThis() {
-  return this;
+          function tthis(a){
+    console.log(this.a);
+    console.log("my a == ",a)
 }
-
-console.log(Function.prototype);
-console.log(Object.getPrototypeOf(getThis));
-
-let age = 20;
-function person(name,age) {
-    this.name = name;
-    this.age = age;
-    this.say = function() {
-        console.log(this.name + this.age);
-    }
-
-}
-console.log(person.prototype);
-person.prototype.do = function() {
-    console.log("i do");
-}
-let p1 = new person('zhangsan', 20);
-p1.do();
+tthis(1);
+Object.prototype.tthis = tthis;
+globalThis.tthis(1);
       
     </div>
 
@@ -527,10 +632,16 @@ console.log(create({})`{0} {1}!{upper}`('hello', 'world'));
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-03-18 19:18:24 / 修改时间：19:25:19" itemprop="dateCreated datePublished" datetime="2024-03-18T19:18:24+08:00">2024-03-18</time>
+              <time title="创建时间：2024-03-18 19:18:24" itemprop="dateCreated datePublished" datetime="2024-03-18T19:18:24+08:00">2024-03-18</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-05-17 17:03:29" itemprop="dateModified" datetime="2024-05-17T17:03:29+08:00">2024-05-17</time>
+              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -538,7 +649,7 @@ console.log(create({})`{0} {1}!{upper}`('hello', 'world'));
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>113</span>
+              <span>379</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -558,6 +669,8 @@ console.log(create({})`{0} {1}!{upper}`('hello', 'world'));
 
       
           <p>普通函数里的this是调用的对象<br>回调函数里的this undefined，非严格模式下是window，严格模式下是undefined<br>箭头函数 不会创建新的this绑定，直接绑到函数创建时的this上<br>构造函数 this指向新创建的对象</p>
+<p><strong>理解this指向</strong><br>出现在函数里面，是函数的一个内部属性或者说自有变量，指向函数的调用者<br>函数总是要被调用的，总要有一个对象调用它，this就是指向这个对象的，也就是堆里的一块数据<br>这个上下文对象是在函数调用时确定的，而不是在函数定义时确定的<br>那这样就好理解了</p>
+<p>至于箭头函数比较特殊，它的this基于词法作用域从外层获得，什么意思呢，它的this是在定义时确定的，而不是在调用时确定的。因为特喵箭头函数没有变量名别处调用不了，本身就是一个匿名函数，所以它的this就是定义时的this，也就是外层函数的this，这样就不会出现this指向问题了</p>
 
       
     </div>
@@ -985,79 +1098,6 @@ console.log(create({})`{0} {1}!{upper}`('hello', 'world'));
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/01/25/diary0125/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/frieren-fire.gif">
-      <meta itemprop="name" content="Kiwiq">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blogs of EmilChan">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/01/25/diary0125/" class="post-title-link" itemprop="url">diary0125</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-01-25 21:57:04 / 修改时间：21:58:54" itemprop="dateCreated datePublished" datetime="2024-01-25T21:57:04+08:00">2024-01-25</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>51</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>完蛋。<br>今天好像啥也没做。<br>我下午做了啥来着？<br>晚上和哈提聊了下简历，受益匪浅。<br>定好接下来计划，然后，<br>休假。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1129,7 +1169,7 @@ console.log(create({})`{0} {1}!{upper}`('hello', 'world'));
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

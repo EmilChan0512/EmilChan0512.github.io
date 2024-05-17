@@ -22,15 +22,15 @@
     var CONFIG = {"hostname":"emilchan0512.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="普通函数里的this是调用的对象回调函数里的this undefined，非严格模式下是window，严格模式下是undefined箭头函数 不会创建新的this绑定，直接绑到函数创建时的this上构造函数 this指向新创建的对象">
+  <meta name="description" content="普通函数里的this是调用的对象回调函数里的this undefined，非严格模式下是window，严格模式下是undefined箭头函数 不会创建新的this绑定，直接绑到函数创建时的this上构造函数 this指向新创建的对象 理解this指向出现在函数里面，是函数的一个内部属性或者说自有变量，指向函数的调用者函数总是要被调用的，总要有一个对象调用它，this就是指向这个对象的，也就是堆里的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="note-js-this">
 <meta property="og:url" content="http://emilchan0512.github.io/2024/03/18/note-js-this/index.html">
 <meta property="og:site_name" content="Blogs of EmilChan">
-<meta property="og:description" content="普通函数里的this是调用的对象回调函数里的this undefined，非严格模式下是window，严格模式下是undefined箭头函数 不会创建新的this绑定，直接绑到函数创建时的this上构造函数 this指向新创建的对象">
+<meta property="og:description" content="普通函数里的this是调用的对象回调函数里的this undefined，非严格模式下是window，严格模式下是undefined箭头函数 不会创建新的this绑定，直接绑到函数创建时的this上构造函数 this指向新创建的对象 理解this指向出现在函数里面，是函数的一个内部属性或者说自有变量，指向函数的调用者函数总是要被调用的，总要有一个对象调用它，this就是指向这个对象的，也就是堆里的">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-18T11:18:24.000Z">
-<meta property="article:modified_time" content="2024-03-18T11:25:19.040Z">
+<meta property="article:modified_time" content="2024-05-17T09:03:29.424Z">
 <meta property="article:author" content="Kiwiq">
 <meta name="twitter:card" content="summary">
 
@@ -213,10 +213,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-03-18 19:18:24 / 修改时间：19:25:19" itemprop="dateCreated datePublished" datetime="2024-03-18T19:18:24+08:00">2024-03-18</time>
+              <time title="创建时间：2024-03-18 19:18:24" itemprop="dateCreated datePublished" datetime="2024-03-18T19:18:24+08:00">2024-03-18</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-05-17 17:03:29" itemprop="dateModified" datetime="2024-05-17T17:03:29+08:00">2024-05-17</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -231,7 +237,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>113</span>
+              <span>379</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -251,6 +257,8 @@
 
       
         <p>普通函数里的this是调用的对象<br>回调函数里的this undefined，非严格模式下是window，严格模式下是undefined<br>箭头函数 不会创建新的this绑定，直接绑到函数创建时的this上<br>构造函数 this指向新创建的对象</p>
+<p><strong>理解this指向</strong><br>出现在函数里面，是函数的一个内部属性或者说自有变量，指向函数的调用者<br>函数总是要被调用的，总要有一个对象调用它，this就是指向这个对象的，也就是堆里的一块数据<br>这个上下文对象是在函数调用时确定的，而不是在函数定义时确定的<br>那这样就好理解了</p>
+<p>至于箭头函数比较特殊，它的this基于词法作用域从外层获得，什么意思呢，它的this是在定义时确定的，而不是在调用时确定的。因为特喵箭头函数没有变量名别处调用不了，本身就是一个匿名函数，所以它的this就是定义时的this，也就是外层函数的this，这样就不会出现this指向问题了</p>
 
     </div>
 
@@ -346,7 +354,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-count">29</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
