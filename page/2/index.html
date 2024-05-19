@@ -432,7 +432,7 @@ rl.on('line', (line) => {
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-17 20:10:36" itemprop="dateModified" datetime="2024-05-17T20:10:36+08:00">2024-05-17</time>
+                <time title="修改时间：2024-05-19 16:54:05" itemprop="dateModified" datetime="2024-05-19T16:54:05+08:00">2024-05-19</time>
               </span>
 
           <br>
@@ -460,15 +460,12 @@ rl.on('line', (line) => {
     <div class="post-body" itemprop="articleBody">
 
       
-          function f() {
-
-  "use strict";
-  console.log(this);
-  this.a = 1;
-  
-};
-
-f();// 报错，this未定义
+          function test() {
+    this.a = 1;
+}
+let tt = new test();
+test.prototype.b = 2;
+console.log(tt.__proto__);
       
     </div>
 

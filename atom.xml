@@ -6,7 +6,7 @@
   <link href="http://emilchan0512.github.io/atom.xml" rel="self"/>
   
   <link href="http://emilchan0512.github.io/"/>
-  <updated>2024-05-17T13:56:58.423Z</updated>
+  <updated>2024-05-19T15:18:20.519Z</updated>
   <id>http://emilchan0512.github.io/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="http://emilchan0512.github.io/2024/05/17/js-rushing-for-honor/"/>
     <id>http://emilchan0512.github.io/2024/05/17/js-rushing-for-honor/</id>
     <published>2024-05-17T12:11:50.000Z</published>
-    <updated>2024-05-17T13:56:58.423Z</updated>
+    <updated>2024-05-19T15:18:20.519Z</updated>
     
     
       
       
     <summary type="html">&lt;h1 id=&quot;要准备的&quot;&gt;&lt;a href=&quot;#要准备的&quot; class=&quot;headerlink&quot; title=&quot;要准备的&quot;&gt;&lt;/a&gt;要准备的&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 闭包&lt;/li&gt;
-&lt;li&gt;&lt;input d</summary>
+&lt;li&gt;[ D ] 闭包 &lt;/li&gt;
+&lt;li&gt;[ D ] 作用域 执行上下文 全局作用域 函数作用域 块作用域let&amp;#</summary>
       
     
     
@@ -45,7 +45,7 @@
     <link href="http://emilchan0512.github.io/2024/05/17/js-this-1/"/>
     <id>http://emilchan0512.github.io/2024/05/17/js-this-1/</id>
     <published>2024-05-17T08:45:46.524Z</published>
-    <updated>2024-05-17T10:26:43.711Z</updated>
+    <updated>2024-05-19T08:53:56.721Z</updated>
     
     
       
@@ -156,7 +156,7 @@ this.a = 5;
     <link href="http://emilchan0512.github.io/2024/04/08/js-base-1-t/"/>
     <id>http://emilchan0512.github.io/2024/04/08/js-base-1-t/</id>
     <published>2024-04-08T08:18:23.917Z</published>
-    <updated>2024-05-17T12:10:50.563Z</updated>
+    <updated>2024-05-18T10:24:23.053Z</updated>
     
     
       
@@ -293,20 +293,17 @@ var img = do</summary>
     <link href="http://emilchan0512.github.io/2024/03/31/tempCodeRunnerFile/"/>
     <id>http://emilchan0512.github.io/2024/03/31/tempCodeRunnerFile/</id>
     <published>2024-03-31T13:30:57.993Z</published>
-    <updated>2024-05-17T12:10:36.790Z</updated>
+    <updated>2024-05-19T08:54:05.282Z</updated>
     
     
       
       
-    <summary type="html">function f() {
-
-  &quot;use strict&quot;;
-  console.log(this);
-  this.a = 1;
-  
-};
-
-f();// 报错，this未定义</summary>
+    <summary type="html">function test() {
+    this.a = 1;
+}
+let tt = new test();
+test.prototype.b = 2;
+console.log(tt.__proto__);</summary>
       
     
     
