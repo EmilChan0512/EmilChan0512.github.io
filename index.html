@@ -186,6 +186,79 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/05/20/js-promise/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/frieren-fire.gif">
+      <meta itemprop="name" content="Kiwiq">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Blogs of EmilChan">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/05/20/js-promise/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-05-20 21:01:16 / 修改时间：21:01:32" itemprop="dateCreated datePublished" datetime="2024-05-20T21:01:16+08:00">2024-05-20</time>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span></span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>NaN:aN</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          //懂又不懂呀系列01
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/05/17/js-rushing-for-honor/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -217,7 +290,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-05-19 23:18:20" itemprop="dateModified" datetime="2024-05-19T23:18:20+08:00">2024-05-19</time>
+                <time title="修改时间：2024-05-20 23:11:25" itemprop="dateModified" datetime="2024-05-20T23:11:25+08:00">2024-05-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -239,14 +312,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.5k</span>
+              <span>4.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>3 分钟</span>
+              <span>7 分钟</span>
             </span>
 
         </div>
@@ -259,7 +332,7 @@
 
       
           <h1 id="要准备的"><a href="#要准备的" class="headerlink" title="要准备的"></a>要准备的</h1><ul>
-<li>[ D ] 闭包 </li>
+<li>[ D ] 闭包  词法（lexical）一词指的是，词法作用域根据源代码中声明变量的位置来确定该变量在何处可用。嵌套函数可访问声明于它们外部作用域的变量。</li>
 <li>[ D ] 作用域 执行上下文 全局作用域 函数作用域 块作用域let&#x2F;const </li>
 <li>[ D ] 原型链 链表   构造函数.prototype 实例.<strong>proto</strong>  都是指向原型</li>
 <li>[ D ] 继承 class extends super（父亲构造函数）原型链</li>
@@ -277,25 +350,27 @@
 <li><input disabled="" type="checkbox"> 项目配置 webpack vite 区别 vite热更新更快，因为只对该模块进行重新编译，然后进行替换。冷启动也快，因为vite是基于es6的模块化，所以不需要编译整个项目，按需编译。</li>
 <li><input disabled="" type="checkbox"> 安全 路由 登陆怎么做 token怎么传</li>
 <li><input disabled="" type="checkbox"> 路由鉴权 有些页面需要登陆才能访问，有些页面需要管理员权限才能访问 </li>
-<li><input disabled="" type="checkbox"> 性能优化 <a target="_blank" rel="noopener" href="https://fe.ecool.fun/topic/a5032eb9-6a53-4792-852f-3f9417631c47?orderBy=updateTime&order=desc&tagId=14">https://fe.ecool.fun/topic/a5032eb9-6a53-4792-852f-3f9417631c47?orderBy=updateTime&amp;order=desc&amp;tagId=14</a> ES6编译时加载大部分，除了加一个动态加载模块import().then 在开发阶段就可以做导入和导出模块相关的代码检查。结合 Webpack、Babel 等工具可以在打包阶段移除上下文中未引用的代码（dead-code），这种技术被称作“tree shaking”，可以极大的减小代码体积、缩短程序运行时间、提升程序性能。 适当导入需要的UI模块，静态资源本地缓存，渲染角度讲，减少重排重绘。 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/88639980">https://zhuanlan.zhihu.com/p/88639980</a> cdn 路由动态加载 组件动态加载</li>
+<li><input disabled="" type="checkbox"> 性能优化 <a target="_blank" rel="noopener" href="https://fe.ecool.fun/topic/a5032eb9-6a53-4792-852f-3f9417631c47?orderBy=updateTime&order=desc&tagId=14">https://fe.ecool.fun/topic/a5032eb9-6a53-4792-852f-3f9417631c47?orderBy=updateTime&amp;order=desc&amp;tagId=14</a> ES6编译时加载大部分，除了加一个动态加载模块import().then 在开发阶段就可以做导入和导出模块相关的代码检查。结合 Webpack、Babel 等工具可以在打包阶段移除上下文中未引用的代码（dead-code），这种技术被称作“tree shaking”，可以极大的减小代码体积、缩短程序运行时间、提升程序性能。 适当导入需要的UI模块，静态资源本地缓存(依赖做强缓存,css等做304协商缓存)，渲染角度讲，减少重排重绘。 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/88639980">https://zhuanlan.zhihu.com/p/88639980</a> cdn 路由动态加载 组件动态加载</li>
 <li><input disabled="" type="checkbox"> 移动端适配&#x2F;响应式设计<br><strong>css</strong></li>
 <li><input disabled="" type="checkbox"> 布局练手</li>
 <li><input disabled="" type="checkbox"> 属性复习 grid&#x2F;flex<br><strong>react</strong></li>
-<li><input disabled="" type="checkbox"> 生命周期</li>
+<li><input disabled="" type="checkbox"> 生命周期 <a target="_blank" rel="noopener" href="https://fe.ecool.fun/topic/460a9714-1001-4beb-b12a-be8fec732879?orderBy=updateTime&order=desc&titleKey=hook">https://fe.ecool.fun/topic/460a9714-1001-4beb-b12a-be8fec732879?orderBy=updateTime&amp;order=desc&amp;titleKey=hook</a></li>
 <li><input disabled="" type="checkbox"> hooks useEffect 传了哪些参数，返回值是什么 每次渲染执行第一个回调函数，return一个函数，每次组件卸载执行</li>
 <li><input disabled="" type="checkbox"> hooks useState 状态管理</li>
 <li><input disabled="" type="checkbox"> hooks useContext 传值，很远的地方也可以传值</li>
 <li><input disabled="" type="checkbox"> hooks useReducer 和useState差不多，只是移到了外面，方便管理</li>
 <li><input disabled="" type="checkbox"> hooks useRef 不用于展示的值，不会在渲染后丢失<br><strong>vue</strong></li>
 <li><input disabled="" type="checkbox"> 生命周期</li>
+<li><input disabled="" type="checkbox"> 双向绑定</li>
 <li><input disabled="" type="checkbox"> vue-router  history模式和hash模式 动态加载路由，可以在路由跳转时加载对应的组件，而不是一次性加载所有组件</li>
 <li><input disabled="" type="checkbox"> vuex 现在是pinia 当然也可以手动 store.js 里面 用响应式api 像reactive(),ref(),然后导出,reactive只能对象，ref可以是基本类型，一般用ref</li>
 <li><input disabled="" type="checkbox"> 组合式API<br><strong>网络</strong><br><img src="/image.png" alt="alt text"></li>
-<li><input disabled="" type="checkbox"> http&#x2F;https <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/450128753">https://zhuanlan.zhihu.com/p/450128753</a></li>
+<li><input disabled="" type="checkbox"> http&#x2F;https <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/450128753">https://zhuanlan.zhihu.com/p/450128753</a> <strong>100</strong>Information <strong>200</strong>Success <strong>300</strong>Redirection <strong>400</strong>ClientError <strong>500</strong>ServerError</li>
+<li><input disabled="" type="checkbox"> POST<br>预检请求</li>
 <li><input disabled="" type="checkbox"> http2</li>
 <li><input disabled="" type="checkbox"> get&#x2F;post 幂等 url 实体(body) 传参 缓存</li>
 <li><input disabled="" type="checkbox"> 跨域</li>
-<li><input disabled="" type="checkbox"> 重定向</li>
+<li><input disabled="" type="checkbox"> 重定向<br>重定向就是，在网页上设置一个约束条件，条件满足，就自动转入到其它网页、网址。比如登录后跳转。如何实现呢<br>window.location &#x3D; “<a target="_blank" rel="noopener" href="https://example.com/">https://example.com/</a>“;<br>react umijs login history推入重定向链接 路由权限就用 model 维护全局状态access:canAdmin函数去计算权限是不是够<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="property">location</span>.<span class="property">href</span> = <span class="string">&#x27;http://www.baidu.com&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
 <li><input disabled="" type="checkbox"> 缓存</li>
 <li><input disabled="" type="checkbox"> cookie</li>
 <li><input disabled="" type="checkbox"> session</li>
@@ -303,11 +378,78 @@
 <li><input disabled="" type="checkbox"> jwt</li>
 </ul>
 <h2 id="问题们"><a href="#问题们" class="headerlink" title="问题们"></a>问题们</h2><ul>
-<li><input disabled="" type="checkbox"> vue和react的区别，你觉得哪个更好</li>
-<li><input disabled="" type="checkbox"> ES6的新特性</li>
-<li><input disabled="" type="checkbox"> 你对闭包的理解</li>
-<li><input disabled="" type="checkbox"> 你对作用域的理解</li>
-<li><input disabled="" type="checkbox"> 你对原型链的理解<br>等等…</li>
+<li><p><input disabled="" type="checkbox"> 
+vue和react的区别，你觉得哪个更好<br>vue是响应式的 数据绑定 靠watcher 响应式更新vDOM react是函数式的 数据流 数据不可变 JSX</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+websocket和http的区别<br>websocket是全双工的，http是半双工的（这个说法有问题 全双工这类说法是在物理链路层的），websocket是长连接，http是短连接 http1.1开始也有长的 http无状态 指的是一个用户连续发两个你都不知道是一个发的 websocket有状态 游戏 聊天 这种连续的数据流</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+ES6的新特性</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+你对闭包的理解</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+你对作用域的理解</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+你对原型链的理解</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+前端工程化 webpack vite<br><a target="_blank" rel="noopener" href="https://fe.ecool.fun/topic/1db9414f-b160-4cf6-9a3c-32d8b7acb4ff">https://fe.ecool.fun/topic/1db9414f-b160-4cf6-9a3c-32d8b7acb4ff</a><br>模块化打包的工具  依赖导入导出 TreeShaking依赖于ES Module的静态语法分析（不执行任何的代码，可以明确知道模块的依赖关系）<br>vite启动和热更新很快,按需加载,利用浏览器原生的ES Module编译能力，省略费时的编译环节，直给浏览器开发环境源码，dev server只提供轻量服务<br>webpack proxy 前端代理,本质是一个http中间件(Tomcat Redis),起一个同端口的服务，然后转发请求，解决跨域问题</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+说一说react循环渲染的过程<br> 每次调用 setState 或 useState 的 setter 函数时，都会触发一次重新渲染请求。批量更新机制,同一个事件循环里面发生的状态更新会合并成一次.<strong>然后生成虚拟DOM</strong>.优先级的话,调度器,用户输入优先响应.<br> react会先生成虚拟DOM，然后对比新旧虚拟DOM，找到差异,生成DOM指令集,然后更新真实DOM.<br>setState是异步的，不会立即更新，会等到事件循环结束后再批量更新</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+虚拟DOM<br>就是一个对真实在DOM的抽象，用js对象来描述真实DOM，然后对比两个虚拟DOM的差异，diff，然后更新真实DOM<br><a target="_blank" rel="noopener" href="https://fe.ecool.fun/topic/d5acd6cf-38c3-4afb-965d-be79f03cd045">https://fe.ecool.fun/topic/d5acd6cf-38c3-4afb-965d-be79f03cd045</a><br>等等…</p>
+</li>
+</ul>
+<blockquote>
+<p>云轴 vue路由守卫如果具体到组件怎么办 路由表 vue3和vue2的区别 vue3有哪些特性 vue3的响应式原理 双向绑定 react的生命周期 自定义hooks 深拷贝怎么实现</p>
+</blockquote>
+<ul>
+<li><p><input disabled="" type="checkbox"> 
+类型检查怎么做</p>
+</li>
+<li><p>Array.isArray() </p>
+</li>
+<li><p>instanceof (constructor) person instanceof Person&#x2F;Object 只要是原型链上的就是true </p>
+</li>
+<li><p>typeof 只区分到Object和Function</p>
+</li>
+<li><p>Object.prototype.toString.call() &#x3D;&#x3D;&#x3D; ‘[object Array]’</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+Axios怎么定时请求，超时处理，promise</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//超时处理</span></span><br><span class="line"><span class="attr">timeout</span>: <span class="number">1000</span>,</span><br></pre></td></tr></table></figure></li>
+<li><p><input disabled="" type="checkbox"> 
+浅拷贝用什么函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj2 = &#123;...obj1&#125;;</span><br><span class="line"><span class="keyword">let</span> obj3 = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;,obj1);</span><br></pre></td></tr></table></figure></li>
+<li><p><input disabled="" type="checkbox"> 
+深拷贝怎么写  </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj2 = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(<span class="title class_">JSON</span>.<span class="title function_">stringfy</span>(obj1));</span><br><span class="line"><span class="keyword">let</span> obj3 = lodash.<span class="title function_">cloneDeep</span>(obj1);</span><br><span class="line"><span class="comment">//手写注意循环引用，用hashmap</span></span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904197595332622?searchId=20240520160001A98997C75E69BC6024DA">https://juejin.cn/post/6844904197595332622?searchId=20240520160001A98997C75E69BC6024DA</a></p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+对象解构</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;John Doe&#x27;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">30</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> &#123; <span class="attr">name</span>: personName, <span class="attr">age</span>: personAge &#125; = person;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(personName); <span class="comment">// Output: &#x27;John Doe&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(personAge); <span class="comment">// Output: 30</span></span><br><span class="line"><span class="comment">//数组换[]</span></span><br></pre></td></tr></table></figure></li>
+<li><p><input disabled="" type="checkbox"> 
+vue，react打包之后的html，有哪些东西</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+h5适配<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/425121653">https://zhuanlan.zhihu.com/p/425121653</a></p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+BOM<br><img src="/image-1.png" alt="alt text"></p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+this.$nextTick<br> 在修改数据之后立即使用这个方法，获取更新后的 DOM,可以看作和react中的setState 加入列表 等事件循环完 后面延迟执行的回调函数 马上拿到更新后的DOM</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+导致重流焊和重绘的原因<br>添加、删除、更新 DOM 节点时将发生重排<br>隐藏 DOM 元素将导致重排和重绘display: none<br>隐藏 DOM 元素将导致唯一的重绘，因为没有布局或位置更改visibility: hidden<br>移动 DOM 节点并设置动画将触发重排和重绘<br>调整窗口大小将触发重排<br>更改字体样式会更改元素的几何形状。这意味着它可能会影响页面上其他元素的位置或大小，这两者都需要浏览器执行重排。 一旦这些布局操作完成，任何损坏的像素都需要重新绘制<br>添加或删除样式表将导致重排&#x2F;重绘<br>操作 DOM 的脚本是一项代价高昂的操作，因为它们每次修改文档或文档的一部分时都会重新计算。正如我们从触发回流焊的许多事情中看到的那样，它每秒可以发生数千次</p>
+</li>
 </ul>
 
       
@@ -1304,126 +1446,10 @@ console.log(Object.getPrototypeOf(Stuednt.prototype));
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://emilchan0512.github.io/2024/04/07/t/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/frieren-fire.gif">
-      <meta itemprop="name" content="Kiwiq">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blogs of EmilChan">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/04/07/t/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-04-07 15:19:23" itemprop="dateCreated datePublished" datetime="2024-04-07T15:19:23+08:00">2024-04-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-04-08 16:17:06" itemprop="dateModified" datetime="2024-04-08T16:17:06+08:00">2024-04-08</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>519</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-<!DOCTYPE html>
-<html>
-<head>
-  <title>导入 JavaScript 文件</title>
-  <script src="test3.js"></script>
-  <style>
-    .container{
-      display: flex;
-      align-items: center;
-    }
-    .img{
-      width: 100px;
-      color: red;
-      background-color: yellow;
-    }
-    .title{
-      flex:1;/*占满剩余空间*/
-      word-wrap: break-word;/*换行*/
-      color: blue;
-      background-color: pink;
-    }
-    .button{
-      white-space: nowrap;/*不换行*/
-      overflow: hidden;/*超出部分隐藏*/
-      width:auto;/*自适应宽度*/
-      color: green;
-      background-color: lightblue;
-    }
-
-  </style>
-</head>
-<body>
-    <div class="container">
-        <img class="img" src="" />
-        <div class="title">标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案文案标题文案标题文案</div>
-        <div class="button">查看详情标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案标题文案</div>
-    </div></body>
-</html>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1491,7 +1517,7 @@ console.log(Object.getPrototypeOf(Stuednt.prototype));
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

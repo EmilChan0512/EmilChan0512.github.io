@@ -6,7 +6,7 @@
   <link href="http://emilchan0512.github.io/atom.xml" rel="self"/>
   
   <link href="http://emilchan0512.github.io/"/>
-  <updated>2024-05-19T15:18:20.519Z</updated>
+  <updated>2024-05-20T13:01:32.634Z</updated>
   <id>http://emilchan0512.github.io/</id>
   
   <author>
@@ -17,18 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://emilchan0512.github.io/2024/05/20/js-promise/"/>
+    <id>http://emilchan0512.github.io/2024/05/20/js-promise/</id>
+    <published>2024-05-20T13:01:16.927Z</published>
+    <updated>2024-05-20T13:01:32.634Z</updated>
+    
+    
+      
+      
+    <summary type="html">//懂又不懂呀系列01
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>js-rushing-for-honor</title>
     <link href="http://emilchan0512.github.io/2024/05/17/js-rushing-for-honor/"/>
     <id>http://emilchan0512.github.io/2024/05/17/js-rushing-for-honor/</id>
     <published>2024-05-17T12:11:50.000Z</published>
-    <updated>2024-05-19T15:18:20.519Z</updated>
+    <updated>2024-05-20T15:11:25.545Z</updated>
     
     
       
       
     <summary type="html">&lt;h1 id=&quot;要准备的&quot;&gt;&lt;a href=&quot;#要准备的&quot; class=&quot;headerlink&quot; title=&quot;要准备的&quot;&gt;&lt;/a&gt;要准备的&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;[ D ] 闭包 &lt;/li&gt;
-&lt;li&gt;[ D ] 作用域 执行上下文 全局作用域 函数作用域 块作用域let&amp;#</summary>
+&lt;li&gt;[ D ] 闭包  词法（lexical）一词指的是，词法作用域根据源代码中声明变量的位置来确定该变量在何处可用</summary>
       
     
     
@@ -427,25 +445,6 @@ console.log(tt.__proto__);</summary>
       
     <summary type="html">&lt;p&gt;欠下的牛逼终归要还的。&lt;br&gt;离面试还有四天，让我看看我能不能把这些给整明白。&lt;/p&gt;
 &lt;h2 id=&quot;首先是CSS&quot;&gt;&lt;a href=&quot;#首先是CSS&quot; class=&quot;headerlink&quot; title=&quot;首先是CSS&quot;&gt;&lt;/a&gt;首先是CSS&lt;/h2&gt;&lt;p&gt;Less干了什</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>diary0301</title>
-    <link href="http://emilchan0512.github.io/2024/03/01/diary0301/"/>
-    <id>http://emilchan0512.github.io/2024/03/01/diary0301/</id>
-    <published>2024-03-01T13:18:43.000Z</published>
-    <updated>2024-03-02T14:36:29.325Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;好吧，今天终于把那份很糙的简历都投了下。&lt;br&gt;腾讯美团vivo&lt;/p&gt;
-&lt;h2 id=&quot;JS函数式编程&quot;&gt;&lt;a href=&quot;#JS函数式编程&quot; class=&quot;headerlink&quot; title=&quot;JS函数式编程&quot;&gt;&lt;/a&gt;JS函数式编程&lt;/h2&gt;</summary>
       
     
     
