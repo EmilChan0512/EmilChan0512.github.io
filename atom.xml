@@ -6,7 +6,7 @@
   <link href="http://emilchan0512.github.io/atom.xml" rel="self"/>
   
   <link href="http://emilchan0512.github.io/"/>
-  <updated>2024-05-20T13:01:32.634Z</updated>
+  <updated>2024-05-31T09:46:29.793Z</updated>
   <id>http://emilchan0512.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js-FINAL-ANS</title>
+    <link href="http://emilchan0512.github.io/2024/05/29/js-FINAL-ANS/"/>
+    <id>http://emilchan0512.github.io/2024/05/29/js-FINAL-ANS/</id>
+    <published>2024-05-29T08:23:52.000Z</published>
+    <updated>2024-05-31T09:46:29.793Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;ANS&quot;&gt;&lt;a href=&quot;#ANS&quot; class=&quot;headerlink&quot; title=&quot;ANS&quot;&gt;&lt;/a&gt;ANS&lt;/h1&gt;&lt;h2 id=&quot;简历&quot;&gt;&lt;a href=&quot;#简历&quot; class=&quot;headerlink&quot; title=&quot;简历&quot;&gt;&lt;/a&gt;简历&lt;/h2&gt;&lt;u</summary>
+      
+    
+    
+    
+    <category term="note" scheme="http://emilchan0512.github.io/categories/note/"/>
+    
+    <category term="js" scheme="http://emilchan0512.github.io/categories/note/js/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>js-FINAL-RES</title>
+    <link href="http://emilchan0512.github.io/2024/05/29/js-FINAL-RES/"/>
+    <id>http://emilchan0512.github.io/2024/05/29/js-FINAL-RES/</id>
+    <published>2024-05-29T08:13:52.000Z</published>
+    <updated>2024-05-29T11:35:59.120Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;最终准备&quot;&gt;&lt;a href=&quot;#最终准备&quot; class=&quot;headerlink&quot; title=&quot;最终准备&quot;&gt;&lt;/a&gt;最终准备&lt;/h1&gt;&lt;h2 id=&quot;简历&quot;&gt;&lt;a href=&quot;#简历&quot; class=&quot;headerlink&quot; title=&quot;简历&quot;&gt;&lt;/a&gt;简历&lt;/h</summary>
+      
+    
+    
+    
+    <category term="note" scheme="http://emilchan0512.github.io/categories/note/"/>
+    
+    <category term="js" scheme="http://emilchan0512.github.io/categories/note/js/"/>
+    
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -40,13 +84,13 @@
     <link href="http://emilchan0512.github.io/2024/05/17/js-rushing-for-honor/"/>
     <id>http://emilchan0512.github.io/2024/05/17/js-rushing-for-honor/</id>
     <published>2024-05-17T12:11:50.000Z</published>
-    <updated>2024-05-20T15:11:25.545Z</updated>
+    <updated>2024-05-22T10:52:59.191Z</updated>
     
     
       
       
     <summary type="html">&lt;h1 id=&quot;要准备的&quot;&gt;&lt;a href=&quot;#要准备的&quot; class=&quot;headerlink&quot; title=&quot;要准备的&quot;&gt;&lt;/a&gt;要准备的&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;[ D ] 闭包  词法（lexical）一词指的是，词法作用域根据源代码中声明变量的位置来确定该变量在何处可用</summary>
+&lt;li&gt;&lt;p&gt;[ D ] 闭包  词法（lexical）一词指的是，词法作用域根据源代码中声明变量的位置来确定该变量在何</summary>
       
     
     
@@ -405,46 +449,6 @@ console.log(tt.__proto__);</summary>
       
     <summary type="html">&lt;p&gt;一个值得记录的发现。&lt;br&gt;useState的维护挺复杂的。&lt;br&gt;setState并不是立即生效的，而是在下一次渲染时生效。&lt;/p&gt;
 </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>diary0309</title>
-    <link href="http://emilchan0512.github.io/2024/03/09/diary0309/"/>
-    <id>http://emilchan0512.github.io/2024/03/09/diary0309/</id>
-    <published>2024-03-09T11:54:17.000Z</published>
-    <updated>2024-03-11T08:48:08.271Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;面经&quot;&gt;&lt;a href=&quot;#面经&quot; class=&quot;headerlink&quot; title=&quot;面经&quot;&gt;&lt;/a&gt;面经&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;进程和线程概念&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;并发和并行&lt;br&gt;并发是指一个处理器同时处理多个任务，而并行是指多个处理</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>diary0307</title>
-    <link href="http://emilchan0512.github.io/2024/03/07/diary0307/"/>
-    <id>http://emilchan0512.github.io/2024/03/07/diary0307/</id>
-    <published>2024-03-07T09:08:37.000Z</published>
-    <updated>2024-04-22T12:52:32.880Z</updated>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;欠下的牛逼终归要还的。&lt;br&gt;离面试还有四天，让我看看我能不能把这些给整明白。&lt;/p&gt;
-&lt;h2 id=&quot;首先是CSS&quot;&gt;&lt;a href=&quot;#首先是CSS&quot; class=&quot;headerlink&quot; title=&quot;首先是CSS&quot;&gt;&lt;/a&gt;首先是CSS&lt;/h2&gt;&lt;p&gt;Less干了什</summary>
       
     
     
